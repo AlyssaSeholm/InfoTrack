@@ -1,0 +1,61 @@
+// {
+//     "compilerOptions": {
+//         "target": "es6", // Specify the ECMAScript target version
+//         "module": "commonjs", // Specify the module system
+//         "outDir": "./dist", // Specify the output directory for compiled files
+//         "strict": true, // Enable strict type-checking
+//         "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+//         "sourceMap": true // Generate source maps for better debugging
+//     },
+//     "include": [
+//         "src/**/*.ts" // Specify the files to be included in the compilation
+//     ],
+//     "exclude": [
+//         "node_modules" // Specify the files to be excluded from the compilation
+//     ]
+// }
+
+// {
+//     "compilerOptions": {
+//       "target": "esnext",                    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ESNext' */
+//       "module": "esnext",                    /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+//       "lib": ["dom", "dom.iterable", "esnext"],/* Specify library files to be included in the compilation. */
+//       "jsx": "react",                        /* Specify JSX mode: 'preserve', 'react-native', or 'react'. */
+//       "strict": true,                        /* Enable all strict type-checking options. */
+//       "esModuleInterop": true,               /* Enables emitting ES modulesInterop.emitInterop: true /* Enables emitting of default exports for ES moduleInterop/DefaultImports. */
+//       "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
+        
+//         "baseUrl": "./",
+//         "paths": {
+//         "@/*": ["src/*"]
+//         }
+//     },
+//     "include": ["src/**/*"],                  /* Specify files to be included in compilation. */
+//     "exclude": ["node_modules"]               /* Specify files to be excluded from compilation. */
+//   }
+  
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "useDefineForClassFields": true,
+      "lib": ["ES2020", "DOM", "DOM.Iterable"],
+      "module": "ESNext",
+      "skipLibCheck": true,
+  
+      /* Bundler mode */
+      "moduleResolution": "bundler",
+      "allowImportingTsExtensions": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx",
+  
+      /* Linting */
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+  }
