@@ -75,8 +75,10 @@ namespace Microsoft.Extensions.DependencyInjection
             //services.AddTransient<ISearchService, BingSearchService>(); //TODO: What's the difference between addtransient and addscoped
             //services.AddTransient<ISearchService, YahooSearchService>(); //TODO: What's the difference between addtransient and addscoped
 
-            services.AddTransient<IResultParserService, DefaultResultParserService>();
+            //services.AddTransient<IResultParserService, ResultParserService>();
             services.AddTransient<IResultParserService, GoogleResultParserService>();
+            //services.AddTransient<IResultParserService, YahooResultParserService>();
+            //services.AddTransient<IResultParserService, BingResultParserService>();
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<ICompanyRepository, CompanyRepository>();

@@ -1,21 +1,13 @@
 ﻿using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Domain.Repositories.Interfaces;
+using Microsoft.Extensions.Hosting;
 
 namespace InfoTrack.Infrastructure.Services.Parse
 {
-    public class YahooResultParserService : IResultParserService
+    public class YahooResultParserService(ISearchRepository searchRepository, HttpClient httpClient, IHostEnvironment webHostEnvironment) 
+        : ResultParserService(searchRepository, httpClient, webHostEnvironment)
     {
-        public Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> PerformSearch(int queryId, CancellationToken cancellation)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<SearchResults> SanitizeResults(IEnumerable<ResultParse> parsedItems, CancellationToken cancellation)
+        public override Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation)
         {
             throw new NotImplementedException();
         }

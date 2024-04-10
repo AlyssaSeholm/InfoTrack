@@ -1,0 +1,72 @@
+----------------------------------Count: 1----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling integration for Clio Manage users - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; clio</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.infotrack.com/clio/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAIQAg&amp;usg=AOvVaw1iDjkQmkw23DPVCKrFyeXG" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling integration for Clio Manage users - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; clio</div></div></div></a>
+ **END** 
+----------------------------------Count: 2----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Knowledge Base Solution - CCH Axcess Workflow E-File Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">support.cch.com &#8250; solution</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://support.cch.com/kb/solution/000225205&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAoQAg&amp;usg=AOvVaw0vAOePulbAF8jnK6c1P8s1" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Knowledge Base Solution - CCH Axcess Workflow E-File Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">support.cch.com &#8250; solution</div></div></div></a>
+ **END** 
+----------------------------------Count: 3----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clerks Authority eFiling Vendor Integration information - GSCCCA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.gsccca.org &#8250; learn &#8250; efiling-information &#8250; vendor-integration</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.gsccca.org/learn/efiling-information/vendor-integration&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAkQAg&amp;usg=AOvVaw3UDgoeLssJffB7-wPJrNqu" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clerks Authority eFiling Vendor Integration information - GSCCCA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.gsccca.org &#8250; learn &#8250; efiling-information &#8250; vendor-integration</div></div></div></a>
+ **END** 
+----------------------------------Count: 4----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Explained: Integrated eFiling and continued innovation - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; blog &#8250; explained-integrated-efiling-and-continued-in...</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.infotrack.com/blog/explained-integrated-efiling-and-continued-innovation/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAgQAg&amp;usg=AOvVaw3EibM_-DyUO6SACB8xfPuv" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Explained: Integrated eFiling and continued innovation - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; blog &#8250; explained-integrated-efiling-and-continued-in...</div></div></div></a>
+ **END** 
+----------------------------------Count: 5----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">MyCase + InfoTrack Integration: Faster &amp; More Accurate e-Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mycase.com &#8250; General</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.mycase.com/blog/general/mycase-infotrack-integration-faster-and-more-accurate-e-filing/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAYQAg&amp;usg=AOvVaw0mhVtkFsYIyhDw010db0kz" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">MyCase + InfoTrack Integration: Faster &amp; More Accurate e-Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mycase.com &#8250; General</div></div></div></a>
+ **END** 
+----------------------------------Count: 6----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.tax1099.com/integrations&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAEQAg&amp;usg=AOvVaw1qu4yg5frmlc69nr-kfVCt" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div></a>
+ **END** 
+----------------------------------Count: 7----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.fileandservexpress.com/how-do-i-integrate-my-law-firm-technology/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAcQAg&amp;usg=AOvVaw11p4XrbfvxqHuDTahPxqyd" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div></a>
+ **END** 
+----------------------------------Count: 8----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clio and InfoTrack Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; app-directory &#8250; infotrack</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.clio.com/app-directory/infotrack/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAUQAg&amp;usg=AOvVaw3YPQ-Ua4R0dkqM9hRq1rEd" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clio and InfoTrack Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; app-directory &#8250; infotrack</div></div></div></a>
+ **END** 
+----------------------------------Count: 9----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.tylertech.com/products/enterprise-justice/efile-serve&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAQQAg&amp;usg=AOvVaw1H6k9BzGS_lXK7PyUBj-4y" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div></a>
+ **END** 
+----------------------------------Count: 10----------------------------------
+  <<<<<<<InnerHtml
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) Overview - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-overview</div></div></div>
+  >>>>>>>OuterHtml
+<a href="/url?q=https://www.irs.gov/e-file-providers/modernized-e-file-overview&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAMQAg&amp;usg=AOvVaw3srDHk9C6zaYKSDtRd-WqA" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) Overview - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-overview</div></div></div></a>
+ **END** 
+----------------------------------Count: 11----------------------------------
+  <<<<<<<InnerHtml
+<accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_1" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack, integrations</div></span></div>
+  >>>>>>>OuterHtml
+<a class="Q71vJc" href="/search?sca_esv=6480816f92634337&amp;sca_upv=1&amp;ie=UTF-8&amp;q=InfoTrack,+integrations&amp;sa=X&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAI" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAI"><accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_1" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack, integrations</div></span></div></a>
+ **END** 
+----------------------------------Count: 12----------------------------------
+  <<<<<<<InnerHtml
+<accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_3" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack and Clio</div></span></div>
+  >>>>>>>OuterHtml
+<a class="Q71vJc" href="/search?sca_esv=6480816f92634337&amp;sca_upv=1&amp;ie=UTF-8&amp;q=InfoTrack+and+Clio&amp;sa=X&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAQ" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAQ"><accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_3" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack and Clio</div></span></div></a>
+ **END** 
