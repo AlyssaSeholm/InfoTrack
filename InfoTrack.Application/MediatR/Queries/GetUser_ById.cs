@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.Common;
 using InfoTrack.Application.DTOs;
-using InfoTrack.Application.DTOs;
 using InfoTrack.Domain.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InfoTrack.Application.MediatR.Queries
 {
@@ -21,9 +15,9 @@ namespace InfoTrack.Application.MediatR.Queries
 
     public record GetUserByIdResponse(UserDto User);
 
-    public class GetUserByIdHandler(IUserService companyService, IMapper mapper) : IRequestHandler<GetUserByIdRequest, GetUserByIdResponse>
+    public class GetUserByIdHandler(IUserService userService, IMapper mapper) : IRequestHandler<GetUserByIdRequest, GetUserByIdResponse>
     {
-        private readonly IUserService _companyService = companyService;
+        private readonly IUserService _userService = userService;
         private readonly IMapper _mapper = mapper;
 
         public async Task<GetUserByIdResponse> Handle(GetUserByIdRequest request, CancellationToken cancellationToken)
@@ -33,14 +27,14 @@ namespace InfoTrack.Application.MediatR.Queries
                 return new GetUserByIdResponse(UserDto.CreateEmptyWithMessage(ResponseMessages.StatusType.Conversion_To_Int));
             }
 
-            var company = await _companyService.GetUserById(id, cancellationToken);
+            var user = await _userService.GetUserById(id, cancellationToken);
 
-            if (company == null)
+            if (user == null)
             {
                 return new GetUserByIdResponse(UserDto.CreateEmptyWithMessage(ResponseMessages.StatusType.NotFound));
             }
 
-            var response = new GetUserByIdResponse(_mapper.Map<UserDto>(company));
+            var response = new GetUserByIdResponse(_mapper.Map<UserDto>(user));
 
             return response;
         }

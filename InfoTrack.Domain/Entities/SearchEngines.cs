@@ -8,4 +8,11 @@ namespace InfoTrack.Domain.Entities
         public required string BaseUrl { get; set; }
         public string? Description { get; set; }
     }
+
+    //public enum SearchEngine
+    //{
+    //    Google = 0,
+    //    Bing = 1,
+
+    //}
 }

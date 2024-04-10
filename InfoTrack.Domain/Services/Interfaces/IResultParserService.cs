@@ -4,8 +4,10 @@ namespace InfoTrack.Domain.Services.Interfaces
 {
     public interface IResultParserService
     {
-        IEnumerable<ResultParse> ParseResults(string htmlContent);
+        Task<string> PerformSearch(int queryId, CancellationToken cancellation);
 
-        IEnumerable<SearchResults> SanitizeResults(IEnumerable<ResultParse> parsedItems);
+        Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation);
+
+        Task<SearchResults> SanitizeResults(IEnumerable<ResultParse> parsedItems, CancellationToken cancellation);
     }
 }

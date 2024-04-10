@@ -6,7 +6,6 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
-using static InfoTrack.Application.Common.ResponseMessages;
 
 namespace InfoTrack.API.Controllers
 {
@@ -29,9 +28,12 @@ namespace InfoTrack.API.Controllers
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(CreateCompanyResponse), (int)HttpStatusCode.Created)]
         [SwaggerOperation(OperationId = "CreateCompany")]
-        public async Task<ActionResult<CreateCompanyResponse>> Create([FromBody] CreateCompanyRequest request) //=> await _mediator.Send(request);
+        public async Task<ActionResult<CreateCompanyResponse>> Create([FromBody] CreateCompanyRequest request)
         {
             var response = await _mediator.Send(request);
+            
+            //Todo: validate relationship (if pci == null, then it has to be primary; otherwise, pci cannot equal null)
+            //Todo: validate userId
 
             //TODO- validator
             //var validator = new AddItemValidator();
@@ -61,7 +63,7 @@ namespace InfoTrack.API.Controllers
         [SwaggerOperation(OperationId = "GetCompanyById")]
         public async Task<ActionResult<GetCompanyByIdResponse>> GetById([FromRoute] GetCompanyByIdRequest request) //string companyId) //[FromRoute] GetCompanyByIdRequest request)
         {
-            if (string.IsNullOrEmpty(request.Id)) { return new BadRequestObjectResult("spooky!"); }
+            if (string.IsNullOrEmpty(request.Id)) { return new BadRequestObjectResult("Missing Id from route."); }
 
             var response = await _mediator.Send(request); //TODO: Add decryption
 
@@ -93,7 +95,7 @@ namespace InfoTrack.API.Controllers
 
             if (response.Company == null)
             {
-                return new NotFoundObjectResult($"Company with name \"{request}\" not found.");
+                return new NotFoundObjectResult($"Company with name \"{request.Name}\" not found.");
                 //TODO: custom response messages
                 //var msg = $"Company with name \"{name}\" not found.";
                 //return ResponseMsgHelper.NotFound(StatusType.NotFound, msg, response);
@@ -120,6 +122,7 @@ namespace InfoTrack.API.Controllers
             return new OkObjectResult(response);
         }
 
+        //TODO: Didn't return newly created entity - needs to be refreshed?
         /// <summary> GetCompanyListByUserId </summary>
         /// <remarks> 
         ///    -- Required Request Values: string companyId. 
@@ -169,7 +172,6 @@ namespace InfoTrack.API.Controllers
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(UpdateCompanyResponse), (int)HttpStatusCode.OK)]
-        //[ProducesResponseType((int)HttpStatusCode.NoContent)]
         [SwaggerOperation(OperationId = "DeleteCompanyById")]
         public async Task<IActionResult> DeleteById([FromRoute] DeleteCompanyByIdRequest request)
         {

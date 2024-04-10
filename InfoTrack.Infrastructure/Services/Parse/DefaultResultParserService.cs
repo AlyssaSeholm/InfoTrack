@@ -3,7 +3,7 @@ using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Infrastructure.Services.Parse
 {
-    public class YahooResultParserService : IResultParserService
+    public class DefaultResultParserService : IResultParserService
     {
         public Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation)
         {

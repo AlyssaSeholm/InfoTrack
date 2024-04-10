@@ -34,6 +34,10 @@ namespace InfoTrack.Infrastructure.Data.Configurations
                 .HasMaxLength(255)
                 .IsRequired();
 
+            builder.Property(q => q.Name)
+                .HasMaxLength(255)
+                .IsRequired();
+
             builder.Property(q => q.ExcludeTerms)
                 .HasMaxLength(255);
 

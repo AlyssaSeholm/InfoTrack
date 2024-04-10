@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfoTrack.Infrastructure.Repositories
+namespace InfoTrack.Application.MediatR.Commands
 {
-    public class ResultsRepository
+    internal class Search_Update
     {
-
     }
 }

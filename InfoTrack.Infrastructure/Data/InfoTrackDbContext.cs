@@ -19,6 +19,7 @@ namespace InfoTrack.Infrastructure.Data
         public DbSet<SearchResults> SearchResults { get; set; }
         public DbSet<SearchResultItem> SearchResultItems { get; set; }
         public DbSet<SearchResultType> SearchResultTypes { get; set; }
+        public DbSet<SearchEngines> SearchEngines { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

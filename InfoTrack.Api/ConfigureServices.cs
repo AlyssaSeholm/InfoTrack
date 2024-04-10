@@ -63,25 +63,19 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddHttpClient();
 
             // Application Layer DI
-            //services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-            services.AddAutoMapper(cfg => cfg.AddProfile(typeof(MappingProfile)));//services.AddAutoMapper(typeof(Startup).Assembly); //services.AddAutoMapper(typeof(Startup).Assembly);
+            services.AddAutoMapper(cfg => cfg.AddProfile(typeof(MappingProfile)));
 
             services.AddSingleton<IEncryptionService>(new EncryptionService("YourEncryptionKeyHere1234", "YourIVHere12345678")); //TODO: Generate key and iv
-
-            //services.AddAutoMapper(x => x.AddProfile(new
-            //    MappingProfile(encryptionService))
-            //);
-
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining(typeof(GetCompanyByIdHandler))); //
             // Domain and Application Interfaces DI
                
 
-            services.AddTransient<ISearchService, GoogleSearchService>(); //TODO: What's the difference between addtransient and addscoped
-            services.AddTransient<ISearchService, BingSearchService>(); //TODO: What's the difference between addtransient and addscoped
-            services.AddTransient<ISearchService, YahooSearchService>(); //TODO: What's the difference between addtransient and addscoped
+            //services.AddTransient<ISearchService, GoogleSearchService>(); //TODO: What's the difference between addtransient and addscoped
+            //services.AddTransient<ISearchService, BingSearchService>(); //TODO: What's the difference between addtransient and addscoped
+            //services.AddTransient<ISearchService, YahooSearchService>(); //TODO: What's the difference between addtransient and addscoped
 
-            services.AddTransient<IResultParserService, ResultParserService>();
+            services.AddTransient<IResultParserService, DefaultResultParserService>();
             services.AddTransient<IResultParserService, GoogleResultParserService>();
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
@@ -89,6 +83,10 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddTransient<ICompanyService, CompanyService>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IQueryRepository, QueryRepository>();
+            services.AddTransient<IQueryService, QueryService>();
+            services.AddTransient<ISearchRepository, SearchRepository>();
+            services.AddTransient<ISearchService, SearchService>();
 
 
             // EF Core DI
@@ -100,7 +98,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 //        .EnableRetryOnFailure())
                 //.EnableThreadSafetyChecks(false)
                 //.EnableSensitiveDataLogging();
-            }, ServiceLifetime.Scoped);
+            }, ServiceLifetime.Scoped); //TODO: is this necessary as I 'AddScoped' above?
 
 
             services.AddControllers();

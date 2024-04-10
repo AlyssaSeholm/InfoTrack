@@ -7,6 +7,7 @@ namespace InfoTrack.Domain.Services
     public class UserService(IUserRepository UserRepository) : IUserService
     {
         private readonly IUserRepository _UserRepository = UserRepository;
+
         public async Task<User> CreateUser(User user, CancellationToken cancellationToken)
         {
             return await _UserRepository.AddAsync(user, cancellationToken);

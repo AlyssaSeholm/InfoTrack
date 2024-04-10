@@ -3,7 +3,7 @@ using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Infrastructure.Services.Search
 {
-    public class YahooSearchService(HttpClient httpClient) : ISearchService
+    public class YahooSearchService(HttpClient httpClient) //: ISearchService
     {
         private readonly HttpClient _httpClient = httpClient;
 

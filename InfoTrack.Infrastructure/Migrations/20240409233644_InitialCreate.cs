@@ -78,8 +78,8 @@ namespace InfoTrack.Infrastructure.Migrations
                     Email = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(5788)),
-                    LastModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6028)),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(274)),
+                    LastModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(484)),
                     SelectedTheme = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
@@ -99,7 +99,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     BaseUrl = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     IncludeTerms = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 695, DateTimeKind.Utc).AddTicks(3823)),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 948, DateTimeKind.Utc).AddTicks(4358)),
                     DateRemoved = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -129,9 +129,10 @@ namespace InfoTrack.Infrastructure.Migrations
                     MyCompanyId = table.Column<int>(type: "int", nullable: false),
                     CompetitorCompanyId = table.Column<int>(type: "int", nullable: true),
                     SearchEngineId = table.Column<int>(type: "int", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     IncludeTerms = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ExcludeTerms = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 695, DateTimeKind.Utc).AddTicks(8942)),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 948, DateTimeKind.Utc).AddTicks(9324)),
                     DateRemoved = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -171,7 +172,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     CompanyId = table.Column<int>(type: "int", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false),
                     PrimaryCompanyId = table.Column<int>(type: "int", nullable: true),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(3563)),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 950, DateTimeKind.Utc).AddTicks(7954)),
                     RelationshipType = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     KeyTerms = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     DateRemoved = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -208,8 +209,9 @@ namespace InfoTrack.Infrastructure.Migrations
                     QueryId = table.Column<int>(type: "int", nullable: false),
                     HighestRank = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     Top100Count = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    SearchedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 18, 46, 24, 696, DateTimeKind.Utc).AddTicks(3584)),
-                    ResultTypeCode = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Seed")
+                    SearchedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 4, 9, 23, 36, 43, 949, DateTimeKind.Utc).AddTicks(7827)),
+                    ResultTypeCode = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Seed"),
+                    QueryId1 = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -220,6 +222,11 @@ namespace InfoTrack.Infrastructure.Migrations
                         principalTable: "Queries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_SearchResults_Queries_QueryId1",
+                        column: x => x.QueryId1,
+                        principalTable: "Queries",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -280,8 +287,8 @@ namespace InfoTrack.Infrastructure.Migrations
                 columns: new[] { "Id", "CreatedOn", "Email", "FirstName", "LastModifiedOn", "LastName", "SelectedTheme" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6194), "Lys.Seholm@Gmail.com", "Alyssa", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6194), "Seholm", null },
-                    { 2, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6197), "Batman@DefinitelyNotBruceWayne.com", "Bruce", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6197), "Wayne", null }
+                    { 1, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(691), "Lys.Seholm@Gmail.com", "Alyssa", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(692), "Seholm", null },
+                    { 2, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(694), "Batman@DefinitelyNotBruceWayne.com", "Bruce", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(694), "Wayne", null }
                 });
 
             migrationBuilder.InsertData(
@@ -289,12 +296,12 @@ namespace InfoTrack.Infrastructure.Migrations
                 columns: new[] { "Id", "BaseUrl", "CreatedOn", "DateRemoved", "IncludeTerms", "Name", "PrimaryCompanyId", "RelationshipType", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "https://www.infotrack.com/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6275), null, "[\"efiling\",\"integration\"]", "InfoTrack", null, "Primary", 1 },
-                    { 4, "https://www.dogsrustitusville.com/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6281), null, "[\"happy\",\"humans\"]", "Dogs R' Us", null, "Primary", 2 },
-                    { 2, "https://catsrusrescue.org/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6277), null, "[\"unlimited\",\"food\"]", "Cats R' Us", 1, "Sister", 1 },
-                    { 3, "https://batman.fandom.com/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6279), null, "[\"batman\",\"unmasked\"]", "Wayne Enterprises", 1, "Competitor", 1 },
-                    { 5, "https://dailyplanetdc.com/planet-profiles/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6282), null, "[\"superman\",\"lois\"]", "The Daily Planet", 4, "Competitor", 2 },
-                    { 6, "https://www.clio.com/", new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6283), null, "[\"efiling\"]", "Clio", 1, "Parent", 1 }
+                    { 1, "https://www.infotrack.com/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(798), null, "[\"efiling\",\"integration\"]", "InfoTrack", null, "Primary", 1 },
+                    { 4, "https://www.dogsrustitusville.com/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(810), null, "[\"happy\",\"humans\"]", "Dogs R' Us", null, "Primary", 2 },
+                    { 2, "https://catsrusrescue.org/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(803), null, "[\"unlimited\",\"food\"]", "Cats R' Us", 1, "Sister", 1 },
+                    { 3, "https://batman.fandom.com/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(808), null, "[\"batman\",\"unmasked\"]", "Wayne Enterprises", 1, "Competitor", 1 },
+                    { 5, "https://dailyplanetdc.com/planet-profiles/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(812), null, "[\"superman\",\"lois\"]", "The Daily Planet", 4, "Competitor", 2 },
+                    { 6, "https://www.clio.com/", new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(813), null, "[\"efiling\"]", "Clio", 1, "Parent", 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -302,12 +309,12 @@ namespace InfoTrack.Infrastructure.Migrations
                 columns: new[] { "CompanyId", "UserId", "DateCreated", "DateRemoved", "Id", "KeyTerms", "PrimaryCompanyId", "RelationshipType" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6301), null, 1, "", null, "Primary" },
-                    { 4, 1, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6305), null, 3, "dogs", 1, "Competitor" },
-                    { 2, 1, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6304), null, 2, "cats", 1, "Sister" },
-                    { 5, 1, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6309), null, 6, "", 1, "Parent" },
-                    { 3, 2, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6306), null, 4, "batman", null, "Primary" },
-                    { 5, 2, new DateTime(2024, 4, 9, 18, 46, 24, 697, DateTimeKind.Utc).AddTicks(6308), null, 5, "superman, lois", 4, "Competitor" }
+                    { 1, 1, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(834), null, 1, "", null, "Primary" },
+                    { 4, 1, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(838), null, 3, "dogs", 1, "Competitor" },
+                    { 2, 1, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(836), null, 2, "cats", 1, "Sister" },
+                    { 5, 1, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(842), null, 6, "", 1, "Parent" },
+                    { 3, 2, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(839), null, 4, "batman", null, "Primary" },
+                    { 5, 2, new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(841), null, 5, "superman, lois", 4, "Competitor" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -349,6 +356,11 @@ namespace InfoTrack.Infrastructure.Migrations
                 name: "IX_SearchResults_QueryId",
                 table: "SearchResults",
                 column: "QueryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SearchResults_QueryId1",
+                table: "SearchResults",
+                column: "QueryId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserCompanies_CompanyId",

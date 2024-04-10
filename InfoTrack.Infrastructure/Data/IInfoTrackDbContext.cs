@@ -17,6 +17,7 @@ namespace InfoTrack.Infrastructure.Data
         DbSet<SearchResults> SearchResults { get; }
         DbSet<SearchResultItem> SearchResultItems { get; }
         DbSet<SearchResultType> SearchResultTypes { get; }
+        public DbSet<SearchEngines> SearchEngines { get; set; }
 
         //EntityEntry Add(object entity);
         //EntityEntry Remove(object entity);

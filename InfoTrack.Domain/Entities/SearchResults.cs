@@ -10,7 +10,7 @@ namespace InfoTrack.Domain.Entities
         public DateTime SearchedOn { get; set; }
         public required string ResultTypeCode { get; set; }
 
-        public required Query Query { get; set; }
-        public required IEnumerable<SearchResultItem> Items { get; set; }
+        public Query? Query { get; set; }
+        public IEnumerable<SearchResultItem>? Items { get; set; }
     }
 }

@@ -5,11 +5,11 @@ using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Infrastructure.Services.Search
 {
-    public class GoogleSearchService(HttpClient httpClient) : ISearchService
+    public class GoogleSearchService(HttpClient httpClient) //: ISearchService
     {
         private readonly HttpClient _httpClient = httpClient;
 
-        public async Task<SearchResults?> PerformSearchAsync(string query)
+        public async Task<SearchResults?> PerformSearch(string query)
         {
             // Implement calling Google search and saving the raw results
             // Ensure the query is URL-encoded

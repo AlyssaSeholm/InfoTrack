@@ -16,14 +16,9 @@ namespace InfoTrack.Application.MediatR.Commands
     /// <param name="DeletedCompanyName">Will be empty if the company lookup failed to return a company entity.</param>
     public record DeleteCompanyByIdResponse(string DeletedCompanyName);
 
-    public class DeleteCompanyByIdHandler : IRequestHandler<DeleteCompanyByIdRequest, DeleteCompanyByIdResponse>
+    public class DeleteCompanyByIdHandler(ICompanyService companyService) : IRequestHandler<DeleteCompanyByIdRequest, DeleteCompanyByIdResponse>
     {
-        private readonly ICompanyService _companyService;
-
-        public DeleteCompanyByIdHandler(ICompanyService companyService)
-        {
-            _companyService = companyService;
-        }
+        private readonly ICompanyService _companyService = companyService;
 
         public async Task<DeleteCompanyByIdResponse> Handle(DeleteCompanyByIdRequest request, CancellationToken cancellationToken)
         {

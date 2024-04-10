@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using InfoTrack.Domain.Entities;
 
 namespace InfoTrack.Domain.Repositories.Interfaces
 {
-    internal interface IQueryRepository
+    public interface IQueryRepository : IRepository<Query>
     {
     }
 }

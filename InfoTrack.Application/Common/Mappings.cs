@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.DTOs;
-using InfoTrack.Application.Interfaces;
-using InfoTrack.Application.DTOs;
 using InfoTrack.Domain.Entities;
-using InfoTrack.Infrastructure.Services;
 
 namespace InfoTrack.Application.Common.Mappings
 {
@@ -13,8 +10,16 @@ namespace InfoTrack.Application.Common.Mappings
         {
             CreateMap<Company, CompanyDto>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()));
+
             CreateMap<User, UserDto>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()));
+
+            CreateMap<Query, QueryDto>();
+
+            CreateMap<SearchResults, SearchResultsDto>();
+
+            CreateMap<SearchResultItem, SearchResultsItemDto>();
+
             //.ForMember(dest => dest.Id, opt => opt.MapFrom(src => encryptionService.Encrypt(src.Id.ToString())))
             //.ReverseMap();
             //.ForMember(dest => dest.Id, opt => opt.MapFrom(src => int.Parse(encryptionService.Decrypt(src.Id))));

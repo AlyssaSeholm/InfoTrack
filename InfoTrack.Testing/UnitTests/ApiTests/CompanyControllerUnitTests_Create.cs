@@ -24,8 +24,8 @@ namespace InfoTrack.Testing.UnitTests.ApiTests
         [Theory]
         [InlineData(1, "Test Company A", "http://www.testcompanya.com", "Primary", null)]
         [InlineData(0, "Test Company B", "http://www.testcompanyb.com", "Competitor", 1)]
-        [InlineData(1, "", "http://www.emptyname.com", "Sister", 1)] // Assuming your validation allows empty names, adjust as needed
-        [InlineData(2, "Test Company C", ", \"\", 1", "Primary", null)] // Assuming your validation allows empty URLs, adjust as needed
+        [InlineData(1, "", "http://www.emptyname.com", "Sister", 1)] 
+        [InlineData(2, "Test Company C", ", \"\", 1", "Primary", null)] 
         public async Task CreateCompany_VariousInputs(int userId, string companyName, string websiteUrl, string relationshipType, int? primaryCompId)
         {
             // Arrange
