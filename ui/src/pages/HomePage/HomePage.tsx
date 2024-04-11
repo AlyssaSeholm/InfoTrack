@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 // import { HomePageWrapper } from './HomePage.styled';
 
 interface HomePageProps {}
