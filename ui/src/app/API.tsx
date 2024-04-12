@@ -68,3 +68,36 @@ export const getAPI = async (url: string, data: any): Promise<any> =>{
         // }
     })
 }
+
+const API_PATH  = Object.freeze({
+    Company: {
+        Get_ById: `${getConfig.baseUrl}/api/Company/ById`,
+        Get_ByName: `${getConfig.baseUrl}/api/Company/ByName`,
+        GetList_ByUserId: `${getConfig.baseUrl}/api/Company/AllByUserId`,
+        GetAll: `${getConfig.baseUrl}/api/Company/All`,
+        Post: `${getConfig.baseUrl}/api/Company`,
+        Put: `${getConfig.baseUrl}/api/Company`,
+        Delete: `${getConfig.baseUrl}/api/Company`
+    },
+    User: {
+        Get_ById: `${getConfig.baseUrl}/api/User/ById`,
+        Get_ByEmail: `${getConfig.baseUrl}/api/User/ByEmail`,
+        Post: `${getConfig.baseUrl}/api/User`,
+        Put: `${getConfig.baseUrl}/api/User`,
+        Delete: `${getConfig.baseUrl}/api/User`
+    },
+    Query: {
+        Get_ById: `${getConfig.baseUrl}/api/Query/ById`,
+        GetList_ByUserId: `${getConfig.baseUrl}/api/Query/AllByUserId`, //TODO: Create this to Query
+        Post: `${getConfig.baseUrl}/api/Query`,
+        Put: `${getConfig.baseUrl}/api/Query`,
+        Delete: `${getConfig.baseUrl}/api/Query`
+    },
+    Search: {
+        GetList_ByQueryId: `${getConfig.baseUrl}/api/Search/ByQueryId`,
+        GetList_ByUserId: `${getConfig.baseUrl}/api/Search/ByUserId`, 
+        Post: `${getConfig.baseUrl}/api/Search/ByQueryId`, //create/execute a new search
+        Delete: `${getConfig.baseUrl}/api/Query`//TODO: Allow user to delete a search?
+    },
+});
+export default API_PATH;

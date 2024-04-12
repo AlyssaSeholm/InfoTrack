@@ -72,7 +72,7 @@ namespace InfoTrack.API.Controllers
 
             var response = await _mediator.Send(request);
 
-            if (response.User == null)
+            if (response.User == null || response.User.Id == "0"  )
             {
                 return new NotFoundObjectResult($"User with email \"{request.Email}\" not found.");
             }

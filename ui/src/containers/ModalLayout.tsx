@@ -10,11 +10,12 @@ function ModalLayout() {
 
 
     const {isOpen, bodyType, size, extraObject, title} = useSelector((state: RootState) => state.modal)
-    const state = useSelector((state: RootState) => state);
+    // const state = useSelector((state: RootState) => state);
     const dispatch = useDispatch()
 
     const close = () => { //const close = (e: ModalState) => {
-        dispatch(closeModal(state.modal))
+        // dispatch(closeModal(state.modal))
+        console.log("close"); //todo
     }
 
     const getModalBody = () => {

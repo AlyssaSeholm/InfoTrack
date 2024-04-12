@@ -3,13 +3,17 @@ import { HeaderReducer } from '../features/common/headerSlice'
 import { ModalReducer } from '../features/common/modalSlice'
 import { RightDrawerReducer } from '../features/common/rightDrawerSlice'
 import { ThemeReducer } from '../features/theme/themeSlice'
+import CompanyReducer from '../features/company/companySlice'
+import UserReducer from '../features/user/userSlice'
 
 const store = configureStore({
   reducer: {
     header : HeaderReducer,
     rightDrawer : RightDrawerReducer,
     modal : ModalReducer,
-    theme: ThemeReducer
+    theme: ThemeReducer,
+    company: CompanyReducer,
+    user: UserReducer,
   },
 })
 

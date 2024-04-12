@@ -27,15 +27,21 @@ function InputText({
 
     const updateInputValue = (val: SetStateAction<string | null>) => {
         setValue(val)
-        if(updateFormValue !== null) { updateFormValue({updateType, value : val}); }
+        if (updateFormValue !== null) { updateFormValue({ updateType, value: val }); }
     }
 
-    return(
-        <div className={`form-control w-full ${containerStyle}`}>
+    return (
+        <div className={`form-control w-full ${containerStyle} focus-within:px-2 px-3`}>
             <label className="label">
                 <span className={"label-text text-base-content " + labelStyle}>{labelTitle}</span>
             </label>
-            <input type={type || "text"} value={value || ""} placeholder={placeholder || ""} onChange={(e) => updateInputValue(e.target.value)} className={"input input-" + inputStyle + " input-bordered w-full "} />
+            <input
+                type={type || "text"}
+                value={value || ""}
+                placeholder={placeholder || ""}
+                onChange={(e) => updateInputValue(e.target.value)}
+                className={"input w-full focus:input-accent input-primary input-bordered  "}
+            />
         </div>
     )
 }

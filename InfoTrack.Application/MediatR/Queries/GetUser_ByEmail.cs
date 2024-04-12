@@ -13,7 +13,7 @@ namespace InfoTrack.Application.MediatR.Queries
         public required string Email { get; set; }
     }
 
-    public record GetUserByEmailResponse(UserDto User);
+    public record GetUserByEmailResponse(UserDto? User);
 
     public class GetUserByEmailHandler(IUserService userService, IMapper mapper) : IRequestHandler<GetUserByEmailRequest, GetUserByEmailResponse>
     {
@@ -24,9 +24,9 @@ namespace InfoTrack.Application.MediatR.Queries
         {
             var user = await _userService.GetUserByEmail(request.Email, cancellationToken);
 
-            if (user == null)
+            if (user == null ||  user.Id == 0)
             {
-                return new GetUserByEmailResponse(UserDto.CreateEmptyWithMessage(ResponseMessages.StatusType.NotFound));
+                return new GetUserByEmailResponse(null); // UserDto.CreateEmptyWithMessage(ResponseMessages.StatusType.NotFound));
             }
 
             var response = new GetUserByEmailResponse(_mapper.Map<UserDto>(user));

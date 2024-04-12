@@ -4,12 +4,14 @@ import ShareIcon  from '@heroicons/react/24/outline/ShareIcon'
 import EnvelopeIcon  from '@heroicons/react/24/outline/EnvelopeIcon'
 import EllipsisVerticalIcon  from '@heroicons/react/24/outline/EllipsisVerticalIcon'
 import ArrowPathIcon  from '@heroicons/react/24/outline/ArrowPathIcon'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Datepicker from "react-tailwindcss-datepicker"; 
 import { getAPI } from "../../../app/API"
 import { RootState } from "../../../app/store"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import CompletedThemes from "../../theme/themeColors"
+import { Company } from "../../company/types"
+import { fetch_Company_ById } from "../../company/companySlice"
 
 
 
@@ -29,23 +31,66 @@ function DashboardTopBar({updateDashboardPeriod}: {updateDashboardPeriod: Functi
             endDate: new Date() 
         }); 
         const currentTheme = useSelector((state: RootState) => state.theme.currentTheme);
+
+        //#region Company Testing start
         
+        
+        const { selectedCompany, selectedCompanyId, isCompanyLoading, companyError, companyList } = useSelector((state: RootState) => ({
+            selectedCompanyId: state.company.selectedCompanyId,
+            selectedCompany: state.company.companies.find(c => c.id === state.company.selectedCompanyId),
+            companyList: state.company.companies,
+            isCompanyLoading: state.company.isLoading,
+            companyError: state.company.error,
+        }));
+        
+        const companyId: string ="2";
         const handleDatePickerValueChange = (newValue: any) => {
-            console.debug("datePickerNewValue:", newValue); 
+            console.log("datePickerNewValue:", newValue); 
             setDateValue(newValue); 
             updateDashboardPeriod(newValue)
         } 
 
         const updateSelectBoxValue = (value: any) => {
-            console.debug("selectBoxNewValue:", value); 
+            console.log("selectBoxNewValue:", value); 
             // Add your implementation here
         }
 
+        var displayCompanySliceStatus = () => {
+            var firstCompany = companyList[0] ?? null;
+            if (isCompanyLoading) return <div>Loading...</div>;
+            if (companyError) return <div>Error: {companyError}</div>;
+            if (!companyList || companyList.length === 0) return <div>No companies found.</div>;
+            if (firstCompany) return <div>Id: {firstCompany.id?.toString()}  NAME: {firstCompany.name} </div>;
+            if (!selectedCompany) return <div>Company not found.</div>;
+            if (!selectedCompanyId) return <div>CompanyId not set.</div>;
+        }
+
+        const handleGetCompany = () => {
+                dispatch(fetch_Company_ById(companyId) as any);
+                // getAPI("api/Company/ById", "2").then((response) => {
+                //     console.log("response", response);
+                // });
+        }
+        const dispatch = useDispatch();
+        // useEffect(() => {
+        //     dispatch(fetch_Company_ById(companyId) as any);
+        // }, [dispatch, companyId]);
+
+        // const handleUpdateCompany = () => {
+        //     const updatedCompany: Company = { ...selectedCompany, name };
+        //     dispatch(updateCompany(updatedCompany));
+        //     // getAPI("api/Company/ById", "2").then((response) => {
+        //     //     console.log("response", response);
+        //     // });
+        // }
+
+        //#endregion Company Testing end
         const testCall = () => {
-            console.log("test call");
-            getAPI("api/Company/ById", "2").then((response) => {
-                console.log("response", response);
-            });
+            dispatch(fetch_Company_ById(companyId) as any);
+            // console.log("test call");
+            // getAPI("api/Company/ById", "2").then((response) => {
+            //     console.log("response", response);
+            // });
         }
 
     return(
@@ -73,7 +118,8 @@ function DashboardTopBar({updateDashboardPeriod}: {updateDashboardPeriod: Functi
                 updateType={undefined} />
             </div>
             <div className="text-right ">
-                <button className="btn btn-ghost btn-sm normal-case" onClick={testCall}><ArrowPathIcon className="w-4 mr-2"/>Refresh Data</button>
+                {displayCompanySliceStatus()}
+                <button className="btn btn-ghost btn-sm normal-case" onClick={testCall}><ArrowPathIcon className="w-4 mr-2"/>{ isCompanyLoading ? "Loading.." : "Refresh Data"}</button>
                 <button className="btn btn-ghost btn-sm normal-case  ml-2"><ShareIcon className="w-4 mr-2"/>Share</button>
 
                 <div className="dropdown dropdown-bottom dropdown-end  ml-2">
