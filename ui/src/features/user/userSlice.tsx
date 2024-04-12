@@ -109,7 +109,7 @@ export const userSlice = createSlice({
                 state.error = action.error.message || 'Failed to fetch user';
             })
             //#endregion Fetch By Id
-            //#region Fetch By Name
+            //#region Fetch By Email
             .addCase(fetch_User_ByEmail.pending, (state) => { setStateToLoading(state); })
             .addCase(fetch_User_ByEmail.fulfilled, (state, action: PayloadAction<UserResponse>) => {
                 state.isLoading = false;        
@@ -126,7 +126,7 @@ export const userSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch user by email';
             })
-            //#endregion Fetch By Name
+            //#endregion Fetch By Email
             //#region Create User
             .addCase(create_User.pending, (state) => { setStateToLoading(state); })
             .addCase(create_User.fulfilled, (state, action: PayloadAction<UserResponse>) => {

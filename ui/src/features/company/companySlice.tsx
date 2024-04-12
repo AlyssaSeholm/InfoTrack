@@ -26,7 +26,8 @@ interface CompanyResponse {
     meta: any;
     company: Company;
     type: string;
-}interface CompanyListResponse {
+}
+interface CompanyListResponse {
     meta: any;
     companies: Company[];
     type: string;
@@ -36,7 +37,7 @@ interface CompanyResponse {
 // #region Thunks: These are the async actions that will be dispatched based on the request's outcome
 export const fetch_Company_ById = createAsyncThunk('company/fetchById', async (id: string, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.Get_ById}/${id}`);
+        console.log(`${API_PATH.Company.Get_ById}/${id}`);
         const response = await axios.get(`${API_PATH.Company.Get_ById}/${id}`);
         return response.data as CompanyResponse;
     } catch (error) {
@@ -46,7 +47,7 @@ export const fetch_Company_ById = createAsyncThunk('company/fetchById', async (i
 
 export const fetch_Company_ByName = createAsyncThunk('company/fetchByName', async (name: string, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.Get_ByName}/${name}`);
+        console.log(`${API_PATH.Company.Get_ByName}/${name}`);
         const response = await axios.get(`${API_PATH.Company.Get_ByName}/${name}`);
         return response.data as CompanyResponse;
     } catch (error) {
@@ -56,7 +57,7 @@ export const fetch_Company_ByName = createAsyncThunk('company/fetchByName', asyn
 
 export const fetch_CompanyList_ByUserId = createAsyncThunk('company/fetchAllByUserId', async (userId: string, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.GetList_ByUserId}/${userId}`);
+        console.log(`${API_PATH.Company.GetList_ByUserId}/${userId}`);
         const response = await axios.get(`${API_PATH.Company.GetList_ByUserId}/${userId}`);
         return response.data as CompanyListResponse;
     } catch (error) {
@@ -66,7 +67,7 @@ export const fetch_CompanyList_ByUserId = createAsyncThunk('company/fetchAllByUs
 
 export const fetch_CompanyList_All = createAsyncThunk('company/fetchAll', async (_, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.GetAll}`);
+        console.log(`${API_PATH.Company.GetAll}`);
         const response = await axios.get(API_PATH.Company.GetAll);
         return response.data as CompanyListResponse;
     } catch (error) {
@@ -76,7 +77,7 @@ export const fetch_CompanyList_All = createAsyncThunk('company/fetchAll', async 
 
 export const create_Company = createAsyncThunk('company/create', async (companyData: Company, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.Post}`);
+        console.log(`${API_PATH.Company.Post}`);
         console.dir(companyData);
         const response = await axios.post(API_PATH.Company.Post, companyData);
         return response.data as CompanyResponse;
@@ -87,7 +88,7 @@ export const create_Company = createAsyncThunk('company/create', async (companyD
 
 export const update_Company = createAsyncThunk('company/update', async (companyData: Company, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.Put}/${companyData.id}`);
+        console.log(`${API_PATH.Company.Put}/${companyData.id}`);
         console.dir(companyData);
         const response = await axios.put(`${API_PATH.Company.Put}/${companyData.id}`, companyData);
         return response.data as CompanyResponse;
@@ -98,7 +99,7 @@ export const update_Company = createAsyncThunk('company/update', async (companyD
 
 export const delete_Company = createAsyncThunk('company/delete', async (id: string, { rejectWithValue }) => {
     try {
-        console.log(`{$API_PATH.Company.Delete}/${id}`);
+        console.log(`${API_PATH.Company.Delete}/${id}`);
         await axios.delete(`${API_PATH.Company.Delete}/${id}`);
         return id;
     } catch (error) {
@@ -136,7 +137,7 @@ export const companySlice = createSlice({
                 } else {
                     // Add the new company to the array
                     console.log("Adding new company...");
-                    state.companies.push(action.payload.company);
+                    state.companies.unshift(action.payload.company);
                 }
 
                 state.error = null;
@@ -159,7 +160,7 @@ export const companySlice = createSlice({
                 } else {
                     // Add the new company to the array
                     console.log("Adding new company...");
-                    state.companies.push(action.payload.company);
+                    state.companies.unshift(action.payload.company);
                 }
 
                 state.error = null;
@@ -197,7 +198,7 @@ export const companySlice = createSlice({
             .addCase(create_Company.pending, (state) => { setStateToLoading(state); })
             .addCase(create_Company.fulfilled, (state, action: PayloadAction<CompanyResponse>) => {
                 state.isLoading = false;
-                state.companies.push(action.payload.company);
+                state.companies.unshift(action.payload.company);
                 state.error = null;
             })
             .addCase(create_Company.rejected, (state, action) => {
@@ -239,8 +240,11 @@ export const companySlice = createSlice({
 
 });
 
-export const getCompanies = (state: RootState) => state.company.companies;
-export const getCompanyById = (state: RootState, id: string) => state.company.companies.find(company => company.id === id);
+export const selectCompanies = (state: RootState) => state.company.companies;
+export const selectCompanyById = (state: RootState, id: string) => state.company.companies.find(company => company.id === id);
+export const selectCompanyByName = (state: RootState, name: string) => state.company.companies.find(company => company.name === name);
+export const selectCompanyLoading = (state: RootState) => state.company.isLoading;
+export const selectCompanyError = (state: RootState) => state.company.error;
 
 // export default companySlice.reducer;
 const CompanyReducer = companySlice.reducer

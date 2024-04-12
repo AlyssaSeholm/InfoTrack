@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import TitleCard from '../../../components/Cards/TitleCard';
+import LineChartComponent from '../../charts/components/LineChart';
 
 ChartJS.register(
   CategoryScale,
@@ -52,8 +53,12 @@ function LineChart(){
   
 
     return(
-      <TitleCard title={"Montly Active Users (in K)"}>
-          <Line data={data} options={options}/>
+      // <TitleCard title={"Montly Active Users (in K)"}>
+      //     <Line data={data} options={options}/>
+      // </TitleCard>
+
+      <TitleCard title={"Some Data"}>
+          <LineChartComponent />
       </TitleCard>
     )
 }
