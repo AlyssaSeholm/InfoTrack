@@ -1,5 +1,5 @@
 import TemplatePointers from "./components/TemplatePointers"
-import logo from "../../assets/images/images"
+import catalogLogo from "../../assets/images/images"
 
 
 function LandingIntro() {

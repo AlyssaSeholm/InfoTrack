@@ -8,6 +8,8 @@
 //     { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' },
 //   ];
 
-const logo = {id: 1, src: '../../assets/images/logo.png', title: 'logo', description: 'bar'};
+const catalogLogo = {id: 1, src: '../../assets/images/logo.png', title: 'logo', description: 'Cat-A-Log'};
+const loadingAnimation = {id: 1, src: '../../assets/images/loading-mouse.gif', title: 'loading', description: 'lading animation'};
   
-export default logo;
+export default catalogLogo;
+export {loadingAnimation};

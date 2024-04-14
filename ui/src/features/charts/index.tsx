@@ -27,13 +27,13 @@ function Charts(){
         <Datepicker 
                 containerClassName="w-72" 
                 value={dateValue} 
-                theme={"light"}
+                // theme={"light"}
                 inputClassName="input input-bordered w-72" 
                 popoverDirection={"down"}
                 toggleClassName="invisible"
                 onChange={handleDatePickerValueChange} 
                 showShortcuts={true} 
-                primaryColor={"white"} 
+                // primaryColor={"white"} 
             /> 
         {/** ---------------------- Different charts ------------------------- */}
             <div className="grid lg:grid-cols-2 mt-0 grid-cols-1 gap-6">

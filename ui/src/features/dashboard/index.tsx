@@ -10,10 +10,17 @@ import UserChannels from './components/UserChannels'
 import LineChart from './components/LineChart'
 import BarChart from './components/BarChart'
 import DashboardTopBar from './components/DashboardTopBar'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {showNotification} from '../common/headerSlice'
 import DoughnutChart from './components/DoughnutChart'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Loading from '../common/components/Loading'
+import { fetchInitialData } from '../../app/dataFetchers'
+import { AppDispatch } from '../../app/store'
+import { selectUserLoading } from '../user/userSlice'
+import { selectCompanyLoading } from '../company/companySlice'
+import { selectQueryLoading } from '../queries/querySlice'
+import Companies from './components/Companies'
 
 const statsData = [
     {title : "New Users", value : "34.7k", icon : <UserGroupIcon className='w-8 h-8'/>, description : "↗︎ 2300 (22%)"},
@@ -26,51 +33,82 @@ const statsData = [
 
 function Dashboard(){
 
-    const dispatch = useDispatch()
- 
+    const dispatch: AppDispatch = useDispatch();
+    const user_loading = useSelector(selectUserLoading);
+    const company_loading = useSelector(selectCompanyLoading);
+    const query_loading = useSelector(selectQueryLoading);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await dispatch(fetchInitialData());
+            } catch (error) {
+                // Handle error
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const updateDashboardPeriod = (newRange: { startDate: any; endDate: any }) => {
         // Dashboard range changed, write code to refresh your values
-        dispatch(showNotification({message : `Period updated to ${newRange.startDate} to ${newRange.endDate}`, status : 1}))
+        dispatch(showNotification({ message: `Period updated to ${newRange.startDate} to ${newRange.endDate}`, status: 1 }));
+    };
+
+    const renderDashboard = () => {
+
+        return (
+            <>
+            {/** ---------------------- Select Period Content ------------------------- */}
+            <DashboardTopBar updateDashboardPeriod={updateDashboardPeriod}/>
+        
+            {/** ---------------------- Different stats content 1 ------------------------- */}
+                {/* <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6">
+                    {
+                        statsData.map((d, k) => {
+                            return (
+                                <DashboardStats key={k} {...d} colorIndex={k}/>
+                            )
+                        })
+                    }
+                </div> */}
+
+            {/** ---------------------- Different charts ------------------------- */}
+                <div className="grid  mt-4 grid-cols-1 gap-6">
+                    <Companies></Companies>
+                    {/* <LineChart /> */}
+                    {/* <BarChart /> */}
+                </div>
+                
+            {/** ---------------------- Different stats content 2 ------------------------- */}
+            
+                <div className="grid lg:grid-cols-2 mt-10 grid-cols-1 gap-6">
+                    <AmountStats />
+                    <PageStats />
+                </div>
+
+            {/** ---------------------- User source channels table  ------------------------- */}
+            
+                <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
+                    <UserChannels />
+                    <DoughnutChart />
+                </div>
+            </>
+        )
+    };
+
+    const isLoading = () : boolean => {
+        if (user_loading || company_loading || query_loading){
+            return true;
+        }
+        return false;
     }
 
     return(
         <>
-        {/** ---------------------- Select Period Content ------------------------- */}
-            <DashboardTopBar updateDashboardPeriod={updateDashboardPeriod}/>
+            {isLoading() && <Loading />}
+            {!isLoading() && renderDashboard()}
         
-        {/** ---------------------- Different stats content 1 ------------------------- */}
-            <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6">
-                {
-                    statsData.map((d, k) => {
-                        return (
-                            <DashboardStats key={k} {...d} colorIndex={k}/>
-                        )
-                    })
-                }
-            </div>
-
-
-
-        {/** ---------------------- Different charts ------------------------- */}
-            <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
-                <LineChart />
-                <BarChart />
-            </div>
-            
-        {/** ---------------------- Different stats content 2 ------------------------- */}
-        
-            <div className="grid lg:grid-cols-2 mt-10 grid-cols-1 gap-6">
-                <AmountStats />
-                <PageStats />
-            </div>
-
-        {/** ---------------------- User source channels table  ------------------------- */}
-        
-            <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
-                <UserChannels />
-                <DoughnutChart />
-            </div>
         </>
     )
 }

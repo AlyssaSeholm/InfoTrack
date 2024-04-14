@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 // import { HeaderState } from "../features/common/headerSlice"
 import { RootState } from "../app/store"
 import Footer from "../components/Footer/Footer"
+import Loading from "../features/common/components/Loading"
 
 const Page404 = lazy(() => import('../pages/protected/404'))
 
@@ -41,7 +42,7 @@ function PageContent(){
         <div className="drawer-content flex flex-col ">
 
             <Header/>
-            <main className="flex-1 overflow-y-auto md:pt-4 pt-4 px-6  bg-base-200" ref={mainContentRef}>
+            <main className="flex-1 overflow-y-auto md:pt-4 pt-4 px-6  bg-base-300" ref={mainContentRef}>
                 <Suspense fallback={<LoadingContent />}>
                         <Routes>
                             {

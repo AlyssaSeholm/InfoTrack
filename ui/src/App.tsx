@@ -1,3 +1,5 @@
+
+// import './utilities/fontawesome.js'
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { themeChange } from 'theme-change'
@@ -8,7 +10,6 @@ import initializeApp from './app/init';
 // import SiteLayout from './layout/SiteLayout/SiteLayout';
 import './App.css'
 import './assets/css/global.css'
-
 
 import { lazy, useEffect } from 'react'
 const Layout = lazy(() => import('./containers/Layout'))

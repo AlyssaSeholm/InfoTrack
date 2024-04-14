@@ -5,6 +5,7 @@ import store from './src/app/store.js'
 import './index.css'
 import { Provider } from 'react-redux'
 import LoadingContent from './src/containers/LoadingContent.js';
+import Loading from './src/features/common/components/Loading.js'
 
 const rootElement = document.getElementById('root');
 if (rootElement) {

@@ -35,6 +35,7 @@
 //   }
   
 {
+  // "extends": "expo/tsconfig.base",
     "compilerOptions": {
       "target": "ES2020",
       "useDefineForClassFields": true,

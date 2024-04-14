@@ -1,0 +1,39 @@
+.text-dropdown-btn {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.5rem;
+
+  > span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    > svg {
+      margin-top: 5px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Get the menu items to display over a modal window */
+div[data-floating-ui-portal] div[role="menu"]  {
+  z-index: 9999;
+  width: auto;
+  background-color: pink;
+
+  > button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+  }
+  > button.disabled {
+    pointer-events: none;
+    font-weight: 200;
+    font-style: italic;
+    cursor: not-allowed;
+  }
+}

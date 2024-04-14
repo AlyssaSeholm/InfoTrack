@@ -9,6 +9,7 @@ import DocumentIcon from '@heroicons/react/24/outline/DocumentIcon'
 import ExclamationTriangleIcon from '@heroicons/react/24/outline/ExclamationTriangleIcon'
 import CalendarDaysIcon from '@heroicons/react/24/outline/CalendarDaysIcon'
 import ArrowRightOnRectangleIcon from '@heroicons/react/24/outline/ArrowRightOnRectangleIcon'
+import LoadingIcon from '@heroicons/react/24/outline/LoadingIcon'
 import UserIcon from '@heroicons/react/24/outline/UserIcon'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import BoltIcon from '@heroicons/react/24/outline/BoltIcon'
@@ -18,6 +19,8 @@ import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightToBracket, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 const iconClasses = `h-6 w-6`
 const submenuIconClasses = `h-5 w-5`
@@ -52,13 +55,19 @@ const routes = [
     submenu : [
       {
         path: '/login',
-        icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
+        icon: <FontAwesomeIcon icon={faArrowRightToBracket} />,
+        // icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
         name: 'Login',
       },
       {
         path: '/register', //url
         icon: <UserIcon className={submenuIconClasses}/>, // icon component
         name: 'Register', // name that appear in Sidebar
+      },
+      {
+        path: '/app/loading', //url
+        icon: <FontAwesomeIcon icon={faSpinner} />,
+        name: 'Loading', // name that appear in Sidebar
       },
       {
         path: '/forgot-password',

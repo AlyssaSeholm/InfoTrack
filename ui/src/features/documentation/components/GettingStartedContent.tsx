@@ -2,19 +2,21 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Subtitle from '../../../components/Typography/Subtitle'
 import { setPageTitle } from '../../common/headerSlice'
+import { loadingAnimation } from '../../../assets/images/images'
+import Loading from '../../common/components/Loading'
 
 function GettingStartedContent(){
 
     const dispatch = useDispatch()
 
-
+    function getImageUrl(name:string, ext:string) {
+      return new URL(`../../assets/images/${name}.${ext}`, import.meta.url).href
+    }
 
     return(
         <>
             <article className="prose">
               <h1 className="">Getting Started</h1>
-
-
               {/* Introduction */}
               <h2 className="" id="getstarted1">Introduction</h2>
               <p>A free dashboard template using <span className='font-bold'>Daisy UI</span> and react js. With the help of Dasisy UI, it comes with <span className='font-bold'>fully customizable and themable CSS</span> and power of Tailwind CSS utility classes. We have also added <span className='font-bold'>redux toolkit</span>  and configured it for API calls and state management.</p> 
@@ -159,6 +161,12 @@ function GettingStartedContent(){
                     <li>index.js - Entry point of project</li>
                     <li>package.json - All dependencies and npm scripts</li>
                     <li>tailwind.config.js - Tailwind CSS configuration file, add theme customization and new themes in this file</li>
+                </ul>
+                
+
+              <h4>Credits & Attributions - </h4>
+              <ul className='mt-0'>
+                    <li><a href="https://www.flaticon.com/free-animated-icons/wind-up" title="wind up animated icons">Wind up animated icons created by Freepik - Flaticon</a></li>
                 </ul>
 
 

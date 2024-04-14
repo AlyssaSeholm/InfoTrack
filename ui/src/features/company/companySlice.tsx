@@ -4,6 +4,7 @@ import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Company } from './types.tsx';
 import { RootState } from '../../app/store.tsx';
+import exp from 'constants';
 
 
 interface CompanyState {
@@ -175,6 +176,8 @@ export const companySlice = createSlice({
             .addCase(fetch_CompanyList_ByUserId.fulfilled, (state, action: PayloadAction<CompanyListResponse>) => {
                 state.isLoading = false;
                 state.companies = action.payload.companies;
+                state.selectedCompany = state.companies.find(company => company.primaryCompanyId === null && company.relationshipType === 'Primary') || null;
+                state.selectedCompanyId = state.selectedCompany?.id || null;
                 state.error = null;
             })
             .addCase(fetch_CompanyList_ByUserId.rejected, (state, action) => {
@@ -243,8 +246,10 @@ export const companySlice = createSlice({
 export const selectCompanies = (state: RootState) => state.company.companies;
 export const selectCompanyById = (state: RootState, id: string) => state.company.companies.find(company => company.id === id);
 export const selectCompanyByName = (state: RootState, name: string) => state.company.companies.find(company => company.name === name);
-export const selectCompanyLoading = (state: RootState) => state.company.isLoading;
+export const selectCompanyLoading = (state: RootState) => state?.company?.isLoading ?? false;
 export const selectCompanyError = (state: RootState) => state.company.error;
+export const selectSelectedCompany = (state: RootState) => state.company.selectedCompany;
+export const selectSelectedCompanyId = (state: RootState) => state.company.selectedCompanyId;
 
 // export default companySlice.reducer;
 const CompanyReducer = companySlice.reducer

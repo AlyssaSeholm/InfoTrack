@@ -3,8 +3,11 @@ import ChevronLeftIcon from "@heroicons/react/24/solid/ChevronLeftIcon";
 import ChevronRightIcon from "@heroicons/react/24/solid/ChevronRightIcon";
 import moment from "moment";
 import UTIL from "./util";
+import { Dialog, DialogHeader, DialogBody, DialogFooter, Button } from '@material-tailwind/react';
+import Datepicker, { DateValueType } from "react-tailwindcss-datepicker";
+import '../../assets/css/modal.css';
 
-const THEME_BG: { [key: string]: string } = UTIL.CALENDAR_EVENT_STYLE
+const THEME_BG: { [key: string]: string } = UTIL.CALENDAR_EVENT_STYLE //TODO remove theme
 
 export interface FilteredEvent {
   title: string,
@@ -31,6 +34,7 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
   const [firstDayOfMonth, setFirstDayOfMonth] = useState(moment().startOf('month'))
   const [events, setEvents] = useState([])
   const [currMonth, setCurrMonth] = useState(() => moment(today).format("MMM-yyyy"));
+  const [newEventOpen, toggleNewEventOpen] = useState(false);
 
   useEffect(() => {
     setEvents(calendarEvents)
@@ -99,8 +103,31 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
     return +moment(day).day().toString();//return moment(date).format("D")
   }
 
+  const openEventModal = () => {
+
+    return (
+      <Dialog open={newEventOpen} handler={toggleNewEventOpen} className="w-1/2">
+        <DialogHeader>
+            Add New Event
+          </DialogHeader>
+          <DialogBody>
+            <p>Body</p>
+            {/* <input type="date" /> */}
+            {/* <Datepicker value={null} onChange={function (value: DateValueType, e?: HTMLInputElement | null | undefined): void {
+            throw new Error("Function not implemented.");
+          } }></Datepicker> */}
+          </DialogBody>
+          <DialogFooter>
+            <button className="btn btn-primary">Save</button>
+            <button className="btn btn-outline">Cancel</button>
+          </DialogFooter>
+      </Dialog>
+    )
+  }
+
   return (
     <>
+    {openEventModal()}
       <div className="w-full bg-base-100 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div className="flex  justify-normal gap-2 sm:gap-4">
@@ -121,7 +148,7 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
             /></button>
           </div>
           <div>
-            <button className="btn btn-sm btn-ghost btn-outline normal-case" onClick={addNewEvent}>Add New Event</button>
+            <button className="btn btn-sm btn-ghost btn-outline normal-case" onClick={() => toggleNewEventOpen(!newEventOpen)}>Add New Event</button>
           </div>
 
         </div>

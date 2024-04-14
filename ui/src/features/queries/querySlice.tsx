@@ -193,5 +193,5 @@ export const selectQueryId = (state: any) => state.query.selectedQueryId;
 export const selectQueryList = (state: any) => state.query.queries;
 export const selectQueryById = (state: any, id: string) => state.query.queries.find((query: Query) => query.id === id);
 export const selectQueryName = (state: any) => state.query.name;
-export const selectQueryLoading = (state: any) => state.query.isLoading;
+export const selectQueryLoading = (state: any) => state?.query?.isLoading ?? false;
 export const selectQueryError = (state: any) => state.query.error;

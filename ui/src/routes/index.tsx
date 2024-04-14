@@ -3,6 +3,7 @@ import { lazy } from 'react'
 const Dashboard = lazy(() => import('../pages/protected/Dashboard'))
 const Welcome = lazy(() => import('../pages/protected/Welcome'))
 const Page404 = lazy(() => import('../pages/protected/404'))
+const Loading = lazy(() => import('../pages/protected/Loading'))
 const Blank = lazy(() => import('../pages/protected/Blank'))
 const Charts = lazy(() => import('../pages/protected/Charts'))
 const Calendar = lazy(() => import('../pages/protected/Calendar'))
@@ -63,6 +64,10 @@ const routes = [
     {
         path: '/404',
         component: Page404,
+    },
+    {
+        path: '/loading',
+        component: Loading,
     },
     {
         path: '/blank',
