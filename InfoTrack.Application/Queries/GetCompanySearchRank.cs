@@ -1,13 +1,8 @@
 ﻿using AutoMapper;
-using InfoTrack.Application.Models;
+using InfoTrack.Application.DTOs;
 using InfoTrack.Infrastructure.Data;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfoTrack.Application.Queries
 {
@@ -15,16 +10,11 @@ namespace InfoTrack.Application.Queries
 
     public record GetCompaniesResponse(List<CompanyDto> Companies);
 
-    public class GetCompaniesHandler : IRequestHandler<GetCompaniesRequest, GetCompaniesResponse>
+    public class GetCompaniesHandler(IInfoTrackDbContext context, IMapper mapper) 
+        : IRequestHandler<GetCompaniesRequest, GetCompaniesResponse>
     {
-        private readonly IInfoTrackDbContext _context;
-        private readonly IMapper _mapper;
-
-        public GetCompaniesHandler(IInfoTrackDbContext context, IMapper mapper)
-        {
-            _context = context;
-            _mapper = mapper;
-        }
+        private readonly IInfoTrackDbContext _context = context;
+        private readonly IMapper _mapper = mapper;
 
         public async Task<GetCompaniesResponse> Handle(GetCompaniesRequest request, CancellationToken cancellationToken)
         {

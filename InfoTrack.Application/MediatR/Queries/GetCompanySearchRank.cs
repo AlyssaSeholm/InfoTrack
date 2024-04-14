@@ -1,13 +1,8 @@
 ﻿using AutoMapper;
-using InfoTrack.Application.Models;
+using InfoTrack.Application.DTOs;
 using InfoTrack.Infrastructure.Data;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfoTrack.Application.Mediatr.Queries
 {
@@ -32,7 +27,7 @@ namespace InfoTrack.Application.Mediatr.Queries
             //   Add Automapper for Entity to DTOs
             //-----------------TODO:------------------
             //return new(await _context.AsNoTracking().Companies.Select(x => x.ToDto()).ToListAsync(cancellationToken));
-            var companies = await _context.Companies.AsNoTracking().ToListAsync(cancellationToken);
+            var companies = await _context.Companies.AsNoTracking().ToListAsync(cancellationToken); //await _context.Companies.AsNoTracking().ToListAsync(cancellationToken);
 
             var response = new GetCompaniesResponse(_mapper.Map<List<CompanyDto>>(companies));
 
