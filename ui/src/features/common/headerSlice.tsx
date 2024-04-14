@@ -6,9 +6,9 @@ export interface HeaderState {
     newNotificationMessage: string;
     newNotificationStatus: number;
 }
-  
+
 // Define a type for the item object
-interface Notification {
+export interface Notification {
     status: number;
     message: string;
 }

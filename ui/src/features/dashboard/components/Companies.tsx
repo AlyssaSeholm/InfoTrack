@@ -31,7 +31,7 @@ const Companies: FC<CompaniesProps> = (props) => {
                         <CompanyCard
                             key={company.id}  // Use company.id if possible, for a more stable key than index
                             title={company.name}
-                            gradientFromColor={CompletedThemes[theme]?.primary}
+                            company={company}
                             gradientToColor={CompletedThemes[theme]?.accent}
                             faIcon={company.icon ?? "coffee"}  // Ensure you replace null with an actual SVG element or conditional rendering
                             description={company.name + " - " + company.baseUrl}

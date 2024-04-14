@@ -38,9 +38,10 @@
         }
     }
     .row {
-        flex-direction: row;
-        row-gap: 0.75rem;
-        justify-content: center;
+      flex-direction: row;
+      /* row-gap: 0.75rem; */
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .col {
         flex-direction: column;
@@ -69,3 +70,9 @@ div[data-floating-ui-portal] {
     transition-property: background-color; 
   }
 }
+/* button[data-loading="true"] svg {
+  fill: red; 
+}
+button:has(> .disabled) svg {
+  fill: red;
+} */

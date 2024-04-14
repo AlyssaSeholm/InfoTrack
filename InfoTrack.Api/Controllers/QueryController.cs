@@ -29,7 +29,7 @@ namespace InfoTrack.API.Controllers
 
             //Todo: Add validation
 
-            return new CreatedAtActionResult("Create", "QueryController", new { id = response.Query.Id }, response);
+            return new CreatedAtActionResult("Create", "Query", new { id = response.Query.Id }, response);
         }
 
 

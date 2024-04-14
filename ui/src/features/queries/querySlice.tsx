@@ -4,6 +4,7 @@ import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Query } from './types.tsx';
 import exp from 'constants';
+import { RootState } from '../../app/store.tsx';
 
 
 interface QueryState {
@@ -189,9 +190,11 @@ export const querySlice = createSlice({
 const QueryReducer = querySlice.reducer
 export default QueryReducer;
 
-export const selectQueryId = (state: any) => state.query.selectedQueryId;
-export const selectQueryList = (state: any) => state.query.queries;
-export const selectQueryById = (state: any, id: string) => state.query.queries.find((query: Query) => query.id === id);
-export const selectQueryName = (state: any) => state.query.name;
-export const selectQueryLoading = (state: any) => state?.query?.isLoading ?? false;
-export const selectQueryError = (state: any) => state.query.error;
+export const selectQueryId = (state: RootState) => state.query.selectedQueryId;
+export const selectQueryList = (state: RootState) => state.query.queries;
+export const selectQueryListByUserId = (state: RootState, userId: string) => state.query.queries.filter((query: Query) => query.userId === userId);
+export const selectQueryListByCompanyId = (state: RootState, companyId: string) => state.query.queries?.filter((query: Query) => query.myCompanyId === companyId) ?? [];
+export const selectQueryById = (state: RootState, id: string) => state.query.queries.find((query: Query) => query.id === id);
+export const selectQueryName = (state: RootState, name: string) => state.query.queries.find(query => query.name === name);
+export const selectQueryLoading = (state: RootState) => state?.query?.isLoading ?? false;
+export const selectQueryError = (state: RootState) => state.query.error;

@@ -1,0 +1,8 @@
+#delayedtooltip {
+    position: relative;
+    z-index: 999999;
+}
+.thisisatooltip {
+    z-index: 99999;
+    position: relative;
+}

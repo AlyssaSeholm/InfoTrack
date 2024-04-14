@@ -30,6 +30,9 @@ namespace InfoTrack.Infrastructure.Data.Configurations
                 .HasForeignKey(q => q.SearchEngineId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Property(c => c.NumberOfResultsPulled)
+                .HasDefaultValue(100);
+
             builder.Property(q => q.IncludeTerms)
                 .HasMaxLength(255)
                 .IsRequired();

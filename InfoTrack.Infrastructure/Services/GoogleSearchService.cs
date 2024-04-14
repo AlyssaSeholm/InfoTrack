@@ -23,6 +23,7 @@ namespace InfoTrack.Infrastructure.Services
             // Implement calling Google search and saving the raw results
             // Ensure the query is URL-encoded
             var encodedQuery = WebUtility.UrlEncode(query);
+            //TODO!!!
             var url = $"https://www.google.com/search?num=100&q={encodedQuery}"; //TODO: move the url into the searchenging object
 
             try

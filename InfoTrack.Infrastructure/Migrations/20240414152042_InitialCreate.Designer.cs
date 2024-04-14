@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTrack.Infrastructure.Migrations
 {
     [DbContext(typeof(InfoTrackDbContext))]
-    [Migration("20240409233644_InitialCreate")]
+    [Migration("20240414152042_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,7 +42,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 948, DateTimeKind.Utc).AddTicks(4358));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 792, DateTimeKind.Utc).AddTicks(3508));
 
                     b.Property<DateTime?>("DateRemoved")
                         .HasColumnType("datetime2");
@@ -80,7 +80,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 1,
                             BaseUrl = "https://www.infotrack.com/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(798),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6253),
                             IncludeTerms = "[\"efiling\",\"integration\"]",
                             Name = "InfoTrack",
                             RelationshipType = "Primary",
@@ -90,7 +90,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 2,
                             BaseUrl = "https://catsrusrescue.org/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(803),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6255),
                             IncludeTerms = "[\"unlimited\",\"food\"]",
                             Name = "Cats R' Us",
                             PrimaryCompanyId = 1,
@@ -101,7 +101,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 3,
                             BaseUrl = "https://batman.fandom.com/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(808),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6257),
                             IncludeTerms = "[\"batman\",\"unmasked\"]",
                             Name = "Wayne Enterprises",
                             PrimaryCompanyId = 1,
@@ -112,7 +112,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 4,
                             BaseUrl = "https://www.dogsrustitusville.com/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(810),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6259),
                             IncludeTerms = "[\"happy\",\"humans\"]",
                             Name = "Dogs R' Us",
                             RelationshipType = "Primary",
@@ -122,7 +122,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 5,
                             BaseUrl = "https://dailyplanetdc.com/planet-profiles/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(812),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6260),
                             IncludeTerms = "[\"superman\",\"lois\"]",
                             Name = "The Daily Planet",
                             PrimaryCompanyId = 4,
@@ -133,7 +133,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             Id = 6,
                             BaseUrl = "https://www.clio.com/",
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(813),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6261),
                             IncludeTerms = "[\"efiling\"]",
                             Name = "Clio",
                             PrimaryCompanyId = 1,
@@ -156,7 +156,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 948, DateTimeKind.Utc).AddTicks(9324));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 793, DateTimeKind.Utc).AddTicks(21));
 
                     b.Property<DateTime?>("DateRemoved")
                         .HasColumnType("datetime2");
@@ -178,7 +178,12 @@ namespace InfoTrack.Infrastructure.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("SearchEngineId")
+                    b.Property<int?>("NumberOfResultsPulled")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(100);
+
+                    b.Property<int>("SearchEngineId")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
@@ -228,14 +233,14 @@ namespace InfoTrack.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            BaseUrl = "https://www.google.com/search?num=100&q=",
+                            BaseUrl = "https://www.google.com/search?num=###&q=",
                             Description = "Always returns 100 results (if possible)",
                             Name = "Google"
                         },
                         new
                         {
                             Id = 2,
-                            BaseUrl = "https://www.jedi.com/search?num=100&q=",
+                            BaseUrl = "https://www.jedi.com/search?num=###&q=",
                             Description = "These are not the droids you are looking for...",
                             Name = "Jedi"
                         });
@@ -351,7 +356,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     b.Property<DateTime>("SearchedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 949, DateTimeKind.Utc).AddTicks(7827));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 794, DateTimeKind.Utc).AddTicks(654));
 
                     b.Property<int>("Top100Count")
                         .ValueGeneratedOnAdd()
@@ -393,10 +398,18 @@ namespace InfoTrack.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("About")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("City")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(274));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(5643));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -409,10 +422,14 @@ namespace InfoTrack.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Language")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<DateTime>("LastModifiedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(484));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(5887));
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -420,6 +437,18 @@ namespace InfoTrack.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("SelectedTheme")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("State")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Timezone")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<string>("Title")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -431,19 +460,19 @@ namespace InfoTrack.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(691),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6138),
                             Email = "Lys.Seholm@Gmail.com",
                             FirstName = "Alyssa",
-                            LastModifiedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(692),
+                            LastModifiedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6139),
                             LastName = "Seholm"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(694),
+                            CreatedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6140),
                             Email = "Batman@DefinitelyNotBruceWayne.com",
                             FirstName = "Bruce",
-                            LastModifiedOn = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(694),
+                            LastModifiedOn = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6141),
                             LastName = "Wayne"
                         });
                 });
@@ -459,7 +488,7 @@ namespace InfoTrack.Infrastructure.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 9, 23, 36, 43, 950, DateTimeKind.Utc).AddTicks(7954));
+                        .HasDefaultValue(new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(2983));
 
                     b.Property<DateTime?>("DateRemoved")
                         .HasColumnType("datetime2");
@@ -491,7 +520,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 1,
                             CompanyId = 1,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(834),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6290),
                             Id = 1,
                             KeyTerms = "",
                             RelationshipType = "Primary"
@@ -500,7 +529,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 1,
                             CompanyId = 2,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(836),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6292),
                             Id = 2,
                             KeyTerms = "cats",
                             PrimaryCompanyId = 1,
@@ -510,7 +539,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 1,
                             CompanyId = 4,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(838),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6294),
                             Id = 3,
                             KeyTerms = "dogs",
                             PrimaryCompanyId = 1,
@@ -520,7 +549,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 2,
                             CompanyId = 3,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(839),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6295),
                             Id = 4,
                             KeyTerms = "batman",
                             RelationshipType = "Primary"
@@ -529,7 +558,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 2,
                             CompanyId = 5,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(841),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6296),
                             Id = 5,
                             KeyTerms = "superman, lois",
                             PrimaryCompanyId = 4,
@@ -539,7 +568,7 @@ namespace InfoTrack.Infrastructure.Migrations
                         {
                             UserId = 1,
                             CompanyId = 5,
-                            DateCreated = new DateTime(2024, 4, 9, 23, 36, 43, 951, DateTimeKind.Utc).AddTicks(842),
+                            DateCreated = new DateTime(2024, 4, 14, 15, 20, 41, 795, DateTimeKind.Utc).AddTicks(6297),
                             Id = 6,
                             KeyTerms = "",
                             PrimaryCompanyId = 1,
@@ -630,7 +659,8 @@ namespace InfoTrack.Infrastructure.Migrations
                     b.HasOne("InfoTrack.Domain.Entities.SearchEngines", "Engine")
                         .WithMany()
                         .HasForeignKey("SearchEngineId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("InfoTrack.Domain.Entities.User", "User")
                         .WithMany()

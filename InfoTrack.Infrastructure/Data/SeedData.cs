@@ -51,8 +51,8 @@ namespace InfoTrack.Infrastructure.Data
 
             modelBuilder.Entity<SearchEngines>()
                 .HasData(
-                    new SearchEngines { Id = 1, Name = "Google", BaseUrl = "https://www.google.com/search?num=100&q=", Description = "Always returns 100 results (if possible)" },
-                    new SearchEngines { Id = 2, Name = "Jedi", BaseUrl = "https://www.jedi.com/search?num=100&q=", Description = "These are not the droids you are looking for..." }
+                    new SearchEngines { Id = 1, Name = "Google", BaseUrl = "https://www.google.com/search?num=###&q=", Description = "Always returns 100 results (if possible)" },
+                    new SearchEngines { Id = 2, Name = "Jedi", BaseUrl = "https://www.jedi.com/search?num=###&q=", Description = "These are not the droids you are looking for..." }
                 );
         }
     }

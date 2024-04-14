@@ -1,11 +1,5 @@
 ﻿using InfoTrack.Domain.Interfaces;
 using InfoTrack.Domain.Models;
-using InfoTrack.Infrastructure.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InfoTrack.Infrastructure.Services
 {

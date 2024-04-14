@@ -12,6 +12,7 @@ import './App.css'
 import './assets/css/global.css'
 
 import { lazy, useEffect } from 'react'
+import { ToastContainer } from 'react-toastify';
 const Layout = lazy(() => import('./containers/Layout'))
 const Login = lazy(() => import('./pages/Login'))
 const ForgotPassword = lazy(() => import('./pages/ForgotPassword'))
@@ -44,6 +45,7 @@ function App() {
         </Routes>
         {/* </SiteLayout> */}
       </BrowserRouter>
+      <ToastContainer />
     </>
   )
 }

@@ -18,7 +18,7 @@ Run one of the commands below to create an inital setup migration or an update m
 
 Run this in the terminal:
 
-`dotnet ef --startup-project InfoTrack.API migrations add InitialCreate6 --context InfoTrackDbContext --project InfoTrack.Infrastructure --output-dir Migrations `
+`dotnet ef --startup-project InfoTrack.API migrations add InitialCreate --context InfoTrackDbContext --project InfoTrack.Infrastructure --output-dir Migrations `
 
 ##### 1-B) Update Migration:
 

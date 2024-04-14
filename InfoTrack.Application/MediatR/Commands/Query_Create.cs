@@ -6,12 +6,13 @@ using MediatR;
 
 namespace InfoTrack.Application.MediatR.Commands
 {
-    public class CreateQueryRequest(int userId, int companyId, string includeTerms = "", string? name = "", int searchEngineId = 1, int? competitorCompanyId = null, string? excludeTerms = "")
+    public class CreateQueryRequest(int userId, int companyId, string includeTerms = "", string? name = "", int searchEngineId = 1, int? numberOfResultsPulled = 100,  int? competitorCompanyId = null, string? excludeTerms = "")
         : IRequest<CreateQueryResponse>
     {
         public int UserId { get; } = userId;
         public int CompanyId { get; } = companyId;
         public int SearchEngineId { get; } = searchEngineId;
+        public int? NumberOfResultsPulled { get; } = numberOfResultsPulled;
         public string Name { get; } = name ?? $"Query {DateTime.UtcNow}";
         public string IncludeTerms { get; } = includeTerms;
         public int? CompetitorCompanyId { get; } = competitorCompanyId;

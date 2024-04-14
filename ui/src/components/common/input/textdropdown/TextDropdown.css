@@ -22,7 +22,6 @@
 div[data-floating-ui-portal] div[role="menu"]  {
   z-index: 9999;
   width: auto;
-  background-color: pink;
 
   > button {
     display: flex;

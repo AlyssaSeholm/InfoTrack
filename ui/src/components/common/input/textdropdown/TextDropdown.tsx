@@ -3,10 +3,10 @@
 
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../app/store';
+import { RootState } from '../../../../app/store';
 import { Button, Menu, MenuHandler, MenuItem, MenuList } from '@material-tailwind/react';
 import ChevronDownIcon from '@heroicons/react/24/outline/ChevronDownIcon';
-import { selectSelectedCompanyId } from '../../company/companySlice';
+import { selectSelectedCompanyId } from '../../../../features/company/companySlice';
 import "./TextDropdown.css";
 
 export interface iMenuItem {

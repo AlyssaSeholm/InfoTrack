@@ -5,13 +5,14 @@ import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon'
 import EllipsisVerticalIcon from '@heroicons/react/24/outline/EllipsisVerticalIcon'
 import ArrowPathIcon from '@heroicons/react/24/outline/ArrowPathIcon'
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { RootState } from "../../../app/store"
 import { useDispatch, useSelector } from "react-redux"
 import { fetch_Company_ById } from "../../company/companySlice"
 import NewQueryModal from "../../queries/components/NewQueryModal"
-import { Button, Card, CardBody, CardFooter, Checkbox, Dialog, DialogBody, DialogFooter, DialogHeader, Input, Typography } from "@material-tailwind/react"
+import { Button, Card, CardBody, CardFooter, Checkbox, Dialog, DialogBody, DialogFooter, DialogHeader, Input, Tooltip, Typography } from "@material-tailwind/react"
 import React from "react"
+import DelayedTooltip from "../../../components/common/delayedTooltip/DelayedTooltip"
 // import CustomDialogHeader from "../../common/components/utilities/modal/CustomDialogHeader"
 
 
@@ -56,6 +57,19 @@ function DashboardTopBar({ updateDashboardPeriod }: { updateDashboardPeriod: Fun
  
     const [newQueryDialogOpen, setNewQueryDialogOpen] = React.useState(false);
     const handleOpen = () => setNewQueryDialogOpen(!newQueryDialogOpen);
+
+
+    const [showTooltip, setShowTooltip] = useState(false);
+    const timeoutRef = useRef<NodeJS.Timeout | undefined>();
+    const handleMouseEnter = () => {
+        clearTimeout(timeoutRef.current!);  // Clear any existing timeouts
+        setShowTooltip(true);             // Show tooltip immediately on hover
+    };
+    const handleMouseLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setShowTooltip(false);       // Hide tooltip after a delay
+        }, 20000);                         // Delay in milliseconds
+    };
 
     // const openNewQueryModal = () => {
     //     return (
@@ -158,12 +172,19 @@ function DashboardTopBar({ updateDashboardPeriod }: { updateDashboardPeriod: Fun
                 {/* <button className="btn btn-ghost btn-primary btn-sm normal-case"
                     onClick={() => (document?.getElementById('new_query_modal') as HTMLDialogElement)?.showModal()}>
                     <PlusIcon className="w-4 mr-2" /> Add New Query </button> */}
-                <button className="btn btn-ghost btn-primary btn-sm normal-case"
-                onClick={handleOpen}>
-                <PlusIcon className="w-4 mr-2" /> Add Query </button>
+
+                <Tooltip content='Test' placement='bottom' open={showTooltip}>
+                    <button className="btn btn-ghost btn-primary btn-sm normal-case"
+                        onClick={handleOpen}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}>
+                        <PlusIcon className="w-4 mr-2" /> Add Query </button>
+                </Tooltip>
                     
+                <DelayedTooltip content="NEW FANCY TOOLTIP" placement="bottom">
                 <button className="btn btn-ghost btn-sm normal-case" onClick={testCall}>
                     <ArrowPathIcon className="w-4 mr-2" />Refresh All Data</button>
+                </DelayedTooltip>
                 <button className="btn btn-ghost btn-sm normal-case  ml-2">
                     <ShareIcon className="w-4 mr-2" />Share</button>
 

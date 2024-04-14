@@ -97,7 +97,7 @@ const API_PATH  = Object.freeze({
         GetList_ByQueryId: `${getConfig.baseUrl}/api/Search/ByQueryId`,
         GetList_ByUserId: `${getConfig.baseUrl}/api/Search/ByUserId`, 
         Post: `${getConfig.baseUrl}/api/Search/ByQueryId`, //create/execute a new search
-        Delete: `${getConfig.baseUrl}/api/Query`//TODO: Allow user to delete a search?
+        Delete: `${getConfig.baseUrl}/api/Search`//TODO: Allow user to delete a search?
     },
 });
 export default API_PATH;

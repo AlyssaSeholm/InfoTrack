@@ -5,6 +5,8 @@ import { RightDrawerReducer } from '../features/common/rightDrawerSlice'
 import { ThemeReducer } from '../features/theme/themeSlice'
 import CompanyReducer from '../features/company/companySlice'
 import UserReducer from '../features/user/userSlice'
+import QueryReducer from '../features/queries/querySlice'
+import SearchResultsReducer from '../features/search/results/searchResultsSlice'
 
 const store = configureStore({
   reducer: {
@@ -14,6 +16,8 @@ const store = configureStore({
     theme: ThemeReducer,
     company: CompanyReducer,
     user: UserReducer,
+    query: QueryReducer,
+    searchResults: SearchResultsReducer,
   },
 })
 

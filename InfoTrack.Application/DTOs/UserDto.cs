@@ -12,9 +12,29 @@ namespace InfoTrack.Application.DTOs
         public DateTime CreatedOn { get; set; }
         public DateTime LastModifiedOn { get; set; }
         public string? SelectedTheme { get; set; }
+        public string? Title { get; set; }
+        public string? City { get; set; }
+        public string? State { get; set; }
+        public string? Language { get; set; }
+        public string? Timezone { get; set; }
+        public string? About { get; set; }
 
         public UserDto() { }
-        public UserDto(string id, string email, string firstName, string lastName, string? selectedTheme = null, DateTime? createdOn = null, DateTime? lastModifiedOn = null, string? msg = "")
+        public UserDto(
+            string id, 
+            string email, 
+            string firstName, 
+            string lastName, 
+            string? selectedTheme = null, 
+            DateTime? createdOn = null, 
+            DateTime? lastModifiedOn = null, 
+            string? msg = "",
+            string? title = "",
+            string? city = "",
+            string? state = "",
+            string? about = "",
+            string? language = "English",
+            string? timezone = "EST")
         {
             Id = id;
             Email = email;
@@ -24,6 +44,12 @@ namespace InfoTrack.Application.DTOs
             LastModifiedOn = lastModifiedOn ?? DateTime.UtcNow;
             SelectedTheme = selectedTheme;
             Msg = msg ?? "";
+            Title = title;
+            City = city;
+            State = state;
+            About = about;
+            Language = language;
+            Timezone = timezone;
         }
 
         public static UserDto CreateEmptyWithMessage(StatusType msgType, string id = "0", string email = "", string firstName = "", string lastName = "", string? selectedTheme = null, DateTime? createdOn = null, DateTime? lastModifiedOn = null)
@@ -37,7 +63,13 @@ namespace InfoTrack.Application.DTOs
                 CreatedOn = createdOn ?? DateTime.UtcNow,
                 LastModifiedOn = lastModifiedOn ?? DateTime.UtcNow,
                 SelectedTheme = selectedTheme,
-                Msg = ResponseMessages.GetMessage(msgType)
+                Msg = ResponseMessages.GetMessage(msgType),
+                Title = "",
+                City = "",
+                State = "",
+                About = "",
+                Language = "English",
+                Timezone = "EST"
             };
 
             return obj;
