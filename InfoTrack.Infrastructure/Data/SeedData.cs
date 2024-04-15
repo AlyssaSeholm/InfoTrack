@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using InfoTrack.Domain.Entities;
+﻿using InfoTrack.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfoTrack.Infrastructure.Data
 {

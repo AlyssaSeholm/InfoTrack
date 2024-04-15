@@ -1,9 +1,9 @@
-﻿using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Repositories.Interfaces;
+﻿using InfoTrack.Domain.Repositories.Interfaces;
 using InfoTrack.Infrastructure.Data;
+using InfoTrack.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfoTrack.Infrastructure.Repositories
+namespace InfoTrack.Domain.Entities.Repositories
 {
     public class CompanyRepository(IInfoTrackDbContext context) 
         : Repository<Company>(context), ICompanyRepository
@@ -14,7 +14,6 @@ namespace InfoTrack.Infrastructure.Repositories
                 .FirstOrDefaultAsync(company => company.Name == name, cancellationToken);
         }
 
-        //TODO: review this once data is done
         public async Task<IEnumerable<Company?>> GetListByUserIdAsync(int userId, CancellationToken cancellationToken)
         {
             List<int> companyIds = await _context.UserCompanies.Where(uc => uc.UserId == userId).Include(uc => uc.Company).Select(uc => uc.Id).ToListAsync(cancellationToken);
@@ -24,7 +23,13 @@ namespace InfoTrack.Infrastructure.Repositories
             return companies ?? Enumerable.Empty<Company?>();
         }
 
-        //TODO
+        /// <summary>
+        /// #DevNote: Would like to add this.
+        /// </summary>
+        /// <param name="company"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         public Task<Company> PatchAsync(Company company, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();

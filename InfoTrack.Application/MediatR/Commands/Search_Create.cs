@@ -1,20 +1,14 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.DTOs;
-using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Infrastructure.Services.Interfaces;
 using MediatR;
 
 namespace InfoTrack.Application.MediatR.Commands
 {
-    public class CreateSearchRequest(int queryId)//, string resultTypeCode, int highestRank = 0, int top100Count = 0)//, string[]? includedTerms = null)
+    public class CreateSearchRequest(int queryId)
         : IRequest<CreateSearchResponse>
     {
         public int QueryId { get; } = queryId;
-        //public int HighestRank { get; } = highestRank;
-        //public int Top100Count { get; } = top100Count;
-        ////public string[] IncludedTerms { get; } = includedTerms ?? [];
-        //public string ResultTypeCode { get; } = resultTypeCode;
-        //public DateTime SearchOn { get; } = DateTime.UtcNow;
     }
 
     public record CreateSearchResponse(SearchResultsDto Search);

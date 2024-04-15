@@ -1,4 +1,5 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
+using InfoTrack.Domain.Entities;
 using InfoTrack.Domain.Repositories.Interfaces;
 using InfoTrack.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

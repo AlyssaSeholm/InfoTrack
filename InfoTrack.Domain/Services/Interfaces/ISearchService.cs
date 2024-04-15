@@ -1,10 +1,12 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
 
-namespace InfoTrack.Domain.Services.Interfaces
+using InfoTrack.Domain.Entities;
+
+namespace InfoTrack.Infrastructure.Services.Interfaces
 {
     public interface ISearchService
     {
-        Task<SearchResults?> PerformSearch(int query, CancellationToken cancellationToken);
+        Task<ResultMsg> PerformSearch(int query, CancellationToken cancellationToken);
 
         Task<IEnumerable<SearchResults?>> GetSearchResultsByUserId(int userId, CancellationToken cancellationToken);
         Task<IEnumerable<SearchResults?>> GetSearchResultsByUserId(string userId, CancellationToken cancellationToken);

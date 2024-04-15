@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfoTrack.Domain.Models
+namespace InfoTrack.Domain.Entities.Models
 {
     public class QueryModel
     {

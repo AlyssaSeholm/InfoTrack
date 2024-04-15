@@ -13,7 +13,7 @@ namespace InfoTrack.Infrastructure.Services.Parse
     {
         public override async Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation)
         {
-            if (string.IsNullOrEmpty(htmlContent)) { return Enumerable.Empty<ResultParse>(); }
+            if (string.IsNullOrEmpty(htmlContent)) { return []; }
 
             var doc = new HtmlDocument();
             doc.LoadHtml(htmlContent);
@@ -58,8 +58,6 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
                     var parsedItem = new GoogleSearchResultParse()
                     {
-                        //Description = "",
-                        //Link = "",
                         ResultRank = iter,
                         Snippet = node?.OuterHtml ?? "",
                         DataVed = dataVed ?? "",
@@ -67,11 +65,6 @@ namespace InfoTrack.Infrastructure.Services.Parse
                         Title = h3Text ?? "",
                         Breadcrumbs_Text = !string.IsNullOrEmpty(bc1_text) ? bc1_link.Replace("&#8250;", ">").Trim() : bc1_link ?? "",
                         Breadcrumbs_Link = bc1_link ?? "",
-                        //DataId = "",
-                        //DataViewerGroup = "",
-                        //PostedDate = "", //date ?? "",
-                        //Snippet_Match = "", //matched ?? "",
-                        //Snippet_Remainder = "", //remainder ?? ""
                     };
                     parseResults.Add(parsedItem);
                 }

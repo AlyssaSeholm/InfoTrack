@@ -1,10 +1,9 @@
 ﻿using InfoTrack.Domain.Entities;
 using InfoTrack.Domain.Repositories.Interfaces;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Infrastructure.Services.Interfaces;
 using Microsoft.Extensions.Hosting;
 using System.Net;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Web;
 
 namespace InfoTrack.Infrastructure.Services.Parse
@@ -16,20 +15,25 @@ namespace InfoTrack.Infrastructure.Services.Parse
         protected readonly HttpClient _httpClient = httpClient;
         protected readonly IHostEnvironment _webHostEnvironment = webHostEnvironment;
 
-        public async Task<string> PerformSearch(int queryId, CancellationToken cancellationToken)
+        public async Task<ResultMsg> PerformSearch(int queryId, CancellationToken cancellationToken)
         {
-            //todo: if (cancellationToken.IsCancellationRequested) {}
+            //todo: add functionality for cancellationToken solution-wide
 
             var query = await _searchRepository.GetQueryByQueryId(queryId, cancellationToken);
-            if (query == null) { return ""; }
+            if (query == null) { 
+                return new ResultMsg() { ErrorMessage = $"Unable to get the query for id {queryId}", Data = null, Success = false }; 
+            }
 
             var searchEngine = await _searchRepository.GetSearchEngineByEngineId(query.SearchEngineId, cancellationToken);
-            if (searchEngine == null) { return ""; }
+            if (searchEngine == null) { 
+                return new ResultMsg() { ErrorMessage = $"Unable to get the search engine id {query.SearchEngineId} for query {queryId}", Data = null, Success = false };
+             }
 
             int results = query.NumberOfResultsPulled ?? 100;
-            return await MakeEngineSEORequest(searchEngine.BaseUrl, results, query.IncludeTerms);//TODO: add excluded
 
-            //Todo: Save Results
+            var seoReq = await MakeEngineSEORequest(searchEngine.BaseUrl, results, query.IncludeTerms);
+
+            return new ResultMsg() { ErrorMessage = "", Data = seoReq, Success = true };
         }
 
         private async Task<string> MakeEngineSEORequest(string baseUrl, int results, string query)
@@ -38,6 +42,7 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
             //https://www.google.com/search?num=100&q=efiling+integration
             var url = baseUrl.Replace("###", results.ToString());
+
             var fullUrl = $"{url}{encodedQuery}";
 
             try
@@ -69,11 +74,13 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
         public abstract Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation);
 
-        public async Task<SearchResults?> SanitizeResults(int queryId, IEnumerable<ResultParse> parsedItems, CancellationToken cancellation)
+        public async Task<ResultMsg> SanitizeResults(int queryId, IEnumerable<ResultParse> parsedItems, CancellationToken cancellation)
         {
 
             var query = await _searchRepository.GetQueryByQueryId(queryId, cancellation);
-            if (query == null) return null; // or handle this case appropriately
+            if (query == null) {
+                return new ResultMsg() { ErrorMessage = $"Unable to get the query for id {queryId} when trying to sanitize results", Data = null, Success = false }; 
+            }
 
             var terms = query.IncludeTerms.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(t => t.Trim()).ToList();
             List<ResultParse> items = parsedItems.ToList() ?? []; // Converting to list if we need to access items by index or modify them
@@ -87,7 +94,12 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
             srchResult.Items = searchItems.ToList();
 
-            return await ComprehensiveDataFromResults(query, srchResult, cancellation);
+            var data = await ComprehensiveDataFromResults(query, srchResult, cancellation);
+            
+            return new ResultMsg() { 
+                ErrorMessage = "", 
+                Data = data, 
+                Success = true };
         }
 
         private async Task<IEnumerable<SearchResultItem>> ExtractDetailsFromParsedItems(
@@ -112,31 +124,27 @@ namespace InfoTrack.Infrastructure.Services.Parse
                         tags.Add("direct link");
                     }
 
-                    // Only create a SearchResultItem if there are tags
-                    if (tags.Count > 0)
+                    var url = !string.IsNullOrEmpty(item.Link)
+                        ? item.Link
+                        : (!string.IsNullOrEmpty(item.Href) ? ExtractUrlFromHref(item.Href) : "");
+
+                    var relationship = "none";
+                    if (tags.Count > 0) { relationship = tags.Contains("direct link") ? "Direct" : "Mentioned"; }
+
+                    return new SearchResultItem
                     {
-                        var url = !string.IsNullOrEmpty(item.Link)
-                            ? item.Link
-                            : (!string.IsNullOrEmpty(item.Href) ? ExtractUrlFromHref(item.Href) : "");
-
-                        var relationship = tags.Contains("direct link") ? "Direct" : "Mentioned";
-
-                        return new SearchResultItem
-                        {
-                            Url = url,
-                            ResultTypeName = relationship,
-                            Snippet = item.Description,
-                            Breadcrumbs_Text = item.Breadcrumbs_Text,
-                            Breadcrumbs_Link = item.Breadcrumbs_Link,
-                            Title = item.Title,
-                            Href = item.Href,
-                            DataVed = item.DataVed,
-                            Tags = [.. tags],
-                            SearchResultsId = searchResultId,
-                            ResultRank = item.ResultRank                            
-                        };
-                    }
-                    return null;
+                        Url = url,
+                        ResultTypeName = relationship,
+                        Snippet = item.Description,
+                        Breadcrumbs_Text = item.Breadcrumbs_Text,
+                        Breadcrumbs_Link = item.Breadcrumbs_Link,
+                        Title = item.Title,
+                        Href = item.Href,
+                        DataVed = item.DataVed,
+                        Tags = [.. tags],
+                        SearchResultsId = searchResultId,
+                        ResultRank = item.ResultRank                            
+                    };
                 }).Where(task => task != null);
 
                 var resultItems = await Task.WhenAll(tasks);
@@ -149,62 +157,6 @@ namespace InfoTrack.Infrastructure.Services.Parse
                 }
 
                 return filteredItems.Where(item => item != null).ToList()!;
-
-            // List<SearchResultItem> srItems = [];
-            // // Using parallel processing to handle large datasets efficiently
-            // _ = Parallel.ForEach(items, item =>
-            // {
-            //     List<string> tags = [];
-
-
-            //     if (terms.Any(term => item.Description?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0) ||
-            //         terms.Any(term => item.Title?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0) ||
-            //         terms.Any(term => item.Link?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0) ||
-            //         terms.Any(term => item.Href?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0) ||
-            //         terms.Any(term => item.Breadcrumbs_Text?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0) ||
-            //         terms.Any(term => item.Breadcrumbs_Link?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0))
-            //     {
-            //         tags.Add("keyterm match");
-            //     }
-            //     else if (terms.Any(term => item.Snippet?.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0))
-            //     {
-            //         tags.Add("html match");
-            //     }
-
-            //     List<string> links = [item.Link, item.Href];
-            //     if (!string.IsNullOrEmpty(query.MyCompany?.BaseUrl) && links.Any(term => query.MyCompany.BaseUrl.Contains(term, StringComparison.OrdinalIgnoreCase)))
-        //     {
-            //         tags.Add("direct link");
-            //     }
-
-            //     if (tags.Count > 0)
-            //     {
-
-            //         string url = !string.IsNullOrEmpty(item.Link)
-            //             ? item.Link
-            //             : (!string.IsNullOrEmpty(item.Href) ? ExtractUrlFromHref(item.Href) : "");
-
-            //         string relationship = tags.Contains("direct link") ? "Direct" : "Mentioned";
-
-            //         srItems.Add(new SearchResultItem
-            //         {
-            //             Url = url,
-            //             ResultTypeName = relationship,
-            //             Snippet = item.Description,
-            //             Breadcrumbs_Text = item.Breadcrumbs_Text,
-            //             Breadcrumbs_Link = item.Breadcrumbs_Link,
-            //             Title = item.Title,
-            //             Href = item.Href,
-            //             DataVed = item.DataVed,
-            //             Tags = [.. tags],
-            //             SearchResultsId = searchResultId // Set the Results property to null or assign the appropriate value
-            //         });
-            //     }
-            // });
-
-            // await _searchRepository.AddRangeAsync(srItems, cancellation);
-            
-            // return srItems;
         }
 
         private async Task<SearchResults> ComprehensiveDataFromResults(Query query, SearchResults searchResult, CancellationToken cancellation)

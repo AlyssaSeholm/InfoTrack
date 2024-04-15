@@ -1,9 +1,9 @@
-﻿using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Repositories.Interfaces;
+﻿using InfoTrack.Domain.Repositories.Interfaces;
 using InfoTrack.Infrastructure.Data;
+using InfoTrack.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfoTrack.Infrastructure.Repositories
+namespace InfoTrack.Domain.Entities.Repositories
 {
     public class UserRepository(IInfoTrackDbContext context)
         : Repository<User>(context), IUserRepository

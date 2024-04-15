@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using InfoTrack.Domain.Entities;
 
-namespace InfoTrack.Infrastructure.Data.Configurations
+namespace InfoTrack.Domain.Entities.Data.Configurations
 {
     public class UserCompanyConfiguration : IEntityTypeConfiguration<UserCompany>
     {
@@ -11,19 +11,19 @@ namespace InfoTrack.Infrastructure.Data.Configurations
             builder.HasKey(uc => new { uc.UserId, uc.CompanyId });
 
             builder.HasOne(uc => uc.User)
-                   .WithMany()//u => u.UserCompanies)
+                   .WithMany()
                    .HasForeignKey(uc => uc.UserId)
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(uc => uc.Company)
-                   .WithMany()//c => c.UserCompanies)
+                   .WithMany()
                    .HasForeignKey(uc => uc.CompanyId)
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(uc => uc.PrimaryParentCompany)
-                   .WithMany()//c => c.UserCompanies)
+                   .WithMany()
                    .HasForeignKey(uc => uc.PrimaryCompanyId)
                    .OnDelete(DeleteBehavior.Restrict);            
 

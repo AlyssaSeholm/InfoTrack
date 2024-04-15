@@ -33,6 +33,21 @@ namespace InfoTrack.API.Controllers
             return new CreatedAtActionResult("CreateByQueryId", "Search", new { id = response.Search.Id }, response);
         }
 
+        [HttpGet("NewSearch/{QueryId}", Name = "GetNewSearchByQueryIdRoute")]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(CreateSearchResponse), (int)HttpStatusCode.Created)]
+        [SwaggerOperation(OperationId = "GetNewSearchByQueryId")]
+        public async Task<ActionResult<CreateSearchResponse>> GetNewByQueryId([FromBody] CreateSearchRequest request) //=> await _mediator.Send(request);
+        {
+            var response = await _mediator.Send(request);
+
+            //Todo: Add validation to see if email is available
+
+            //TODO: add encryption to user id for response
+            return new CreatedAtActionResult("GetNewByQueryId", "Search", new { id = response.Search.Id }, response);
+        }
+
 
         /// <summary> GetSearchResults_ByQueryId </summary>
         /// <remarks> 

@@ -208,6 +208,7 @@
     display: flex;
     width: 100%;
 
+    /* unused group? */
     .card-mat {
         padding: 0;
         width: 100%;
@@ -253,6 +254,12 @@
         flex-wrap: wrap;
         flex-direction: row;
         align-items: baseline;
+    }
+    
+    .card__footer {    
+        display: flex;
+        padding: 0.25rem 1rem 0.25rem 1rem;
+        justify-content: flex-end;
     }
 }
 

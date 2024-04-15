@@ -1,24 +1,28 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
+using InfoTrack.Domain.Entities;
 using InfoTrack.Domain.Repositories.Interfaces;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Infrastructure.Services.Interfaces;
 
-namespace InfoTrack.Domain.Services
+namespace InfoTrack.Infrastructure.Services
 {
-    public class SearchService(ISearchRepository SearchRepository, IResultParserService resultParserService) : ISearchService
+    public class SearchService(ISearchRepository SearchRepository, IResultParserService resultParserService) 
+        : ISearchService
     {
         private readonly ISearchRepository _SearchRepository = SearchRepository;
         private readonly IResultParserService _resultParserService = resultParserService;
 
 
-        public async Task<SearchResults?> PerformSearch(int query, CancellationToken cancellationToken)
+        public async Task<ResultMsg> PerformSearch(int query, CancellationToken cancellationToken)
         {
             var htmlResults = await _resultParserService.PerformSearch(query, cancellationToken);
-            var parsedResults = await _resultParserService.ParseResults(htmlResults, cancellationToken);
+            if (!string.IsNullOrEmpty(htmlResults.ErrorMessage) || htmlResults.Data == null) { return htmlResults; }
+
+            var parsedResults = await _resultParserService.ParseResults((string)htmlResults.Data, cancellationToken);
+
             var sanitizeResults = await _resultParserService.SanitizeResults(query, parsedResults, cancellationToken);
 
-            //TODO: Add Save functionality here
 
-            return sanitizeResults;
+            return new ResultMsg { Data = sanitizeResults, ErrorMessage = string.Empty, Success = true };
         }
 
         public async Task<IEnumerable<SearchResults?>> GetSearchResultsByQueryId(int queryId, CancellationToken cancellationToken)

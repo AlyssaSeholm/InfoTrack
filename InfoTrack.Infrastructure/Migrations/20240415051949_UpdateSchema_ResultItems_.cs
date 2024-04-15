@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace InfoTrack.Infrastructure.Migrations
+namespace InfoTrack.Domain.Entities.Migrations
 {
     /// <inheritdoc />
     public partial class UpdateSchema_ResultItems_ : Migration

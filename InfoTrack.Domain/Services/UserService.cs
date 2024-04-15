@@ -1,6 +1,6 @@
 ﻿using InfoTrack.Domain.Entities;
+using InfoTrack.Domain.Entities.Services.Interfaces;
 using InfoTrack.Domain.Repositories.Interfaces;
-using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Domain.Services
 {

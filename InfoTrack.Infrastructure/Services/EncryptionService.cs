@@ -1,8 +1,8 @@
-﻿using InfoTrack.Domain.Services.Interfaces;
+﻿using InfoTrack.Domain.Entities.Services.Interfaces;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace InfoTrack.Infrastructure.Services
+namespace InfoTrack.Domain.Entities.Services
 {
     public class EncryptionService(string key, string iv) : IEncryptionService
     {

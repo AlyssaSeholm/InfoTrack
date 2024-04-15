@@ -11,7 +11,7 @@ namespace InfoTrack.Infrastructure.Data.Configurations
             builder.HasKey(q => q.Id);
 
             builder.HasOne(q => q.User)
-                .WithMany() // If there's a collection of Queries in User, replace with u => u.Queries
+                .WithMany() 
                 .HasForeignKey(q => q.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 

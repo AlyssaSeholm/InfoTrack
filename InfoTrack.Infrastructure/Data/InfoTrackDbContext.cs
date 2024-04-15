@@ -1,7 +1,6 @@
 ﻿using InfoTrack.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.Extensions.Options;
 
 namespace InfoTrack.Infrastructure.Data
 {
@@ -10,8 +9,10 @@ namespace InfoTrack.Infrastructure.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Company> Companies { get; set; }
+
         /// <summary>
-        /// Not Used, but it was a time issue as I didn't have the time/capacity to rely on having company profiles and user profiles.
+        /// #DevNote: Not Used, but it was a time issue as I was intending on trying to allow 2 different profile types.
+        /// A standard user and then more of an admin user (that logged in more as a company and could set preferences).
         /// </summary>
         public DbSet<UserCompany> UserCompanies { get; set; }
         public DbSet<UserCompanyRelationship> UserCompanyRelationships { get; set; }
@@ -70,16 +71,5 @@ namespace InfoTrack.Infrastructure.Data
         {
             return await Set<T>().FindAsync(id);
         }
-
-        //public async EntityEntry Add(object entity)
-        //{
-        //    await this.Add(entity).ReloadAsync();
-        //    return entity;
-        //}
-
-        //public EntityEntry Remove(object entity)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

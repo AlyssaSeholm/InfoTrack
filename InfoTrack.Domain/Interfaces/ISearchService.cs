@@ -1,14 +1,10 @@
-﻿using InfoTrack.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+//using InfoTrack.Domain.Entities;
 
-namespace InfoTrack.Domain.Interfaces
-{
-    public interface ISearchService
-    {
-        Task<SearchResultsModel?> PerformSearchAsync(string query);
-    }
-}
+//namespace InfoTrack.Infrastructure.Interfaces
+//{
+//    public interface ISearchService
+//    {
+//        Task<ResultMsg> PerformSearchAsync(string query);
+//    }
+//}

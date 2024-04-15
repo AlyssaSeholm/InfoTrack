@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.DTOs;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Infrastructure.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

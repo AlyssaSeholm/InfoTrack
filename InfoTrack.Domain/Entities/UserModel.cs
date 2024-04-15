@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace InfoTrack.Domain.Models
+namespace InfoTrack.Domain.Entities.Models
 {
     public class UserModel
     {

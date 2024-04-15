@@ -1,6 +1,6 @@
 ﻿using InfoTrack.Domain.Entities;
 
-namespace InfoTrack.Domain.Services.Interfaces
+namespace InfoTrack.Domain.Entities.Services.Interfaces
 {
     public interface IUserService
     {

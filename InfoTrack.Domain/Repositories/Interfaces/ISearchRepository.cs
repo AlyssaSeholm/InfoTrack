@@ -1,4 +1,5 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
+using InfoTrack.Domain.Entities;
 
 namespace InfoTrack.Domain.Repositories.Interfaces
 {

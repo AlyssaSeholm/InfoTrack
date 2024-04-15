@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.DTOs;
 using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Domain.Entities.Services.Interfaces;
 using MediatR;
 
 namespace InfoTrack.Application.Mediatr.Commands

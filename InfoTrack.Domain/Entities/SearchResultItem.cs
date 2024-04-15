@@ -15,10 +15,7 @@ namespace InfoTrack.Domain.Entities
         public string? Title { get; set; }
         public string? Href { get; set; }
         public string? DataVed { get; set; }
-
         //public string Notes { get; set; }
-
-        //TODO: What data do I want to keep from the parsed results?
 
         public string[]? Tags { get; set; }
         public SearchResults? Results { get; set; }

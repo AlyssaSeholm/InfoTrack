@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace InfoTrack.Infrastructure.Migrations
+namespace InfoTrack.Domain.Entities.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

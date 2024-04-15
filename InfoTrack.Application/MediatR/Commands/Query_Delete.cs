@@ -1,4 +1,4 @@
-﻿using InfoTrack.Domain.Services.Interfaces;
+﻿using InfoTrack.Domain.Entities.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
