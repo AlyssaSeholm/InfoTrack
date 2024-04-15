@@ -12,17 +12,19 @@ namespace InfoTrack.Infrastructure.Services
         private readonly IResultParserService _resultParserService = resultParserService;
 
 
-        public async Task<ResultMsg> PerformSearch(int query, CancellationToken cancellationToken)
+        public async Task<ResultMsg<SearchResults?>> PerformSearch(int query, CancellationToken cancellationToken)
         {
             var htmlResults = await _resultParserService.PerformSearch(query, cancellationToken);
-            if (!string.IsNullOrEmpty(htmlResults.ErrorMessage) || htmlResults.Data == null) { return htmlResults; }
+            if (!string.IsNullOrEmpty(htmlResults.ErrorMessage) || htmlResults.Data == null) { 
+                return new ResultMsg<SearchResults?> { ErrorMessage = htmlResults.ErrorMessage, Success = htmlResults.Success, Data = null }; 
+            }
 
             var parsedResults = await _resultParserService.ParseResults((string)htmlResults.Data, cancellationToken);
 
             var sanitizeResults = await _resultParserService.SanitizeResults(query, parsedResults, cancellationToken);
 
 
-            return new ResultMsg { Data = sanitizeResults, ErrorMessage = string.Empty, Success = true };
+            return new ResultMsg<SearchResults?> { Data = sanitizeResults.Data, ErrorMessage = string.Empty, Success = true };
         }
 
         public async Task<IEnumerable<SearchResults?>> GetSearchResultsByQueryId(int queryId, CancellationToken cancellationToken)

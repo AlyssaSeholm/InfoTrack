@@ -12,7 +12,7 @@ namespace InfoTrack.Application.MediatR.Queries
         public required int QueryId { get; set; }
     }
 
-    public record GetNewSearchResultsByQueryIdResponse(SearchResultsDto SearchResults);
+    public record GetNewSearchResultsByQueryIdResponse(SearchResultsDto SearchResults, bool Success, string Msg);
 
     public class GetNewSearchResultsByQueryIdHandler(ISearchService searchService, IMapper mapper)
         : IRequestHandler<GetNewSearchResultsByQueryIdRequest, GetNewSearchResultsByQueryIdResponse>
@@ -24,7 +24,7 @@ namespace InfoTrack.Application.MediatR.Queries
         {
             var results = await _searchService.PerformSearch(request.QueryId, cancellationToken);
 
-            return new GetNewSearchResultsByQueryIdResponse(_mapper.Map<SearchResultsDto>(results));
+            return new GetNewSearchResultsByQueryIdResponse(_mapper.Map<SearchResultsDto>(results), results.Success, results.ErrorMessage);
         }
     }
 }

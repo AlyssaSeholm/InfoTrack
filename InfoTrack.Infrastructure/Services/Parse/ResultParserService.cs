@@ -15,25 +15,25 @@ namespace InfoTrack.Infrastructure.Services.Parse
         protected readonly HttpClient _httpClient = httpClient;
         protected readonly IHostEnvironment _webHostEnvironment = webHostEnvironment;
 
-        public async Task<ResultMsg> PerformSearch(int queryId, CancellationToken cancellationToken)
+        public async Task<ResultMsg<string>> PerformSearch(int queryId, CancellationToken cancellationToken)
         {
             //todo: add functionality for cancellationToken solution-wide
 
             var query = await _searchRepository.GetQueryByQueryId(queryId, cancellationToken);
             if (query == null) { 
-                return new ResultMsg() { ErrorMessage = $"Unable to get the query for id {queryId}", Data = null, Success = false }; 
+                return new ResultMsg<string>() { ErrorMessage = $"Unable to get the query for id {queryId}", Data = null, Success = false }; 
             }
 
             var searchEngine = await _searchRepository.GetSearchEngineByEngineId(query.SearchEngineId, cancellationToken);
             if (searchEngine == null) { 
-                return new ResultMsg() { ErrorMessage = $"Unable to get the search engine id {query.SearchEngineId} for query {queryId}", Data = null, Success = false };
+                return new ResultMsg<string>() { ErrorMessage = $"Unable to get the search engine id {query.SearchEngineId} for query {queryId}", Data = null, Success = false };
              }
 
             int results = query.NumberOfResultsPulled ?? 100;
 
             var seoReq = await MakeEngineSEORequest(searchEngine.BaseUrl, results, query.IncludeTerms);
 
-            return new ResultMsg() { ErrorMessage = "", Data = seoReq, Success = true };
+            return new ResultMsg<string>() { ErrorMessage = "", Data = seoReq, Success = true };
         }
 
         private async Task<string> MakeEngineSEORequest(string baseUrl, int results, string query)
@@ -74,12 +74,16 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
         public abstract Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation);
 
-        public async Task<ResultMsg> SanitizeResults(int queryId, IEnumerable<ResultParse> parsedItems, CancellationToken cancellation)
+        public async Task<ResultMsg<SearchResults?>> SanitizeResults(int queryId, IEnumerable<ResultParse> parsedItems, CancellationToken cancellation)
         {
 
             var query = await _searchRepository.GetQueryByQueryId(queryId, cancellation);
             if (query == null) {
-                return new ResultMsg() { ErrorMessage = $"Unable to get the query for id {queryId} when trying to sanitize results", Data = null, Success = false }; 
+                return new ResultMsg<SearchResults?>() { 
+                    ErrorMessage = $"Unable to get the query for id {queryId} when trying to sanitize results", 
+                    Data = null, 
+                    Success = false 
+                };
             }
 
             var terms = query.IncludeTerms.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(t => t.Trim()).ToList();
@@ -96,10 +100,7 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
             var data = await ComprehensiveDataFromResults(query, srchResult, cancellation);
             
-            return new ResultMsg() { 
-                ErrorMessage = "", 
-                Data = data, 
-                Success = true };
+            return new ResultMsg<SearchResults?> { ErrorMessage = "", Success = true, Data = data };
         }
 
         private async Task<IEnumerable<SearchResultItem>> ExtractDetailsFromParsedItems(

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using InfoTrack.Application.DTOs;
+using InfoTrack.Domain.Entities;
 using InfoTrack.Infrastructure.Services.Interfaces;
 using MediatR;
 
@@ -11,7 +12,7 @@ namespace InfoTrack.Application.MediatR.Commands
         public int QueryId { get; } = queryId;
     }
 
-    public record CreateSearchResponse(SearchResultsDto Search);
+    public record CreateSearchResponse(SearchResultsDto SearchResults, bool Success, string Msg);
 
     public class CreateSearchHandler(ISearchService SearchService, IMapper mapper)
         : IRequestHandler<CreateSearchRequest, CreateSearchResponse>
@@ -25,7 +26,8 @@ namespace InfoTrack.Application.MediatR.Commands
 
             var results = await _SearchService.PerformSearch(request.QueryId, cancellationToken);
 
-            return new CreateSearchResponse(_mapper.Map<SearchResultsDto>(results));
+
+            return new CreateSearchResponse(_mapper.Map<SearchResultsDto>(results.Data), results.Success, results.ErrorMessage);
         }
     }
 }
