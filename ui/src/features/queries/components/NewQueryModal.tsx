@@ -1,6 +1,6 @@
-import React, { useState, FC } from 'react';
+import { useState, FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../app/store';
+import { AppDispatch } from '../../../app/store';
 import InputTextWithChipsIcon, { iChip } from '../../../components/Input/specialized/InputTextWithChips';
 import { Dialog, DialogHeader, DialogBody, DialogFooter, Button } from '@material-tailwind/react';
 import TextDropdown, { iMenuItem } from '../../../components/common/input/textdropdown/TextDropdown';
@@ -9,10 +9,11 @@ import { selectTheme } from '../../theme/themeSlice';
 import CompletedThemes from '../../theme/themeColors';
 import DelayedTooltip from '../../../components/common/delayedTooltip/DelayedTooltip';
 import '../../../assets/css/modal.css';
-import { fetch_User_ByEmail, selectUserId } from '../../user/userSlice';
-import { create_Query, selectQueryLoading } from '../querySlice';
-import { ToastContainer, toast } from "react-toastify";
+import { selectUserId } from '../../user/userSlice';
+import { create_Query } from '../querySlice';
 import notify, { ToastType } from '../../../services/NotificationService';
+import { unwrapResult } from '@reduxjs/toolkit';
+import { create_Search } from '../../search/results/searchResultsSlice';
 
 interface NewQueryProps {
   isOpen: boolean;
@@ -123,11 +124,15 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
         excludeTerms: '',       
       }
       console.log({newQuery, e });
-      const queryActionResult = await dispatch((create_Query as any)(newQuery));
-      console.log( `Query created!  ${queryActionResult}` );
+      const queryResult = await dispatch((create_Query as any)(newQuery));
+      const queryResultUnwrapped = unwrapResult(queryResult);
+      console.log( `Query created!  ${queryResultUnwrapped}` );
       notify("New query added! Getting first search results ... ", ToastType.SUCCESS);
       
-      // const searchActionResult = await dispatch((create))
+      const searchResult = await dispatch((create_Search as any)(queryResultUnwrapped.id));
+      const searchResultUnwrapped = unwrapResult(searchResult);
+      console.log( `Search done!  ${searchResultUnwrapped}` );
+      notify("Search completed! ", ToastType.SUCCESS);
       // showAlert('success', "Success", 'Query created successfully!')
       setChips([]);
       toggleIsOpen();

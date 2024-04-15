@@ -2,6 +2,7 @@ import { createAsyncThunk, unwrapResult } from '@reduxjs/toolkit';
 import { fetch_CompanyList_ByUserId } from '../features/company/companySlice';
 import { fetch_QueryList_ByUserId } from '../features/queries/querySlice';
 import { fetch_User_ByEmail, selectUserId } from '../features/user/userSlice';
+import { fetch_SearchList_ByUserId } from '../features/search/results/searchResultsSlice';
 
 export const fetchInitialData = createAsyncThunk(
   'data/fetchInitial',
@@ -12,11 +13,31 @@ export const fetchInitialData = createAsyncThunk(
     if (!userId) { //TODO: Change this to check if user is logged in
         const actionResult = await dispatch(fetch_User_ByEmail('Lys.Seholm@gmail.com'));
         const result = unwrapResult(actionResult);
-        await dispatch(fetch_CompanyList_ByUserId(result.user.id));
-        await dispatch(fetch_QueryList_ByUserId(result.user.id));
+        console.log('User:', result.user);
+
+        const companyResults = await dispatch(fetch_CompanyList_ByUserId(result.user.id));
+        const companyResultsUnwrapped = unwrapResult(companyResults);
+        console.log('Companies:', companyResultsUnwrapped);
+
+        const queryResults = await dispatch(fetch_QueryList_ByUserId(result.user.id));
+        const queryResultsUnwrapped = unwrapResult(queryResults);
+        console.log('Queries:', queryResultsUnwrapped);
+
+        const searchResults = await dispatch(fetch_SearchList_ByUserId(result.user.id));
+        const searchResultsUnwrapped = unwrapResult(searchResults);
+        console.log('SearchResults:', searchResultsUnwrapped);
     } else {
-        await dispatch(fetch_CompanyList_ByUserId(userId));
-        await dispatch(fetch_QueryList_ByUserId(userId));
+        const companyResults = await dispatch(fetch_CompanyList_ByUserId(userId));
+        const companyResultsUnwrapped = unwrapResult(companyResults);
+        console.log('Companies (had userId):', companyResultsUnwrapped);
+
+        const queryResults = await dispatch(fetch_QueryList_ByUserId(userId));
+        const queryResultsUnwrapped = unwrapResult(queryResults);
+        console.log('Queries (had userId):', queryResultsUnwrapped);
+
+        const searchResults = await dispatch(fetch_SearchList_ByUserId(userId));
+        const searchResultsUnwrapped = unwrapResult(searchResults);
+        console.log('SearchResults (had userId):', searchResultsUnwrapped);
     }
     
     

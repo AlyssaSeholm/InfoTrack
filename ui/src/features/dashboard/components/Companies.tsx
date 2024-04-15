@@ -4,16 +4,19 @@ import { useSelector } from 'react-redux';
 import { selectTheme } from '../../theme/themeSlice';
 import CompletedThemes from '../../theme/themeColors';
 import CompanyCard from '../../company/components/CompanyCard';
-import { Company } from '../../company/types';
+import { selectQueryList } from '../../queries/querySlice';
+import { selectSearchResults } from '../../search/results/searchResultsSlice';
 
 
 interface CompaniesProps {
     
 }
 
-const Companies: FC<CompaniesProps> = (props) => {
+const Companies: FC<CompaniesProps> = () => {
     const companies = useSelector(selectCompanies);
     const theme = useSelector(selectTheme);
+    const queries = useSelector(selectQueryList);
+    const searchResults = useSelector(selectSearchResults);
 
     const renderEmptyCompanyList = () => {
         return (
@@ -38,6 +41,8 @@ const Companies: FC<CompaniesProps> = (props) => {
                             downloadLink={company.baseUrl}
                             sourceCodeLink={null}
                             isOpen={index === 0}
+                            queries={queries}
+                            searchResults={searchResults}
                             />
             ))}
             {/* {companies.map((company, index) => (

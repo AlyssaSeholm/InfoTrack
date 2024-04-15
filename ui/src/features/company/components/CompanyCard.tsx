@@ -1,16 +1,15 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Card, CardBody, CardFooter, CardHeader, Select, Option } from '@material-tailwind/react';
-import { FC, SetStateAction, useEffect, useState } from 'react';
-
-import { fas, faB } from '@fortawesome/free-solid-svg-icons';
-import { lookupIconByStringName } from '../../../utilities/iconUtilities';
-import { selectQueryList, selectQueryListByCompanyId } from '../../queries/querySlice';
-import { useSelector } from 'react-redux';
+import { FC, useState } from 'react';
 import { Company } from '../types';
-import { RootState } from '../../../app/store';
-import FloatingLabel from '../../../components/common/input/floatingLabel/FloatingLabel';
-import FloatingLabelInput from '../../../components/common/input/floatingLabel/FloatingLabelInput';
+import TextDropdown, { iMenuItem } from '../../../components/common/input/textdropdown/TextDropdown';
+import { Query } from '../../queries/types';
+import { SearchResults } from '../../search/results/types';
+import { Accordion, AccordionBody, AccordionHeader, Button, Chip } from '@material-tailwind/react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch } from '../../../app/store';
+import { create_Search, selectSearchLoading, selectSearchResults } from '../../search/results/searchResultsSlice';
+import { unwrapResult } from '@reduxjs/toolkit';
+import notify, { ToastType } from '../../../services/NotificationService';
+import React from 'react';
 
 
 interface CompanyCardProps {
@@ -22,100 +21,259 @@ interface CompanyCardProps {
     sourceCodeLink: string | null;
     title: string;
     isOpen: boolean;
+    queries: Query[];
+    searchResults: SearchResults[];
 }
 
 const CompanyCard: FC<CompanyCardProps> = (props) => {
-    const { gradientToColor,description, downloadLink, sourceCodeLink, title, isOpen } = props;    
-    
-    const queries = useSelector((state: RootState) => selectQueryListByCompanyId(state, props.company.id));
-    // const [isExpanded, setIsExpanded] = useState<boolean>(false);
+    const { company, gradientToColor, downloadLink, sourceCodeLink, title, isOpen, queries, searchResults } = props;
 
-    
-    const [fieldvalue, setfieldValue] = useState<string>("");
+    const dispatch = useDispatch();
 
+    const [selectedQueryId, setSelectedQueryId] = useState<string>(queries ? queries[0]?.id : "");
+    const [queriesRunning, setQueriesRunning] = useState<boolean>(false);
+    const selectedResults = useSelector(selectSearchResults);
+
+
+    const getQueryName = (id: string): string => {
+        const items = convertQueriesToMenuItems();
+        var query = items.find(q => q.value === id);
+        return query?.label ?? 'missing query name';
+    }
+    const convertQueriesToMenuItems = (): iMenuItem[] => {
+        return queries?.filter(q => q.myCompanyId === company.id)?.map((query: Query, index) => {
+            return {
+                value: query.id,
+                label: query.name != "" ? `${index + 1}. ${query.name}` : `${index + 1}. Query ${query.id} terms: ${query.includeTerms} ${query.excludeTerms}`,
+                count: 0,//selectedResults?.filter(sr => sr.queryId === query.id).length ?? 0,
+                disabled: false
+            };
+        }) ?? [];
+    }
+    const companyQueries = (): Query[] => {
+        return queries?.filter(q => q.myCompanyId === company.id) ?? [];
+    }
+    const handleNewSearchEngineSelected = (e: iMenuItem) => {
+        console.log(`New query chosen! ${e.label}`);
+        setSelectedQueryId(e.value);
+    }
+    const handleQueryRun = async () => {
+        setQueriesRunning(true);
+        console.log(`Run query for ${company.name}`);
+        const searchResult = await dispatch((create_Search as any)(selectedQueryId));
+        
+        console.log(`Query ran!: ${unwrapResult(searchResult)}`);  
+        notify(`Query successfully ran for ${getQueryName(selectedQueryId)}`, ToastType.SUCCESS);      
+        setQueriesRunning(true);
+    }
+
+    const [accordionOpen, setAccordionOpen] = React.useState(1); 
+    const handleOpen = (value: React.SetStateAction<number>) => setAccordionOpen(accordionOpen === value ? 0 : value);
+
+    //#region Render Functions
     const renderEmptyQueryList = () => {
         return (
-            <div className={'card bg-base-100 shadow-xl'}>
-                <p className={'text text-base-content text-xl'}>No queries found for this company.</p>
+            <div className={'card bg-base-100 shadow-xl h-20'}>
+                <p className={'text text-base-content text-md'}>No queries found for this company.</p>
             </div>
         );
     }
+    function Icon({ id }: { id: number }) {
+        return (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className={`${id === accordionOpen ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+            >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        );
+    }
+      
+    const renderQueryListSelect = () => {
+
+        return (
+            <>
+                <div className='form-row'>
+                    <h3>Queries: </h3>
+                    <TextDropdown
+                        btnLabel={selectedQueryId !== "" ? getQueryName(selectedQueryId) : 'No queries found'}
+                        menuItems={convertQueriesToMenuItems()}
+                        onSelect={handleNewSearchEngineSelected} />
+                </div>
+            </>
+        )
+    }
+
+    const renderResultsList = () => {
+
+        if (selectedQueryId === "") {
+            return (
+                <div className={'card bg-base-100 shadow-xl h-20'}>
+                    <p className={'text text-base-content text-md'}>Select a query to display search results.</p>
+                </div>
+            );
+        } 
+
+        const results = selectedResults?.filter(sr => sr?.queryId === selectedQueryId);
+        const resultsv2 = searchResults?.filter(sr => sr?.queryId === selectedQueryId);
+        console.log(`${selectedQueryId} -- renderResultsList: ${results}` )
+        console.log(`${selectedQueryId} -- renderResultsList: ${resultsv2}` )
+        if (!results || results.length === 0) {
+            return (
+                <div className={'card bg-base-100 shadow-xl h-20'}>
+                    <p className={'text text-base-content text-md'}>No search results found for this query.</p>
+                </div>
+            );
+        }
+
+        return (
+            <>
+            {results.map((result, index) => (
+                <Accordion open={accordionOpen === index+1} key={index+1} className={'p-0 overflow-hidden'} icon={<Icon id={index+1} />} animate={{ mount: { scale: 1, y:0 }, unmount: { scale: 0, y: 5 }, }}>
+                    <AccordionHeader onClick={() => handleOpen(index+1)} className='flex flex-row w-full gap-4'>
+                        <h2 className={'text text-base-content text-md'}>{getQueryName(result.queryId)}</h2>
+                        {/* Top 10 results: */}
+                        {result.highestRank > 10 ? 
+                            <h3>Highest Rank: {result.highestRank}</h3> 
+                            : <p className={'text text-base-content text-md'}>No results in top 10</p>}
+                        {result.top100Count > 0 ? 
+                            <h3>Number of Results Found: {result.top100Count} / {result.items.length}</h3> 
+                            : <p className={'text text-base-content text-md'}>No results matched the key terms.</p>}
+                    </AccordionHeader>
+                    <AccordionBody className={"overflow-x-hidden overflow-y-auto max-h-96"}>
+                    <ul key={index} className={'card bg-base-300 shadow-xl flex flex-wrap flex-column gap-2'}>
+                    {result.items.map((item, index) => (
+                        <li key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around'}>
+                            <h3 className='flex'>{`#${item.rank}`}</h3> 
+                            {item.tags?.map((tag, index) => (
+                                <Chip variant='outlined' key={index} value={tag}  className='flex h-8 border-accent'/>
+                            ))}
+                            <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
+                        </li>
+                        // <div key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around animate={{ mount: { scale: 1 }, unmount: { scale: 0.9 }, }}'}>
+                        //     <h3 className='flex'>{`#${item.rank}`}</h3> 
+                        //     {item.tags?.map((tag, index) => (
+                        //         <Chip variant='outlined' key={index} value={tag}  className='flex h-8 border-accent'/>
+                        //     ))}
+                        //     <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
+                        // </div>
+                    ))}
+                    </ul>
+                    </AccordionBody>
+                </Accordion>
+            ))}
+                {/* {results.map((result, index) => (
+                    <div key={index} className={'card bg-base-300 shadow-xl flex flex-column w-full overflow-x-hidden overflow-y-auto max-h-48'}>
+                        <div className='flex flex-row w-95 gap-4'>
+                            <h2 className={'text text-base-content text-md'}>{getQueryName(result.queryId)}</h2>
+                          
+                            {result.highestRank > 10 ? 
+                                <h3>Highest Rank: {result.highestRank}</h3> 
+                                : <p className={'text text-base-content text-md'}>No results in top 10</p>}
+                            {result.top100Count > 0 ? 
+                                <h3>Number of Results Found: {result.top100Count} / {result.items.length}</h3> 
+                                : <p className={'text text-base-content text-md'}>No results matched the key terms.</p>}
+                        </div>
+                        <ul key={index} className={'card bg-base-300 shadow-xl flex flex-wrap flex-column gap-2'}>
+                        {result.items.map((item, index) => (
+                            <li key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around'}>
+                                <h3 className='flex'>{`#${item.rank}`}</h3> 
+                                {item.tags?.map((tag, index) => (
+                                    <Chip variant='outlined' key={index} value={tag}  className='flex h-8 border-accent'/>
+                                ))}
+                                <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
+                            </li>
+                            // <div key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around'}>
+                            //     <h3 className='flex'>{`#${item.rank}`}</h3> 
+                            //     {item.tags?.map((tag, index) => (
+                            //         <Chip variant='outlined' key={index} value={tag}  className='flex h-8 border-accent'/>
+                            //     ))}
+                            //     <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
+                            // </div>
+                        ))}
+                        </ul>
+                    </div>
+                ))} */}
+            </>
+        );
+    }
+    // height: auto;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+//#endregion Render Functions
 
     return (
         <>
-        {/* <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-200">
-            <div className="collapse-title text-xl font-medium">
-            Focus me to see content
-            </div>
-            <div className="collapse-content"> 
-            <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-            </div>
-        </div> */}
-        <div className='company-card'>
-            <div className="card-mat card w-full p-6 bg-base-100 shadow-xl mt-6 collapse collapse-arrow overflow-visible" >
-                <input type="radio" name="my-accordion-1" defaultChecked={isOpen} /> 
+            <div className='company-card'>
+                <div className="card-mat card w-full p-6 bg-base-100 shadow-xl mt-6 collapse collapse-arrow overflow-visible" >
+                    <input type="radio" name="my-accordion-1" defaultChecked={isOpen} />
 
-                {/* TITLE */}
-                <div className="card__header collapse-title " style={{ background: `linear-gradient(255deg,  rgba(255, 134, 91, 0), ${gradientToColor} ) ` }}> 
-                    <label className="swap swap-rotate ">
-                        <input type="checkbox" />
-                        <span className={`material-symbols-outlined large-icon  ${(!isOpen ? "swap-on" : "swap-off")}`}> query_stats </span>
-                        <span className={`material-symbols-outlined large-icon  ${(isOpen ? "swap-on" : "swap-off")}`}> monitoring </span>
-                    </label>
-                    {title && <h2 className="card__header__title text text-primary-content">{title}</h2>}
-                </div>
-
-                {/* COLLAPSABLE CONTENT */}
-                <div className='collapse-content'>
-                    {/* BODY */}
-                    <div className="card__body " >
-                    <div className="w-72">
-
-
-
-  <div className="relative w-full min-w-[200px] h-10">
-    <FloatingLabelInput labelText="Username" value={fieldvalue} setValue={setfieldValue} placeholderTxt={''} />
-    {/* <FloatingLabel labelText="Username" >
-    <input
-      className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
-      placeholder=" " />
-    </FloatingLabel> */}
-      {/* <label
-      className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">Username
-    </label> */}
-  </div>
-</div>  
-    <div className="relative h-10 w-72 min-w-[200px]">
-                    {/* <select className='peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'> */}
-                    <input className='peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900'/>
-                        {/* {(!queries || queries.length === 0)
-                            ? renderEmptyQueryList() 
-                            : queries.map((query, index) => (
-                                <option key={query.id} value={query.id}>{query.name}</option>
-                        ))} */}
-                        {/* <Option>Material Tailwind HTML</Option>
-                        <Option>Material Tailwind React</Option>
-                        <Option>Material Tailwind Vue</Option>
-                        <Option>Material Tailwind Angular</Option>
-                        <Option>Material Tailwind Svelte</Option> */}
-                    {/* </select> */}
-  <label
-    className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">
-    Select a City
-  </label>
+                    {/* TITLE */}
+                    <div className="card__header collapse-title " style={{ background: `linear-gradient(255deg,  rgba(255, 134, 91, 0), ${gradientToColor} ) ` }}>
+                        <label className="swap swap-rotate ">
+                            <input type="checkbox" />
+                            <span className={`material-symbols-outlined large-icon  ${(!isOpen ? "swap-on" : "swap-off")}`}> monitoring </span>
+                            <span className={`material-symbols-outlined large-icon  ${(isOpen ? "swap-on" : "swap-off")}`}> monitoring </span>
+                        </label>
+                        {title && <h2 className="card__header__title text text-primary-content">{title}</h2>}
                     </div>
-                        <p className='text text-neutral-content'>{description}</p>
-                    </div>
-                    {/* FOOTER */}
-                    <div className="card__footer ">
-                        <a href={downloadLink} className="card__footer__link btn btn-ghost btn-neutral-content">Navigate to Company Site</a>
-                        {sourceCodeLink && <a href={sourceCodeLink} className="card__footer__link btn btn-neutral-content">Source Code</a>}
+
+                    {/* COLLAPSABLE CONTENT */}
+                    <div className='collapse-content'>
+                        {/* BODY */}
+                        <div className="card__body w-full" >
+                            <div className="w-full">
+
+                                {/* <div className="relative w-full min-w-[200px] h-10">
+                                    <FloatingLabelInput labelText="Username" value={fieldvalue} setValue={setfieldValue} placeholderTxt={''} />
+                                </div> */}
+
+                                <div className="relative w-full min-w-[200px] flex justify-between">{/* <div className="select-with-floating-label mt-3"> */}
+
+
+                                    <div className='flex flex-1'>
+                                        {(!companyQueries() || companyQueries().length === 0)
+                                            ? renderEmptyQueryList()
+                                            : renderQueryListSelect()}
+                                    </div>
+                                    <div>
+                                        
+                                    <div className='flex flex-row gap-4'>
+                                        {/* <Button variant="outlined" size="md" ripple={true} className="flex items-center gap-3 py-0.5 pl-3 pr-5 border-base-content">
+                                            <span className={`material-symbols-outlined large-icon animate-spin  ${(!isOpen ? "swap-on" : "swap-off")}`}> refresh </span>
+                                            Refresh
+                                        </Button> */}
+                                        <Button disabled={queriesRunning} variant="gradient" size="md" ripple={true} onClick={handleQueryRun}
+                                            className={`flex items-center gap-3 py-0.5 pl-3 pr-5 bg-primary text-primary-content border-primary-content ${queriesRunning ? 'bg-opacity-50' : ''}`}
+                                        >
+                                            <span className={`material-symbols-outlined large-icon ${queriesRunning ? 'animate-pulse' : ''}  ${(!isOpen ? "swap-on" : "swap-off")}`}> query_stats </span>
+                                            Run Query
+                                        </Button>
+                                    </div>
+                                    </div>
+
+                                </div>
+                                <div className="w-full mt-4 flex flex-row flex-wrap gap-3">
+                                    {renderResultsList()}
+                                </div>
+                            </div>
+                        </div>
+                        {/* FOOTER */}
+                        <div className="card__footer ">
+                            <a href={downloadLink} className="card__footer__link btn btn-ghost btn-neutral-content">Navigate to Company Site</a>
+                            {sourceCodeLink && <a href={sourceCodeLink} className="card__footer__link btn btn-neutral-content">Source Code</a>}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </>
     );
 }
 
 export default CompanyCard;
+

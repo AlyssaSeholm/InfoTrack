@@ -1,72 +1,672 @@
 ----------------------------------Count: 1----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling integration for Clio Manage users - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; clio</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.infotrack.com/clio/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAIQAg&amp;usg=AOvVaw1iDjkQmkw23DPVCKrFyeXG" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling integration for Clio Manage users - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; clio</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://www.infotrack.com/clio/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAYQAg&amp;usg=AOvVaw2pobHRCb6Hg9bVqCPhIndZ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling integration for Clio Manage users - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; clio</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 2----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Knowledge Base Solution - CCH Axcess Workflow E-File Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">support.cch.com &#8250; solution</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://support.cch.com/kb/solution/000225205&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAoQAg&amp;usg=AOvVaw0vAOePulbAF8jnK6c1P8s1" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Knowledge Base Solution - CCH Axcess Workflow E-File Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">support.cch.com &#8250; solution</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://support.cch.com/kb/solution/000225205&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECGAQAg&amp;usg=AOvVaw3-C8IteB2hWNjuUtHJNBEn" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECGAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Knowledge Base Solution - CCH Axcess Workflow E-File Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">support.cch.com &#8250; solution</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 3----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clerks Authority eFiling Vendor Integration information - GSCCCA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.gsccca.org &#8250; learn &#8250; efiling-information &#8250; vendor-integration</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.gsccca.org/learn/efiling-information/vendor-integration&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAkQAg&amp;usg=AOvVaw3UDgoeLssJffB7-wPJrNqu" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clerks Authority eFiling Vendor Integration information - GSCCCA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.gsccca.org &#8250; learn &#8250; efiling-information &#8250; vendor-integration</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://www.gsccca.org/learn/efiling-information/vendor-integration&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAMQAg&amp;usg=AOvVaw1Ix0oRgF4MgBqqksRHHQK2" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clerks Authority eFiling Vendor Integration information - GSCCCA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.gsccca.org &#8250; learn &#8250; efiling-information &#8250; vendor-integration</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 4----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Explained: Integrated eFiling and continued innovation - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; blog &#8250; explained-integrated-efiling-and-continued-in...</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.infotrack.com/blog/explained-integrated-efiling-and-continued-innovation/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAgQAg&amp;usg=AOvVaw3EibM_-DyUO6SACB8xfPuv" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Explained: Integrated eFiling and continued innovation - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; blog &#8250; explained-integrated-efiling-and-continued-in...</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://www.infotrack.com/blog/explained-integrated-efiling-and-continued-innovation/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFsQAg&amp;usg=AOvVaw0t8IeWcWODYMeXMuXtOBMi" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Explained: Integrated eFiling and continued innovation - InfoTrack</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.infotrack.com &#8250; blog &#8250; explained-integrated-efiling-and-continued-in...</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 5----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">MyCase + InfoTrack Integration: Faster &amp; More Accurate e-Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mycase.com &#8250; General</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.mycase.com/blog/general/mycase-infotrack-integration-faster-and-more-accurate-e-filing/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAYQAg&amp;usg=AOvVaw0mhVtkFsYIyhDw010db0kz" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">MyCase + InfoTrack Integration: Faster &amp; More Accurate e-Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mycase.com &#8250; General</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://www.mycase.com/blog/general/mycase-infotrack-integration-faster-and-more-accurate-e-filing/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECGEQAg&amp;usg=AOvVaw0wB2aR1OpgC2J-xz9Q0tNf" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECGEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">MyCase + InfoTrack Integration: Faster &amp; More Accurate e-Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mycase.com &#8250; General</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 6----------------------------------
-  <<<<<<<InnerHtml
-<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.tax1099.com/integrations&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAEQAg&amp;usg=AOvVaw1qu4yg5frmlc69nr-kfVCt" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div></a>
- **END** 
-----------------------------------Count: 7----------------------------------
-  <<<<<<<InnerHtml
-<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.fileandservexpress.com/how-do-i-integrate-my-law-firm-technology/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAcQAg&amp;usg=AOvVaw11p4XrbfvxqHuDTahPxqyd" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div></a>
- **END** 
-----------------------------------Count: 8----------------------------------
-  <<<<<<<InnerHtml
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clio and InfoTrack Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; app-directory &#8250; infotrack</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.clio.com/app-directory/infotrack/&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAUQAg&amp;usg=AOvVaw3YPQ-Ua4R0dkqM9hRq1rEd" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clio and InfoTrack Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; app-directory &#8250; infotrack</div></div></div></a>
- **END** 
-----------------------------------Count: 9----------------------------------
-  <<<<<<<InnerHtml
-<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.tylertech.com/products/enterprise-justice/efile-serve&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAQQAg&amp;usg=AOvVaw1H6k9BzGS_lXK7PyUBj-4y" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div></a>
- **END** 
-----------------------------------Count: 10----------------------------------
-  <<<<<<<InnerHtml
+  ** OuterHtml** 
+<a href="/url?q=https://www.clio.com/app-directory/infotrack/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF8QAg&amp;usg=AOvVaw1pTUKFZux8A99nS2BN3g3O" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Clio and InfoTrack Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; app-directory &#8250; infotrack</div></div></div></a>
+  ** END** 
+----------------------------------Count: 7----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.fileandservexpress.com/how-do-i-integrate-my-law-firm-technology/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBQQAg&amp;usg=AOvVaw3HY-_E3kZYILdtOL0RgipU" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">How Do I Integrate My Law Firm Technology? - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; Blog</div></div></div></a>
+  ** END** 
+----------------------------------Count: 8----------------------------------
+  ** InnerHtml** 
 <div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) Overview - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-overview</div></div></div>
-  >>>>>>>OuterHtml
-<a href="/url?q=https://www.irs.gov/e-file-providers/modernized-e-file-overview&amp;sa=U&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAMQAg&amp;usg=AOvVaw3srDHk9C6zaYKSDtRd-WqA" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQFnoECAMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) Overview - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-overview</div></div></div></a>
- **END** 
+  ** OuterHtml** 
+<a href="/url?q=https://www.irs.gov/e-file-providers/modernized-e-file-overview&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFwQAg&amp;usg=AOvVaw0v_Ubwk8MYeFALH6qMb9Uj" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) Overview - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-overview</div></div></div></a>
+  ** END** 
+----------------------------------Count: 9----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.tylertech.com/products/enterprise-justice/efile-serve&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFoQAg&amp;usg=AOvVaw2gzM5GSzlneR_NGp1ejMjL" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile &amp; Serve Portal - Tyler Technologies</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tylertech.com &#8250; Products &#8250; Enterprise Justice</div></div></div></a>
+  ** END** 
+----------------------------------Count: 10----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">AmericanLegalNet | eFileTexas.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiletexas.gov &#8250; Service-Providers &#8250; AmericanLegalNet</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.efiletexas.gov/Service-Providers/AmericanLegalNet.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF0QAg&amp;usg=AOvVaw1MWjcG3Gx2hkhZpSEb7ebw" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">AmericanLegalNet | eFileTexas.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiletexas.gov &#8250; Service-Providers &#8250; AmericanLegalNet</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 11----------------------------------
-  <<<<<<<InnerHtml
-<accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_1" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack, integrations</div></span></div>
-  >>>>>>>OuterHtml
-<a class="Q71vJc" href="/search?sca_esv=6480816f92634337&amp;sca_upv=1&amp;ie=UTF-8&amp;q=InfoTrack,+integrations&amp;sa=X&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAI" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAI"><accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_1" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack, integrations</div></span></div></a>
- **END** 
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">InfoTrack Legal E-Filing for Lawyers | LEAP US Integrations</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">leap.us &#8250; integrations &#8250; e-filing-infotrack</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://leap.us/integrations/e-filing-infotrack/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF4QAg&amp;usg=AOvVaw3uO-QGroQtGv21MUEc6I0y" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECF4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">InfoTrack Legal E-Filing for Lawyers | LEAP US Integrations</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">leap.us &#8250; integrations &#8250; e-filing-infotrack</div></div></div></a>
+  ** END** 
 ----------------------------------Count: 12----------------------------------
-  <<<<<<<InnerHtml
-<accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_3" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack and Clio</div></span></div>
-  >>>>>>>OuterHtml
-<a class="Q71vJc" href="/search?sca_esv=6480816f92634337&amp;sca_upv=1&amp;ie=UTF-8&amp;q=InfoTrack+and+Clio&amp;sa=X&amp;ved=2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAQ" data-ved="2ahUKEwjX1I-2-beFAxV_RDABHYd9AwQQ1QJ6BAgAEAQ"><accordion-entry-search-icon><span class="ieB2Dd"><img class="OEaqif" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:20px;max-height:20px" id="dimg_3" data-deferred="1"></span></accordion-entry-search-icon><div class="kjGX2"><span class="Xe4YD"><div class="BNeawe s3v9rd AP7Wnd lRVwie">InfoTrack and Clio</div></span></div></a>
- **END** 
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Introducing Clio File: E-Filing and E-Service Built in to the Leading ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; Press</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.clio.com/about/press/clio-file/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFgQAg&amp;usg=AOvVaw2gqnjSPpufccdLJvraxTN4" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Introducing Clio File: E-Filing and E-Service Built in to the Leading ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.clio.com &#8250; Press</div></div></div></a>
+  ** END** 
+----------------------------------Count: 13----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing (CM/ECF) | United States Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.uscourts.gov &#8250; court-records &#8250; electronic-filing-cmecf</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.uscourts.gov/court-records/electronic-filing-cmecf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFkQAg&amp;usg=AOvVaw2GVUz9ZzudqUsquXuLN56h" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing (CM/ECF) | United States Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.uscourts.gov &#8250; court-records &#8250; electronic-filing-cmecf</div></div></div></a>
+  ** END** 
+----------------------------------Count: 14----------------------------------
+  ** InnerHtml** 
+<span class="XLloXe AP7Wnd">integration</span>
+  ** OuterHtml** 
+<a href="/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;q=efiling,+%22integration%22&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQIWRAF" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQIWRAF"><span class="XLloXe AP7Wnd">integration</span></a>
+  ** END** 
+----------------------------------Count: 15----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling With ServeManager</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.servemanager.com &#8250; blog &#8250; efiling-with-servemanager</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.servemanager.com/blog/3101/efiling-with-servemanager&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFcQAg&amp;usg=AOvVaw2KqWpD-ssxwIBFPrPE7pp7" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling With ServeManager</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.servemanager.com &#8250; blog &#8250; efiling-with-servemanager</div></div></div></a>
+  ** END** 
+----------------------------------Count: 16----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">InfoTrack US, Inc. - iManage</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">imanage.com &#8250; Technology Partners</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://imanage.com/technology-partners/infotrack-us-inc/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCQQAg&amp;usg=AOvVaw28oE8NRtJy2Fc60GBAN4c8" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">InfoTrack US, Inc. - iManage</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">imanage.com &#8250; Technology Partners</div></div></div></a>
+  ** END** 
+----------------------------------Count: 17----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling Document Library | CPSC.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cpsc.gov &#8250; eFiling-Document-Library</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.cpsc.gov/eFiling-Document-Library&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFYQAg&amp;usg=AOvVaw0nojlJEc0k7nVe0P-VM9nO" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling Document Library | CPSC.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cpsc.gov &#8250; eFiling-Document-Library</div></div></div></a>
+  ** END** 
+----------------------------------Count: 18----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Defining integrated eFiling: The next phase of innovation - One Legal</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.onelegal.com &#8250; blog &#8250; defining-integrated-efiling-the-next-phase-of-i...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.onelegal.com/blog/defining-integrated-efiling-the-next-phase-of-innovation/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFQQAg&amp;usg=AOvVaw3nHeQ0RuvvwNsKWm2wHbN_" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Defining integrated eFiling: The next phase of innovation - One Legal</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.onelegal.com &#8250; blog &#8250; defining-integrated-efiling-the-next-phase-of-i...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 19----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-filing with Assembly Line - Suffolk LIT Lab</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">suffolklitlab.org &#8250; docs &#8250; efiling &#8250; overview</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://suffolklitlab.org/docassemble-AssemblyLine-documentation/docs/efiling/overview&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFIQAg&amp;usg=AOvVaw2wOSX-uBErDNFBg0DJyzB-" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-filing with Assembly Line - Suffolk LIT Lab</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">suffolklitlab.org &#8250; docs &#8250; efiling &#8250; overview</div></div></div></a>
+  ** END** 
+----------------------------------Count: 20----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Home | EFILE.DOL.GOV</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.dol.gov</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://efile.dol.gov/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFUQAg&amp;usg=AOvVaw1vRnWO9x3OPTDMikL-BmPq" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Home | EFILE.DOL.GOV</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.dol.gov</div></div></div></a>
+  ** END** 
+----------------------------------Count: 21----------------------------------
+  ** InnerHtml** 
+<span class="XLloXe AP7Wnd">integration</span>
+  ** OuterHtml** 
+<a href="/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;q=efiling,+%22integration%22&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQIVRAG" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQIVRAG"><span class="XLloXe AP7Wnd">integration</span></a>
+  ** END** 
+----------------------------------Count: 22----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">API - US Legal PRO</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">uslegalpro.com &#8250; api</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://uslegalpro.com/api&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFEQAg&amp;usg=AOvVaw1IEuXrfCNuDI7iWi3p8yNa" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">API - US Legal PRO</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">uslegalpro.com &#8250; api</div></div></div></a>
+  ** END** 
+----------------------------------Count: 23----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing of Court Case Documents</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.rsi.com &#8250; State Judicial Solutions</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.rsi.com/state-judicial-solutions/electronic-court-filing/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFAQAg&amp;usg=AOvVaw1VSfCkuCVN41xjx_zSzZKq" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing of Court Case Documents</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.rsi.com &#8250; State Judicial Solutions</div></div></div></a>
+  ** END** 
+----------------------------------Count: 24----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Court Services - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; court-services</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.fileandservexpress.com/court-services/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE8QAg&amp;usg=AOvVaw24TFjp_1Cc6WidDl3VkSfX" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Court Services - File &amp; ServeXpress</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fileandservexpress.com &#8250; court-services</div></div></div></a>
+  ** END** 
+----------------------------------Count: 25----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">GSCCCA eFile API Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.gsccca.org &#8250; Implementers</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://efile.gsccca.org/Implementers.aspx&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE4QAg&amp;usg=AOvVaw24cg-a1Rz-8ay1ODuZi4Ie" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">GSCCCA eFile API Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.gsccca.org &#8250; Implementers</div></div></div></a>
+  ** END** 
+----------------------------------Count: 26----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Integrated eFiling Services - Minnesota Judicial Branch</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mncourts.gov &#8250; Integration-Services &#8250; IntegratedEfilingServices</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.mncourts.gov/Integration-Services/IntegratedEfilingServices.aspx&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEwQAg&amp;usg=AOvVaw2PtiihMCuE9Xl3IqCeUk1H" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Integrated eFiling Services - Minnesota Judicial Branch</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mncourts.gov &#8250; Integration-Services &#8250; IntegratedEfilingServices</div></div></div></a>
+  ** END** 
+----------------------------------Count: 27----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1308 - Integrated eFiling for Odyssey DMS Superior Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.wa.gov &#8250; Judicial Information System &#8250; IT Goverance</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.wa.gov/jis/%3Ffa%3Djis.ITGRequestDetail%26requestID%3D1308&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEsQAg&amp;usg=AOvVaw05xr3W6neRuYi7JsTggvqz" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1308 - Integrated eFiling for Odyssey DMS Superior Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.wa.gov &#8250; Judicial Information System &#8250; IT Goverance</div></div></div></a>
+  ** END** 
+----------------------------------Count: 28----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">SuffolkLITLab/EfileProxyServer: A proxy server that acts as an Efiling ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">github.com &#8250; SuffolkLITLab &#8250; EfileProxyServer</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://github.com/SuffolkLITLab/EfileProxyServer&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEgQAg&amp;usg=AOvVaw3X7o79-GxEmT1-hjTei1P2" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">SuffolkLITLab/EfileProxyServer: A proxy server that acts as an Efiling ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">github.com &#8250; SuffolkLITLab &#8250; EfileProxyServer</div></div></div></a>
+  ** END** 
+----------------------------------Count: 29----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">PRRB Electronic Filing - CMS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cms.gov &#8250; medicare &#8250; provider-reimbursement-review-board &#8250; prrb-...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.cms.gov/medicare/regulations-guidance/provider-reimbursement-review-board/prrb-electronic-filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEoQAg&amp;usg=AOvVaw2KzXui05dLvt1THrG1y05N" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">PRRB Electronic Filing - CMS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cms.gov &#8250; medicare &#8250; provider-reimbursement-review-board &#8250; prrb-...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 30----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] eFiling Technical Overview Electronic Submission Services</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mncourts.gov &#8250; mncourtsgov &#8250; media &#8250; IntegrationServices &#8250; e...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.mncourts.gov/mncourtsgov/media/IntegrationServices/eFilingTechnicalOverview.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEkQAg&amp;usg=AOvVaw2sTNzSrCIG4Yqfem3C9OzE" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] eFiling Technical Overview Electronic Submission Services</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.mncourts.gov &#8250; mncourtsgov &#8250; media &#8250; IntegrationServices &#8250; e...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 31----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Indiana Judicial Branch: How it works - IN.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.in.gov &#8250; courts &#8250; efiling &#8250; how-it-works</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.in.gov/courts/efiling/how-it-works/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE0QAg&amp;usg=AOvVaw12VQUO_3_pqBgAI_9yOtEH" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECE0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Indiana Judicial Branch: How it works - IN.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.in.gov &#8250; courts &#8250; efiling &#8250; how-it-works</div></div></div></a>
+  ** END** 
+----------------------------------Count: 32----------------------------------
+  ** InnerHtml** 
+<span class="XLloXe AP7Wnd">integration</span>
+  ** OuterHtml** 
+<a href="/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;q=efiling,+%22integration%22&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQITRAF" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ5t4CegQITRAF"><span class="XLloXe AP7Wnd">integration</span></a>
+  ** END** 
+----------------------------------Count: 33----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Strategic Issues to Consider before Starting an E-filing Initiative</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.ncsc.org &#8250; assets &#8250; pdf_file &#8250; efiling-issues-paper-v-101-final</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.ncsc.org/__data/assets/pdf_file/0022/18490/efiling-issues-paper-v-101-final.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEcQAg&amp;usg=AOvVaw1a_oWatjlbR1yI5aI8nV0i" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Strategic Issues to Consider before Starting an E-filing Initiative</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.ncsc.org &#8250; assets &#8250; pdf_file &#8250; efiling-issues-paper-v-101-final</div></div></div></a>
+  ** END** 
+----------------------------------Count: 34----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFileIL | Office of the Illinois Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.illinoiscourts.gov &#8250; eservices &#8250; efileil</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.illinoiscourts.gov/eservices/efileil/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCUQAg&amp;usg=AOvVaw2JxiyzqAZvVpWvbX6sCrSa" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFileIL | Office of the Illinois Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.illinoiscourts.gov &#8250; eservices &#8250; efileil</div></div></div></a>
+  ** END** 
+----------------------------------Count: 35----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Service Providers - eFileTexas.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiletexas.gov &#8250; service-providers</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.efiletexas.gov/service-providers.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFMQAg&amp;usg=AOvVaw0WYARwgVyBznRfLz1am12K" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECFMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Service Providers - eFileTexas.gov</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiletexas.gov &#8250; service-providers</div></div></div></a>
+  ** END** 
+----------------------------------Count: 36----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing Deployment Program - California Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.ca.gov &#8250; ...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.ca.gov/4934.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEMQAg&amp;usg=AOvVaw2g-a2zQYxPBYR4flNVb5o9" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing Deployment Program - California Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.ca.gov &#8250; ...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 37----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling in District and Justice Courts - Utah State Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.utcourts.gov &#8250; Filing &#8250; eFiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.utcourts.gov/en/legal-help/legal-help/procedures/filing/efiling/district.html&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEQQAg&amp;usg=AOvVaw31Svqr_33IHnLqk9gLfkHo" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling in District and Justice Courts - Utah State Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.utcourts.gov &#8250; Filing &#8250; eFiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 38----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CRIMINAL EFILING PERMISSIVE SEPT 1, 2015 | Hidalgo County, TX</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.hidalgocounty.us &#8250; e-Filing</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.hidalgocounty.us/208/e-Filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEIQAg&amp;usg=AOvVaw3AvDAF5E-emajUo5g7aosw" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CRIMINAL EFILING PERMISSIVE SEPT 1, 2015 | Hidalgo County, TX</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.hidalgocounty.us &#8250; e-Filing</div></div></div></a>
+  ** END** 
+----------------------------------Count: 39----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Illinois E-Filing Service Providers</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.illinoiscourts.gov &#8250; eservices &#8250; service-providers</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.illinoiscourts.gov/eservices/service-providers/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEAQAg&amp;usg=AOvVaw2s0p3SaOYfQUFLfG0hD-N8" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Illinois E-Filing Service Providers</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.illinoiscourts.gov &#8250; eservices &#8250; service-providers</div></div></div></a>
+  ** END** 
+----------------------------------Count: 40----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Technical Overview - integration - California Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.ca.gov &#8250; partners &#8250; techoverview</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.ca.gov/partners/techoverview.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEEQAg&amp;usg=AOvVaw2pAgIZKdjel23z1nTRX0I6" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Technical Overview - integration - California Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.ca.gov &#8250; partners &#8250; techoverview</div></div></div></a>
+  ** END** 
+----------------------------------Count: 41----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-File for Software Developers | Arizona Department of Revenue</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">azdor.gov &#8250; file-and-pay &#8250; e-file-services &#8250; e-file-software-developers</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://azdor.gov/file-and-pay/e-file-services/e-file-software-developers&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD8QAg&amp;usg=AOvVaw2RG7g7GFq2wiRgVceLU3B2" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-File for Software Developers | Arizona Department of Revenue</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">azdor.gov &#8250; file-and-pay &#8250; e-file-services &#8250; e-file-software-developers</div></div></div></a>
+  ** END** 
+----------------------------------Count: 42----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing Software &#8211; i3 Public Sector</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.i3verticals.com &#8250; Public Sector &#8250; JusticeTech</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.i3verticals.com/publicsector/justicetech/e-filing/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD4QAg&amp;usg=AOvVaw2Nz9pbaAiWS6C-7hsoV6iz" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing Software &#8211; i3 Public Sector</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.i3verticals.com &#8250; Public Sector &#8250; JusticeTech</div></div></div></a>
+  ** END** 
+----------------------------------Count: 43----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.tax1099.com/integrations&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD0QAg&amp;usg=AOvVaw3vCPM6S-I0yZ3huRy8gQNd" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECD0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099 Integrations for 1099 Forms and more bulk eFiling made ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com &#8250; integrations</div></div></div></a>
+  ** END** 
+----------------------------------Count: 44----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Best E-Filing Platforms in 2024: Compare Reviews on 10+ Products</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.g2.com &#8250; Legal Software</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.g2.com/categories/e-filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDsQAg&amp;usg=AOvVaw1ndXTiHoUCPR3u3Inj07aP" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Best E-Filing Platforms in 2024: Compare Reviews on 10+ Products</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.g2.com &#8250; Legal Software</div></div></div></a>
+  ** END** 
+----------------------------------Count: 45----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling Help / Minnesota Department of Commerce - Energy</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">mn.gov &#8250; commerce &#8250; energy &#8250; industry-government &#8250; utilities &#8250; efiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://mn.gov/commerce/energy/industry-government/utilities/efiling.jsp&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDoQAg&amp;usg=AOvVaw2OIF8ctPjcvFTXMkh3FEe9" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling Help / Minnesota Department of Commerce - Energy</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">mn.gov &#8250; commerce &#8250; energy &#8250; industry-government &#8250; utilities &#8250; efiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 46----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] E-FILING - Wyoming Judicial Branch</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.state.wy.us &#8250; uploads &#8250; 2020/11 &#8250; 2019-eFiling-Report</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.state.wy.us/wp-content/uploads/2020/11/2019-eFiling-Report.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDwQAg&amp;usg=AOvVaw3jyxRamBXecRtEmXs8_0e8" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] E-FILING - Wyoming Judicial Branch</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.state.wy.us &#8250; uploads &#8250; 2020/11 &#8250; 2019-eFiling-Report</div></div></div></a>
+  ** END** 
+----------------------------------Count: 47----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling | Legal Software on Legal.io</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.legal.io &#8250; legal-software &#8250; category &#8250; eFiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.legal.io/legal-software/category/eFiling&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDkQAg&amp;usg=AOvVaw1yGr5tDR67kQw5uDGC-gj2" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling | Legal Software on Legal.io</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.legal.io &#8250; legal-software &#8250; category &#8250; eFiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 48----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">New TXdocs eFiling</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.txdocs.com &#8250; products &#8250; new-txdocs-efiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.txdocs.com/products/new-txdocs-efiling/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDcQAg&amp;usg=AOvVaw1JEn_uStSFZPJjTrhCTxrp" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">New TXdocs eFiling</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.txdocs.com &#8250; products &#8250; new-txdocs-efiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 49----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernizing Administration - Florida Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.flcourts.gov &#8250; Publications-Statistics &#8250; Publications &#8250; Short-History</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.flcourts.gov/Publications-Statistics/Publications/Short-History/Modernizing-Administration&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDgQAg&amp;usg=AOvVaw3EIhcB8FG7UA_McIsoUzkk" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernizing Administration - Florida Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.flcourts.gov &#8250; Publications-Statistics &#8250; Publications &#8250; Short-History</div></div></div></a>
+  ** END** 
+----------------------------------Count: 50----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Legal Electronic Signature Software | Smokeball</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.smokeball.com &#8250; features &#8250; legal-efiling-electronic-signatures</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.smokeball.com/features/legal-efiling-electronic-signatures&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDYQAg&amp;usg=AOvVaw2Sk_J1sHL0GS4pBZeWkSwb" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Legal Electronic Signature Software | Smokeball</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.smokeball.com &#8250; features &#8250; legal-efiling-electronic-signatures</div></div></div></a>
+  ** END** 
+----------------------------------Count: 51----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Can I eFile 1099s through Aatrix</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">kb.blackbaud.com &#8250; knowledgebase &#8250; articles &#8250; Article</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://kb.blackbaud.com/knowledgebase/articles/Article/47624&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDUQAg&amp;usg=AOvVaw0FG5rSOi87CI8_kH333wub" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Can I eFile 1099s through Aatrix</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">kb.blackbaud.com &#8250; knowledgebase &#8250; articles &#8250; Article</div></div></div></a>
+  ** END** 
+----------------------------------Count: 52----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099: File 1099 Online | eFile 1099 NEC, MISC, W2, 941, 1095 ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.tax1099.com/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDEQAg&amp;usg=AOvVaw3eadKNDAQTFPCCEqmGSeyi" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tax1099: File 1099 Online | eFile 1099 NEC, MISC, W2, 941, 1095 ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tax1099.com</div></div></div></a>
+  ** END** 
+----------------------------------Count: 53----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Rapid Legal Unveils Integration with Clio, Top Practice Management ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">rapidlegal.com &#8250; clio-integration-press-release</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://rapidlegal.com/clio-integration-press-release/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDMQAg&amp;usg=AOvVaw1KABk8O0CPFa4wHLhVDPhL" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Rapid Legal Unveils Integration with Clio, Top Practice Management ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">rapidlegal.com &#8250; clio-integration-press-release</div></div></div></a>
+  ** END** 
+----------------------------------Count: 54----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">TrueFiling: 24/7 Electronic Filing Hosted in the Microsoft Azure Cloud</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">truefiling.com</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://truefiling.com/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDIQAg&amp;usg=AOvVaw2bomtA3yZcg6uksZHiiTzG" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">TrueFiling: 24/7 Electronic Filing Hosted in the Microsoft Azure Cloud</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">truefiling.com</div></div></div></a>
+  ** END** 
+----------------------------------Count: 55----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing (e-Filing) - Welcome to Madison County, IL</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.madisoncountyil.gov &#8250; departments &#8250; circuit_clerk &#8250; e-file</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.madisoncountyil.gov/departments/circuit_clerk/e-file/index.php&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDAQAg&amp;usg=AOvVaw2x7_EWrsiv81hcDrPo1yUQ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing (e-Filing) - Welcome to Madison County, IL</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.madisoncountyil.gov &#8250; departments &#8250; circuit_clerk &#8250; e-file</div></div></div></a>
+  ** END** 
+----------------------------------Count: 56----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Easy e-filing: Services designed to help attorneys file documents ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.americanbar.org &#8250; groups &#8250; journal &#8250; articles &#8250; easy-e-filing-services-...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.americanbar.org/groups/journal/articles/2022/easy-e-filing-services-designed-to-help-attorneys-file-document/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDQQAg&amp;usg=AOvVaw29bWRWR0lbhm5gGcWLZxrJ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECDQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Easy e-filing: Services designed to help attorneys file documents ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.americanbar.org &#8250; groups &#8250; journal &#8250; articles &#8250; easy-e-filing-services-...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 57----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">FECFile: The FEC's free software - Electronic filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fec.gov &#8250; help-candidates-and-committees &#8250; filing-reports &#8250; fecfile-so...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.fec.gov/help-candidates-and-committees/filing-reports/fecfile-software/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC8QAg&amp;usg=AOvVaw3h3_pehYRqPt2NV2_5rV73" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">FECFile: The FEC's free software - Electronic filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.fec.gov &#8250; help-candidates-and-committees &#8250; filing-reports &#8250; fecfile-so...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 58----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile 4 Clio</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.legslegalsupport.com &#8250; integration &#8250; clio</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://efile.legslegalsupport.com/integration/clio&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC4QAg&amp;usg=AOvVaw2vw_02GvaFdI8_UdRFp4p-" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFile 4 Clio</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">efile.legslegalsupport.com &#8250; integration &#8250; clio</div></div></div></a>
+  ** END** 
+----------------------------------Count: 59----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tybera &#8211; Efiling, Court Management System, and Document ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tybera.com</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.tybera.com/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC0QAg&amp;usg=AOvVaw27gUkKd1I5llADn-36dluH" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECC0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Tybera &#8211; Efiling, Court Management System, and Document ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tybera.com</div></div></div></a>
+  ** END** 
+----------------------------------Count: 60----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Pennsylvania Workers' Compensation Automation and Integration ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.dli.pa.gov &#8250; Businesses &#8250; Compensation &#8250; claims &#8250; wcais &#8250; Pages</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.dli.pa.gov/Businesses/Compensation/WC/claims/wcais/Pages/default.aspx&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCwQAg&amp;usg=AOvVaw2R2rMmtuZBM_q8MVnyisHA" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Pennsylvania Workers' Compensation Automation and Integration ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.dli.pa.gov &#8250; Businesses &#8250; Compensation &#8250; claims &#8250; wcais &#8250; Pages</div></div></div></a>
+  ** END** 
+----------------------------------Count: 61----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Integrated Colorado Courts E-Filing System: The Next Generation of ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.state.co.us &#8250; file &#8250; JBITS &#8250; PAS_ICCES &#8250; E-File_Article</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.state.co.us/userfiles/file/Administration/JBITS/PAS_ICCES/E-File_Article.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCsQAg&amp;usg=AOvVaw28p9iymOrzr74gb92pg9kF" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Integrated Colorado Courts E-Filing System: The Next Generation of ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.state.co.us &#8250; file &#8250; JBITS &#8250; PAS_ICCES &#8250; E-File_Article</div></div></div></a>
+  ** END** 
+----------------------------------Count: 62----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CLJ-CMS Project FAQs - Washington State Courts Washington Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.wa.gov &#8250; Judicial Information System &#8250; CLJ-CMS</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.wa.gov/index.cfm%3Ffa%3Dhome.sub%26org%3Dcljcms%26layout%3D4%26page%3Dfaq&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCoQAg&amp;usg=AOvVaw1LTsJGnRNp1IIMQs-B6SaG" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CLJ-CMS Project FAQs - Washington State Courts Washington Courts</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.wa.gov &#8250; Judicial Information System &#8250; CLJ-CMS</div></div></div></a>
+  ** END** 
+----------------------------------Count: 63----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling &#8211; CPSC's Modern Approach for Filing Certificate Data</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cpsc.gov &#8250; eFiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.cpsc.gov/eFiling&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCgQAg&amp;usg=AOvVaw0cW8BjuXvNPNm4eu-A9hjH" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling &#8211; CPSC's Modern Approach for Filing Certificate Data</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cpsc.gov &#8250; eFiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 64----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) for Employment Taxes - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-mef-for-employment-t...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.irs.gov/e-file-providers/modernized-e-file-mef-for-employment-taxes&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCcQAg&amp;usg=AOvVaw2m7__hNOlOmZDL1CLDEDX5" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Modernized e-File (MeF) for Employment Taxes - IRS</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.irs.gov &#8250; e-file-providers &#8250; modernized-e-file-mef-for-employment-t...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 65----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Michigan State Court Administrative Office Statewide e-Filing ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.michigan.gov &#8250; e-filing-rfp-addendum-2_10-13-16</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.michigan.gov/4a8de0/siteassets/news-releases/e-filing-rfp-addendum-2_10-13-16.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCkQAg&amp;usg=AOvVaw3p9UvmdhOju7fXq_1z3elP" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Michigan State Court Administrative Office Statewide e-Filing ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.michigan.gov &#8250; e-filing-rfp-addendum-2_10-13-16</div></div></div></a>
+  ** END** 
+----------------------------------Count: 66----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Options | Teton County, WY</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tetoncountywy.gov &#8250; Electronic-Filing-Options</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.tetoncountywy.gov/2069/Electronic-Filing-Options&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEUQAg&amp;usg=AOvVaw3ONfJGgmwY3WTheBuhaHlX" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Options | Teton County, WY</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.tetoncountywy.gov &#8250; Electronic-Filing-Options</div></div></div></a>
+  ** END** 
+----------------------------------Count: 67----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Civil eFiling - Superior Court Clerks of Georgia</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">gaclerks.org &#8250; Projects &#8250; CivileFiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://gaclerks.org/Projects/CivileFiling.aspx&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEYQAg&amp;usg=AOvVaw1cR6y67x19HjrTEfJ0zKxO" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECEYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Civil eFiling - Superior Court Clerks of Georgia</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">gaclerks.org &#8250; Projects &#8250; CivileFiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 68----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Tyler eFileCA Overview - Contra Costa Superior Court</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cc-courts.org &#8250; efiling &#8250; docs &#8250; EFilingOverview</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.cc-courts.org/efiling/docs/EFilingOverview.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCYQAg&amp;usg=AOvVaw3T9lB34fB3zVAy7eNZ9p_f" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Tyler eFileCA Overview - Contra Costa Superior Court</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.cc-courts.org &#8250; efiling &#8250; docs &#8250; EFilingOverview</div></div></div></a>
+  ** END** 
+----------------------------------Count: 69----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-file Software for Tax Professionals | E-file Plans &amp; Bundles - TaxAct</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.taxact.com &#8250; professional &#8250; efiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.taxact.com/professional/efiling&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCMQAg&amp;usg=AOvVaw1y59VavXnf5cYuR-kLOFmJ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-file Software for Tax Professionals | E-file Plans &amp; Bundles - TaxAct</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.taxact.com &#8250; professional &#8250; efiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 70----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing | Door County, WI</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.co.door.wi.gov &#8250; E-Filing</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.co.door.wi.gov/391/E-Filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCIQAg&amp;usg=AOvVaw1jdCFyjXmJOBY_w4bq0bBZ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing | Door County, WI</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.co.door.wi.gov &#8250; E-Filing</div></div></div></a>
+  ** END** 
+----------------------------------Count: 71----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing - Ottawa County, Michigan</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.miottawa.org &#8250; Departments &#8250; CountyClerk &#8250; CourtRecords &#8250; efiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.miottawa.org/Departments/CountyClerk/CourtRecords/efiling.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB4QAg&amp;usg=AOvVaw3ebPfcqoq2oNEU9_lLHujc" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-Filing - Ottawa County, Michigan</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.miottawa.org &#8250; Departments &#8250; CountyClerk &#8250; CourtRecords &#8250; efiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 72----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">County of El Paso Texas - eFile</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.epcounty.com &#8250; efile</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.epcounty.com/efile.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB8QAg&amp;usg=AOvVaw1rlUEebgGuyMHD1miQrJwY" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">County of El Paso Texas - eFile</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.epcounty.com &#8250; efile</div></div></div></a>
+  ** END** 
+----------------------------------Count: 73----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Case Filing - Davidson County Chancery Court</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">chanceryclerkandmaster.nashville.gov &#8250; electronic-case-filing</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://chanceryclerkandmaster.nashville.gov/electronic-case-filing/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBsQAg&amp;usg=AOvVaw0JLok0nWbQLoLtn3P2-1Ls" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Case Filing - Davidson County Chancery Court</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">chanceryclerkandmaster.nashville.gov &#8250; electronic-case-filing</div></div></div></a>
+  ** END** 
+----------------------------------Count: 74----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">New innovative SARS eFiling integration from Sage eases ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.sage.com &#8250; africa &#8250; news &#8250; press-releases &#8250; 2021/07 &#8250; new-innovativ...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.sage.com/africa/news/press-releases/2021/07/new-innovative-sars-efiling-integration-from-sage-eases-compliance-for-accountants/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBwQAg&amp;usg=AOvVaw0kNYEvZnBEa94XSVT2Y1Fi" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">New innovative SARS eFiling integration from Sage eases ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.sage.com &#8250; africa &#8250; news &#8250; press-releases &#8250; 2021/07 &#8250; new-innovativ...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 75----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Secure Direct Transfer Mode (SDTM) - BSA E-Filing System</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">bsaefiling.fincen.treas.gov &#8250; SDTMInfo</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://bsaefiling.fincen.treas.gov/SDTMInfo.html&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB0QAg&amp;usg=AOvVaw1SWLSPHYjbazMOsmkvmhTx" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECB0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Secure Direct Transfer Mode (SDTM) - BSA E-Filing System</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">bsaefiling.fincen.treas.gov &#8250; SDTMInfo</div></div></div></a>
+  ** END** 
+----------------------------------Count: 76----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] India: Integrated E-Filing and Centralized Processing Centre 2.0</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.oecd.org &#8250; tax &#8250; database &#8250; b.4.1-india-iec-2.0.pdf</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.oecd.org/tax/forum-on-tax-administration/database/b.4.1-india-iec-2.0.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCEQAg&amp;usg=AOvVaw2eCJi18zba-1H87NRShQmb" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] India: Integrated E-Filing and Centralized Processing Centre 2.0</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.oecd.org &#8250; tax &#8250; database &#8250; b.4.1-india-iec-2.0.pdf</div></div></div></a>
+  ** END** 
+----------------------------------Count: 77----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Xero continues to drive digital tax forward with new payroll eFiling ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.xero.com &#8250; media-releases &#8250; xero-payroll-efiling-integration-simplepay</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.xero.com/us/media-releases/xero-payroll-efiling-integration-simplepay/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCAQAg&amp;usg=AOvVaw2WVfi2IjnjqVj7vBwgG_51" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECCAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Xero continues to drive digital tax forward with new payroll eFiling ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.xero.com &#8250; media-releases &#8250; xero-payroll-efiling-integration-simplepay</div></div></div></a>
+  ** END** 
+----------------------------------Count: 78----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">USCIS Wants to Build a Better E-Filing Tool with Industry Input</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.docketwise.com &#8250; blog &#8250; uscis-wants-to-build-a-better-e-filing-tool-w...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.docketwise.com/blog/uscis-wants-to-build-a-better-e-filing-tool-with-industry-input&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBoQAg&amp;usg=AOvVaw11nABtbOGpv38VWEluuu5y" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">USCIS Wants to Build a Better E-Filing Tool with Industry Input</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.docketwise.com &#8250; blog &#8250; uscis-wants-to-build-a-better-e-filing-tool-w...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 79----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">RICOH Smart Integration Workflows - Ricoh USA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.ricoh-usa.com &#8250; ... &#8250; Document Scanning &amp; Indexing</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.ricoh-usa.com/en/products/pd/software/document-management/document-scanning-and-indexing/ricoh-smart-integration-workflows&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBcQAg&amp;usg=AOvVaw2tHEbijptRVuBfZrADhV0b" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">RICOH Smart Integration Workflows - Ricoh USA</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.ricoh-usa.com &#8250; ... &#8250; Document Scanning &amp; Indexing</div></div></div></a>
+  ** END** 
+----------------------------------Count: 80----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">EFile Interchange - Profit Developers, Inc.</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.profitdevelopers.com &#8250; solutions &#8250; efile-interchange</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.profitdevelopers.com/solutions/efile-interchange/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBkQAg&amp;usg=AOvVaw30PGAs5UzEdATiO7KBsWFL" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">EFile Interchange - Profit Developers, Inc.</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.profitdevelopers.com &#8250; solutions &#8250; efile-interchange</div></div></div></a>
+  ** END** 
+----------------------------------Count: 81----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eCitations Integration Program : About OJD : State of Oregon</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.oregon.gov &#8250; about &#8250; pages &#8250; integrations</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.courts.oregon.gov/about/pages/integrations.aspx&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBYQAg&amp;usg=AOvVaw00Yp6qAtcrFOauO9z8ICGF" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBYQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eCitations Integration Program : About OJD : State of Oregon</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.courts.oregon.gov &#8250; about &#8250; pages &#8250; integrations</div></div></div></a>
+  ** END** 
+----------------------------------Count: 82----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Precedence in Event of Conflict, Ky. eFiling Rules 4 - Casetext</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">casetext.com &#8250; ... &#8250; Part - Electronic Filing Pilot Project</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://casetext.com/rule/kentucky-court-rules/kentucky-administrative-procedures-of-the-court-of-justice/part-electronic-filing-pilot-project/section-4-integration-with-other-rules-precedence-in-event-of-conflict&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBMQAg&amp;usg=AOvVaw2DKxUySH8dP7TfZrP_Ryjs" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBMQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Precedence in Event of Conflict, Ky. eFiling Rules 4 - Casetext</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">casetext.com &#8250; ... &#8250; Part - Electronic Filing Pilot Project</div></div></div></a>
+  ** END** 
+----------------------------------Count: 83----------------------------------
+  ** InnerHtml** 
+<span class="deIvCb AP7Wnd"><span class="FCUp0c rQMQod">Images</span></span>
+  ** OuterHtml** 
+<a href="https://www.google.com/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;ei=zvIcZsjnDKySwbkPwLGpwA8&amp;q=efiling,+integration&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQsAR6BAhkEAE" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQsAR6BAhkEAE"><span class="deIvCb AP7Wnd"><span class="FCUp0c rQMQod">Images</span></span></a>
+  ** END** 
+----------------------------------Count: 84----------------------------------
+  ** InnerHtml** 
+<span class="tAd8D AP7Wnd"><span class="rQMQod Xb5VRe">View all</span></span>
+  ** OuterHtml** 
+<a href="https://www.google.com/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;ei=zvIcZsjnDKySwbkPwLGpwA8&amp;q=efiling,+integration&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ7Al6BAhkEAI" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ7Al6BAhkEAI"><span class="tAd8D AP7Wnd"><span class="rQMQod Xb5VRe">View all</span></span></a>
+  ** END** 
+----------------------------------Count: 85----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Court filing integration for LEAP users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_3" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://embed-ssl.wistia.com/deliveries/8ed6caf3f5ebdb8240ef539dae53f249.webp?image_crop_resized%3D960x540&amp;imgrefurl=https://www.infotrack.com/leap/&amp;h=540&amp;w=960&amp;tbnid=LT84UVr6gJvODM&amp;q=efiling,+integration&amp;tbnh=83&amp;tbnw=148&amp;usg=AI4_-kQFATeq6pGxkQzWqOEbvQM9mZv0BQ&amp;vet=1&amp;docid=3WoQHPtyrFebUM&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAQ" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAQ"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Court filing integration for LEAP users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_3" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 86----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Smokeball integration - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_5" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://embed-ssl.wistia.com/deliveries/f14fc15a97206e290d3bb31f32a5083e.jpg?image_crop_resized%3D640x360&amp;imgrefurl=https://www.infotrack.com/smokeball/&amp;h=360&amp;w=640&amp;tbnid=y6VmWrNLJQk6vM&amp;q=efiling,+integration&amp;tbnh=77&amp;tbnw=137&amp;usg=AI4_-kSWD2nV7uWJrbznTMDqc2vVWMf-qg&amp;vet=1&amp;docid=8uYn2f4b98jd7M&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAY" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAY"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Smokeball integration - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_5" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 87----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling integration for Clio Manage users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_7" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://embed-ssl.wistia.com/deliveries/c199395e4b99ab27b091dcb42d2e47a7.webp?image_crop_resized%3D1280x720&amp;imgrefurl=https://www.infotrack.com/clio/&amp;h=720&amp;w=1280&amp;tbnid=uKJ52aAwSAQoTM&amp;q=efiling,+integration&amp;tbnh=84&amp;tbnw=150&amp;usg=AI4_-kQMCijp3nUShqckcblf4-3XsSGLAg&amp;vet=1&amp;docid=GFzFpDuHAQDmfM&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAg" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAg"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling integration for Clio Manage users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_7" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 88----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Court filing integration for NetDocuments users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_9" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://embed-ssl.wistia.com/deliveries/effcbd77871eb6889b7ef7e0ffbf79f8.jpg&amp;imgrefurl=https://www.infotrack.com/netdocuments/&amp;h=1080&amp;w=1920&amp;tbnid=PAFuMY7GrVBwpM&amp;q=efiling,+integration&amp;tbnh=84&amp;tbnw=150&amp;usg=AI4_-kTzlwwzvKxnhxCHuxk0VjotQauM3w&amp;vet=1&amp;docid=081bC1LPgkxZRM&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAo" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAo"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="Court filing integration for NetDocuments users - InfoTrack" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_9" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 89----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling With ServeManager" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_11" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://s3.amazonaws.com/lawgical/assets/data/8343/original.png?1651080223&amp;imgrefurl=https://www.servemanager.com/blog/3101/efiling-with-servemanager&amp;h=849&amp;w=1678&amp;tbnid=ywsynO_mSEhfOM&amp;q=efiling,+integration&amp;tbnh=76&amp;tbnw=150&amp;usg=AI4_-kRDWV3wSI1w9lq6pFYxpN5jPn_zmQ&amp;vet=1&amp;docid=Nj5gnlyfGq0RkM&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAw" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEAw"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling With ServeManager" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_11" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 90----------------------------------
+  ** InnerHtml** 
+<div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling &#8211; CPSC's Modern Approach for Filing Certificate Data ..." src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_13" data-deferred="1"></div>
+  ** OuterHtml** 
+<a class="BVG0Nb OxTOff" href="https://www.google.com/imgres?imgurl=https://i.ytimg.com/vi/srYQ3vgOXg8/maxresdefault.jpg&amp;imgrefurl=https://www.cpsc.gov/eFiling&amp;h=720&amp;w=1280&amp;tbnid=zGpX_kBXV6CNYM&amp;q=efiling,+integration&amp;tbnh=84&amp;tbnw=150&amp;usg=AI4_-kROTaVbk2iuzwK0ZI7NGLc1Amtmeg&amp;vet=1&amp;docid=S6uI588J-OT1oM&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEA4" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ9QF6BAhkEA4"><div><img class="WddBJd" style="max-width:none;height:128px;max-height:128px" alt="eFiling &#8211; CPSC's Modern Approach for Filing Certificate Data ..." src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="dimg_13" data-deferred="1"></div></a>
+  ** END** 
+----------------------------------Count: 91----------------------------------
+  ** InnerHtml** 
+<button class="DXk5Me Qi9Fd" tabindex="-1"><span class="hWHuJ"><img class="Dk7jOe" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:24px;max-height:24px" id="dimg_15" data-deferred="1"></span></button><div class="BNeawe ji5jpf tAd8D AP7Wnd">View all</div>
+  ** OuterHtml** 
+<a class="qN9Ked" href="https://www.google.com/search?num=100&amp;sca_esv=df9114d5be7f4ca8&amp;sca_upv=1&amp;ie=UTF-8&amp;ei=zvIcZsjnDKySwbkPwLGpwA8&amp;q=efiling,+integration&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ7Al6BAhkEA8" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQ7Al6BAhkEA8"><button class="DXk5Me Qi9Fd" tabindex="-1"><span class="hWHuJ"><img class="Dk7jOe" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:24px;max-height:24px" id="dimg_15" data-deferred="1"></span></button><div class="BNeawe ji5jpf tAd8D AP7Wnd">View all</div></a>
+  ** END** 
+----------------------------------Count: 92----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Functional &amp; System Requirement Specifications - Income Tax</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.incometax.gov.in &#8250; default &#8250; files &#8250; Bank-Integration_v1.1.pdf</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-11/Bank-Integration_v1.1.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBUQAg&amp;usg=AOvVaw0GtivJWtJjFwMQbdl0izSe" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Functional &amp; System Requirement Specifications - Income Tax</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.incometax.gov.in &#8250; default &#8250; files &#8250; Bank-Integration_v1.1.pdf</div></div></div></a>
+  ** END** 
+----------------------------------Count: 93----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFileMadeEasy Software Now Available to Attorneys and Paralegals ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efilemadeeasy.com &#8250; efilemadeeasy-software-now-available-attorneys...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.efilemadeeasy.com/efilemadeeasy-software-now-available-attorneys-and-paralegals-throughout-florida/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBgQAg&amp;usg=AOvVaw1pH7VrgvlmimlhDQ1sbgsu" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFileMadeEasy Software Now Available to Attorneys and Paralegals ...</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efilemadeeasy.com &#8250; efilemadeeasy-software-now-available-attorneys...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 94----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Sage Intacct 1099 Integration to E-file 1099 Forms - TaxBandits</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.taxbandits.com &#8250; 1099-forms &#8250; integrations &#8250; sage-intacct</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.taxbandits.com/1099-forms/integrations/sage-intacct/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBIQAg&amp;usg=AOvVaw2s5hqkOmpP2MSlX2NP6DOh" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Sage Intacct 1099 Integration to E-file 1099 Forms - TaxBandits</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.taxbandits.com &#8250; 1099-forms &#8250; integrations &#8250; sage-intacct</div></div></div></a>
+  ** END** 
+----------------------------------Count: 95----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling 101 - ABC Legal Services</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.abclegal.com &#8250; efiling-101</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.abclegal.com/efiling-101&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBEQAg&amp;usg=AOvVaw2Gput3osCUrHvB9ZNRw87o" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">eFiling 101 - ABC Legal Services</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.abclegal.com &#8250; efiling-101</div></div></div></a>
+  ** END** 
+----------------------------------Count: 96----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Texas Franchise Tax Electronic Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">comptroller.texas.gov &#8250; programs &#8250; systems &#8250; docs</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://comptroller.texas.gov/programs/systems/docs/96-1788.pdf&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA8QAg&amp;usg=AOvVaw0Me7xzi-dkQYwanjX4ibnB" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA8QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[PDF] Texas Franchise Tax Electronic Filing</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">comptroller.texas.gov &#8250; programs &#8250; systems &#8250; docs</div></div></div></a>
+  ** END** 
+----------------------------------Count: 97----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">OCeFiling Portal</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">orange.efilingportal.com</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://orange.efilingportal.com/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAwQAg&amp;usg=AOvVaw12GFdYje8FMSy6gdLho4qV" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAwQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">OCeFiling Portal</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">orange.efilingportal.com</div></div></div></a>
+  ** END** 
+----------------------------------Count: 98----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Setting Up E-filing and E-signing in Time Matters - T Community</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">community.pclawtimematters.com &#8250; timemattersanswers &#8250; article &#8250; Setting-...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://community.pclawtimematters.com/timemattersanswers/s/article/Setting-up-Time-Matters-E-filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA4QAg&amp;usg=AOvVaw3WrSkputCLOSMzAru1Dqya" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA4QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Setting Up E-filing and E-signing in Time Matters - T Community</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">community.pclawtimematters.com &#8250; timemattersanswers &#8250; article &#8250; Setting-...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 99----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1099 eFile Guide: Filing Online with Automation - Tipalti</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">tipalti.com &#8250; en-eu &#8250; file-1099-online</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://tipalti.com/en-eu/file-1099-online/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAoQAg&amp;usg=AOvVaw1ZmU0ZNGPJCkqbuZDCn3fV" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAoQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1099 eFile Guide: Filing Online with Automation - Tipalti</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">tipalti.com &#8250; en-eu &#8250; file-1099-online</div></div></div></a>
+  ** END** 
+----------------------------------Count: 100----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Land Records and e-Recording Integration - Mixnet</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">mixnet.com &#8250; e-recording-and-efiling-integration-with-land-records-indexi...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://mixnet.com/e-recording-and-efiling-integration-with-land-records-indexing-management/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA0QAg&amp;usg=AOvVaw2YIPpeU0NEfPDizyMDCt8i" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECA0QAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Land Records and e-Recording Integration - Mixnet</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">mixnet.com &#8250; e-recording-and-efiling-integration-with-land-records-indexi...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 101----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-File Magic: Premier Online 1099 Software</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efilemagic.com</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.efilemagic.com/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAsQAg&amp;usg=AOvVaw0BMd4U5hVER1d-x5ev2klW" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAsQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">E-File Magic: Premier Online 1099 Software</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efilemagic.com</div></div></div></a>
+  ** END** 
+----------------------------------Count: 102----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[Video] Konsise on LinkedIn: SARS eFiling Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.linkedin.com &#8250; posts &#8250; konsise_sars-efiling-integration-konsise-activit...</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.linkedin.com/posts/konsise_sars-efiling-integration-konsise-activity-7069238551485235200-8m-P&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBAQAg&amp;usg=AOvVaw1BbdR3LFupHnz-6dyPKo_b" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECBAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">[Video] Konsise on LinkedIn: SARS eFiling Integration</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.linkedin.com &#8250; posts &#8250; konsise_sars-efiling-integration-konsise-activit...</div></div></div></a>
+  ** END** 
+----------------------------------Count: 103----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Odyssey eFileGA Active Courts | Court E-Filing Solution for Georgia</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.odysseyefilega.com &#8250; active-courts</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=http://www.odysseyefilega.com/active-courts.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAkQAg&amp;usg=AOvVaw02Hd_aiU8JH-3iGmet_2-O" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAkQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Odyssey eFileGA Active Courts | Court E-Filing Solution for Georgia</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.odysseyefilega.com &#8250; active-courts</div></div></div></a>
+  ** END** 
+----------------------------------Count: 104----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Courts eFiling - CSI Technology Group</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.csitech.com &#8250; justice-courts &#8250; courts-efiling</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.csitech.com/justice-courts/courts-efiling/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAgQAg&amp;usg=AOvVaw069bICCQV5RbJOCl2bbqPw" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAgQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Courts eFiling - CSI Technology Group</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.csitech.com &#8250; justice-courts &#8250; courts-efiling</div></div></div></a>
+  ** END** 
+----------------------------------Count: 105----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Online Help</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiling.nccourts.org &#8250; manual &#8250; fiFAQ</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.efiling.nccourts.org/manual/fiFAQ.htm&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAQQAg&amp;usg=AOvVaw0jP73ZuV8311g4q0NrTSi9" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAQQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Online Help</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.efiling.nccourts.org &#8250; manual &#8250; fiFAQ</div></div></div></a>
+  ** END** 
+----------------------------------Count: 106----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1099 Automation &amp; e-filing - Baker Tilly</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.bakertilly.com &#8250; products &#8250; 1099-automation-and-e-filing</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.bakertilly.com/products/1099-automation-and-e-filing&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAAQAg&amp;usg=AOvVaw0iGcXzRXOwjp30MP_CAD7d" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAAQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">1099 Automation &amp; e-filing - Baker Tilly</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.bakertilly.com &#8250; products &#8250; 1099-automation-and-e-filing</div></div></div></a>
+  ** END** 
+----------------------------------Count: 107----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CPSC Import Surveillance | eFiling Beta Pilot Welcome Meeting</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.youtube.com &#8250; watch</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.youtube.com/watch%3Fv%3DsrYQ3vgOXg8&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQtwJ6BAhjEAE&amp;usg=AOvVaw31GoEojodjp3F2LpItpSEr" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQtwJ6BAhjEAE"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">CPSC Import Surveillance | eFiling Beta Pilot Welcome Meeting</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.youtube.com &#8250; watch</div></div></div></a>
+  ** END** 
+----------------------------------Count: 108----------------------------------
+  ** InnerHtml** 
+<div class="lcJF1d Q6Xouf G6SP0b eeoFaf"><div style="width:120px;height:67px;position:static"><img class="h1hFNe" alt="Video for efiling, integration" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:120px;height:67px" id="dimg_1" data-deferred="1"></div><div class="S9HcI oz9fhd"></div><div class="S9HcI UhWgBb" style="background-size:36px"></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.youtube.com/watch%3Fv%3DsrYQ3vgOXg8&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQuAJ6BAhjEAI&amp;usg=AOvVaw2FE5bfYBI47TYMrdyWudrE" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQuAJ6BAhjEAI"><div class="lcJF1d Q6Xouf G6SP0b eeoFaf"><div style="width:120px;height:67px;position:static"><img class="h1hFNe" alt="Video for efiling, integration" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:120px;height:67px" id="dimg_1" data-deferred="1"></div><div class="S9HcI oz9fhd"></div><div class="S9HcI UhWgBb" style="background-size:36px"></div></div></a>
+  ** END** 
+----------------------------------Count: 109----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Services - NELCO Solutions</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.nelcosolutions.com &#8250; Software Developers</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.nelcosolutions.com/electronic-filing-services/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAIQAg&amp;usg=AOvVaw3w3tuDotkhXMm7nt09LSAG" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAIQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">Electronic Filing Services - NELCO Solutions</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.nelcosolutions.com &#8250; Software Developers</div></div></div></a>
+  ** END** 
+----------------------------------Count: 110----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">FAQs &#8226; efiling/Texfile - Hidalgo County</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.hidalgocounty.us &#8250; faq</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.hidalgocounty.us/faq.aspx%3FTID%3D50&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAcQAg&amp;usg=AOvVaw2bKAKw73wcF48efnIQsSwj" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAcQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">FAQs &#8226; efiling/Texfile - Hidalgo County</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.hidalgocounty.us &#8250; faq</div></div></div></a>
+  ** END** 
+----------------------------------Count: 111----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">SARS submission integration - Konsise</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.konsise.com &#8250; Features</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://www.konsise.com/features/sars-submission-integration/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAEQAg&amp;usg=AOvVaw2rYh54pt-fT5n7vhbcSzAf" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAEQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">SARS submission integration - Konsise</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">www.konsise.com &#8250; Features</div></div></div></a>
+  ** END** 
+----------------------------------Count: 112----------------------------------
+  ** InnerHtml** 
+<div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">San Diego Court eFiling Goes Live Tomorrow Oct 1st!</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">directlegal.com &#8250; san-diego-court-efiling-now-available</div></div></div>
+  ** OuterHtml** 
+<a href="/url?q=https://directlegal.com/san-diego-court-efiling-now-available/&amp;sa=U&amp;ved=2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAUQAg&amp;usg=AOvVaw1Skq5hH4bbSSZeKCxbZhHy" data-ved="2ahUKEwjIhqy_88OFAxUsSTABHcBYCvgQFnoECAUQAg"><div class="DnJfK"><div class="j039Wc"><h3 class="zBAuLc l97dzf"><div class="BNeawe vvjwJb AP7Wnd">San Diego Court eFiling Goes Live Tomorrow Oct 1st!</div></h3></div><div class="sCuL3"><div class="BNeawe UPmit AP7Wnd lRVwie">directlegal.com &#8250; san-diego-court-efiling-now-available</div></div></div></a>
+  ** END** 

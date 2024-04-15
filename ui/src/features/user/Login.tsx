@@ -29,8 +29,6 @@ function Login() {
     const [errorMessage, setErrorMessage] = useState("")
     const [loginObj, setLoginObj] = useState(INITIAL_LOGIN_OBJ)
 
-    // const user_loading = useSelector((state: RootState) => state.user.loading);
-
     const submitForm = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setErrorMessage("")

@@ -18,7 +18,9 @@ namespace InfoTrack.Application.Common.Mappings
 
             CreateMap<SearchResults, SearchResultsDto>();
 
-            CreateMap<SearchResultItem, SearchResultsItemDto>();
+            CreateMap<SearchResultItem, SearchResultsItemDto>()
+                .ForPath(dest => dest.BreadCrumbs.Text, opt => opt.MapFrom(src => src.Breadcrumbs_Text))
+                .ForPath(dest => dest.BreadCrumbs.Link, opt => opt.MapFrom(src => src.Breadcrumbs_Link));
 
             //.ForMember(dest => dest.Id, opt => opt.MapFrom(src => encryptionService.Encrypt(src.Id.ToString())))
             //.ReverseMap();

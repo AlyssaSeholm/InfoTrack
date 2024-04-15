@@ -8,6 +8,12 @@ namespace InfoTrack.Infrastructure.Repositories
     public class SearchRepository(IInfoTrackDbContext context)
         : Repository<SearchResults>(context), ISearchRepository
     {
+        public async Task AddRangeAsync(List<SearchResultItem> srItems, CancellationToken cancellationToken)
+        {
+            await _context.SearchResultItems.AddRangeAsync(srItems, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
         public async Task<IEnumerable<SearchResults?>> GetListByQueryIdAsync(int queryId, CancellationToken cancellationToken)
         {
             var results = await _context.SearchResults.Where(sr => sr.QueryId == queryId).Include(sr => sr.Items).ToListAsync(cancellationToken);

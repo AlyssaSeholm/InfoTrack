@@ -1,4 +1,3 @@
-import DashboardStats from './components/DashboardStats'
 import AmountStats from './components/AmountStats'
 import PageStats from './components/PageStats'
 
@@ -7,8 +6,6 @@ import UsersIcon  from '@heroicons/react/24/outline/UsersIcon'
 import CircleStackIcon  from '@heroicons/react/24/outline/CircleStackIcon'
 import CreditCardIcon  from '@heroicons/react/24/outline/CreditCardIcon'
 import UserChannels from './components/UserChannels'
-import LineChart from './components/LineChart'
-import BarChart from './components/BarChart'
 import DashboardTopBar from './components/DashboardTopBar'
 import { useDispatch, useSelector } from 'react-redux'
 import {showNotification} from '../common/headerSlice'
@@ -21,6 +18,7 @@ import { selectUserLoading } from '../user/userSlice'
 import { selectCompanyLoading } from '../company/companySlice'
 import { selectQueryLoading } from '../queries/querySlice'
 import Companies from './components/Companies'
+import notify, { ToastType } from '../../services/NotificationService'
 
 const statsData = [
     {title : "New Users", value : "34.7k", icon : <UserGroupIcon className='w-8 h-8'/>, description : "↗︎ 2300 (22%)"},
@@ -37,13 +35,20 @@ function Dashboard(){
     const user_loading = useSelector(selectUserLoading);
     const company_loading = useSelector(selectCompanyLoading);
     const query_loading = useSelector(selectQueryLoading);
+    const [initialDataFetch, setInitialDataFetch] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
+                setInitialDataFetch(true);
                 await dispatch(fetchInitialData());
+                setInitialDataFetch(false);
+                console.log("Initial data fetched successfully!");
             } catch (error) {
                 // Handle error
+                
+                notify("There was an issue when retrieving inital data. Try reloading. ", ToastType.ERROR);
+                console.error(`Error: ${error}`);
             }
         };
 
@@ -98,7 +103,7 @@ function Dashboard(){
     };
 
     const isLoading = () : boolean => {
-        if (user_loading || company_loading || query_loading){
+        if (initialDataFetch) { //} (user_loading || company_loading || query_loading)){
             return true;
         }
         return false;

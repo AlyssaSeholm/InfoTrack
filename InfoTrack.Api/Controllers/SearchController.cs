@@ -63,7 +63,7 @@ namespace InfoTrack.API.Controllers
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(GetAllSearchResultsByUserIdResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
-        [SwaggerOperation(OperationId = "GetSearchResultsByQueryId")]
+        [SwaggerOperation(OperationId = "GetSearchResultsByUserId")]
         public async Task<ActionResult<GetAllSearchResultsByUserIdResponse>> GetByUserId([FromRoute] GetAllSearchResultsByUserIdRequest request)
         {
             if (request == null || string.IsNullOrEmpty(request.UserId)) { return new BadRequestObjectResult("Missing Id from route."); }

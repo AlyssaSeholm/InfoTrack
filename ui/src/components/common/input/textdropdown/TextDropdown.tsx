@@ -2,29 +2,23 @@
 
 
 import React, { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../app/store';
 import { Button, Menu, MenuHandler, MenuItem, MenuList } from '@material-tailwind/react';
 import ChevronDownIcon from '@heroicons/react/24/outline/ChevronDownIcon';
-import { selectSelectedCompanyId } from '../../../../features/company/companySlice';
 import "./TextDropdown.css";
 
 export interface iMenuItem {
   value: string;
   label: string;
   disabled?: boolean;
+  badgeCount?: number;
 }
 interface TextDropdownProps {
-//   isOpen: boolean;
-//   toggleIsOpen: () => void;
     btnLabel: string;
     menuItems: iMenuItem[];
   onSelect: (e: iMenuItem) => void;
 }
 const TextDropdown: FC<TextDropdownProps> = ( props ) => {
-    const { btnLabel, menuItems, onSelect } = props;
-  const companies = useSelector((state: RootState) => state.company.companies);
-  const selectedCompanyId = useSelector(selectSelectedCompanyId);
+    const { btnLabel, menuItems, onSelect} = props;
   const [openMenu, setOpenMenu] = React.useState(false);
 
   const handleSelected = (event: iMenuItem) => {
@@ -47,13 +41,14 @@ const TextDropdown: FC<TextDropdownProps> = ( props ) => {
         </Button>
       </MenuHandler>
       <MenuList className="hidden grid-cols-7 gap-3 overflow-visible flex flex-col text-base bg-base-200 bg-opacity-75 z-9999">
-        {menuItems.map(({ value, label, disabled }) => (
+        {menuItems.map(({ value, label, disabled, badgeCount = null }) => (
             <MenuItem key={value} value={value}
                 disabled={disabled}
                 defaultChecked={label === btnLabel} 
                 onClick={() => handleSelected({value, label})}
                 className={`text text-base-content ${disabled ? "text-opacity-50 disabled" : "text-opacity 100"} bg-base-100 shadow-xl hover:outline-accent`}
             >
+              {badgeCount && <span className="text-xs text-accent">{badgeCount}</span>}
                 {label}
             </MenuItem>
         ))}

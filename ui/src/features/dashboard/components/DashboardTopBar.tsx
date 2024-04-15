@@ -1,4 +1,3 @@
-import SelectBox from "../../../components/Input/SelectBox"
 import ArrowDownTrayIcon from '@heroicons/react/24/outline/ArrowDownTrayIcon'
 import ShareIcon from '@heroicons/react/24/outline/ShareIcon'
 import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon'
@@ -6,11 +5,10 @@ import EllipsisVerticalIcon from '@heroicons/react/24/outline/EllipsisVerticalIc
 import ArrowPathIcon from '@heroicons/react/24/outline/ArrowPathIcon'
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
 import { useRef, useState } from "react"
-import { RootState } from "../../../app/store"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { fetch_Company_ById } from "../../company/companySlice"
 import NewQueryModal from "../../queries/components/NewQueryModal"
-import { Button, Card, CardBody, CardFooter, Checkbox, Dialog, DialogBody, DialogFooter, DialogHeader, Input, Tooltip, Typography } from "@material-tailwind/react"
+import { Tooltip } from "@material-tailwind/react"
 import React from "react"
 import DelayedTooltip from "../../../components/common/delayedTooltip/DelayedTooltip"
 // import CustomDialogHeader from "../../common/components/utilities/modal/CustomDialogHeader"
@@ -27,27 +25,21 @@ const periodOptions = [
 
 function DashboardTopBar({ updateDashboardPeriod }: { updateDashboardPeriod: Function }) {
 
-    const [dateValue, setDateValue] = useState({
-        startDate: new Date(),
-        endDate: new Date()
-    });
-    const currentTheme = useSelector((state: RootState) => state.theme.currentTheme);
-
     //#region Company Testing start
     const companyId: string = "2";
-    const handleDatePickerValueChange = (newValue: any) => {
-        console.log("datePickerNewValue:", newValue);
-        setDateValue(newValue);
-        updateDashboardPeriod(newValue)
-    }
+    // const handleDatePickerValueChange = (newValue: any) => {
+    //     console.log("datePickerNewValue:", newValue);
+    //     setDateValue(newValue);
+    //     updateDashboardPeriod(newValue)
+    // }
 
-    const updateSelectBoxValue = (value: any) => {
-        console.log("selectBoxNewValue:", value);
-    }
+    // const updateSelectBoxValue = (value: any) => {
+    //     console.log("selectBoxNewValue:", value);
+    // }
 
-    const handleGetCompany = () => {
-        dispatch(fetch_Company_ById(companyId) as any);
-    }
+    // const handleGetCompany = () => {
+    //     dispatch(fetch_Company_ById(companyId) as any);
+    // }
     const dispatch = useDispatch();
 
     //#endregion Company Testing end

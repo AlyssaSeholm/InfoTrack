@@ -39,9 +39,6 @@ namespace InfoTrack.Infrastructure.Services
                     HighestRank = 3,
                     QueryId = 1,
                     Top100Count = 7
-                    //SavedQueryId = 0,
-                    //RawResults = content,
-                    //TimeRan = DateTime.Now
                 };
 
                 return history;

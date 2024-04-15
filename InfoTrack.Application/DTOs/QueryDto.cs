@@ -10,13 +10,23 @@ namespace InfoTrack.Application.DTOs
         public required string MyCompanyId { get; set; }
         public string? CompetitorCompanyId { get; set; }
         public string? SearchEngineId { get; set; }
+        public string? Name { get; set; }
 
         public required string IncludeTerms { get; set; }
         public string? ExcludeTerms { get; set; }
         public DateTime DateCreated { get; set; }
 
         public QueryDto() { }
-        public QueryDto(string id, string userId, string companyId, string includeTerms = "", string? competitorCompanyId = null, string? excludeTerms = "", string? searchEngineId = "1", string? msg = "")
+        public QueryDto(
+            string id, 
+            string userId, 
+            string companyId, 
+            string includeTerms = "", 
+            string? competitorCompanyId = null, 
+            string? excludeTerms = "", 
+            string? searchEngineId = "1", 
+            string? msg = "",
+            string? name = "")
         {
             Id = id;
             UserId = userId;
@@ -27,9 +37,19 @@ namespace InfoTrack.Application.DTOs
             ExcludeTerms = excludeTerms;
             DateCreated = DateTime.UtcNow;
             Msg = msg ?? "";
+            Name = name ?? "";
         }
 
-        public static QueryDto CreateEmptyWithMessage(StatusType msgType, string id = "", string userId = "", string companyId = "", string includeTerms = "", string? competitorCompanyId = null, string? excludeTerms = "", string? searchEngineId = "1")
+        public static QueryDto CreateEmptyWithMessage(
+            StatusType msgType, 
+            string id = "", 
+            string userId = "", 
+            string companyId = "", 
+            string includeTerms = "", 
+            string? competitorCompanyId = null, 
+            string? excludeTerms = "", 
+            string? searchEngineId = "1",
+            string? name = "unnamed")
         {
             var obj = new QueryDto()
             {
@@ -41,7 +61,8 @@ namespace InfoTrack.Application.DTOs
                 IncludeTerms = includeTerms,
                 ExcludeTerms = excludeTerms,
                 DateCreated = DateTime.UtcNow,
-                Msg = ResponseMessages.GetMessage(msgType)
+                Msg = ResponseMessages.GetMessage(msgType),
+                Name = name ?? ""
             };
 
             return obj;

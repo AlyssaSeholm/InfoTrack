@@ -4,7 +4,6 @@ import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Company } from './types.tsx';
 import { RootState } from '../../app/store.tsx';
-import exp from 'constants';
 
 
 interface CompanyState {

@@ -14,7 +14,7 @@ namespace InfoTrack.Domain.Services
         {
             var htmlResults = await _resultParserService.PerformSearch(query, cancellationToken);
             var parsedResults = await _resultParserService.ParseResults(htmlResults, cancellationToken);
-            var sanitizeResults = await _resultParserService.SanitizeResults(parsedResults, cancellationToken);
+            var sanitizeResults = await _resultParserService.SanitizeResults(query, parsedResults, cancellationToken);
 
             //TODO: Add Save functionality here
 

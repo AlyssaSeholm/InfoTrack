@@ -1,9 +1,9 @@
 
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, PayloadAction, createSelector } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { SearchResults } from './types';
-import { Search } from 'react-router-dom';
 import API_PATH from '../../../app/API';
+import { RootState } from '../../../app/store';
 
 
 interface SearchState {
@@ -20,13 +20,13 @@ const initialState: SearchState = {
 
 interface SearchResponse {
     meta: any;
-    results: SearchResults;
+    searchResults: SearchResults;
     type: string;
 
 }
 interface SearchListResponse {
     meta: any;
-    results: SearchResults[];
+    searchResults: SearchResults[];
     type: string;
 }
 
@@ -44,18 +44,19 @@ interface SearchListResponse {
 export const fetch_SearchList_ByUserId = createAsyncThunk('search/fetchAllByUserId', async (userId: string, { rejectWithValue }) => {
     try {
         console.log(`${API_PATH.Search.GetList_ByUserId}/${userId}`);
-        const response = await axios.get(`${API_PATH.Company.GetList_ByUserId}/${userId}`);
+        const response = await axios.get(`${API_PATH.Search.GetList_ByUserId}/${userId}`);
         return response.data as SearchListResponse;
     } catch (error) {
         return rejectWithValue('Failed to fetch companies by user ID');
     }
 });
 
-export const create_Search = createAsyncThunk('search/create', async (searchData: Search, { rejectWithValue }) => {
+export const create_Search = createAsyncThunk('search/create', async (queryId: string, { rejectWithValue }) => {
     try {
         console.log(`${API_PATH.Search.Post}`);
-        console.dir(searchData);
-        const response = await axios.post(API_PATH.Search.Post, searchData);
+        const request = { queryId: queryId };
+        console.dir(`Search_Create QueryId:${queryId}`);
+        const response = await axios.post(API_PATH.Search.Post, request);
         return response.data as SearchResponse;
     } catch (error) {
         return rejectWithValue('Failed to create search');
@@ -94,14 +95,14 @@ export const searchSlice = createSlice({
             // .addCase(fetch_Search_ById.fulfilled, (state, action: PayloadAction<SearchResponse>) => {
             //     state.isLoading = false;
                 
-            //     const existingIndex = state.queries.findIndex(search => search.id === action.payload.search.id);
+            //     const existingIndex = state.queries.findIndex(search => search.id === action.payload.searchResults.id);
             //     if (existingIndex !== -1) {
             //         console.log(`existingIndex: ${existingIndex}`);
-            //         state.queries[existingIndex] = action.payload.search;
+            //         state.queries[existingIndex] = action.payload.searchResults;
             //     } else {
             //         // Add the new company to the array
             //         console.log("Adding new company...");
-            //         state.queries.unshift(action.payload.search);
+            //         state.queries.unshift(action.payload.searchResults);
             //     }
 
             //     state.error = null;
@@ -112,10 +113,10 @@ export const searchSlice = createSlice({
             // })
             //#endregion Fetch By Id
             //#region Fetch List By User Id
-            .addCase(fetch_SearchList_ByUserId.pending, (state) => { setStateToLoading(state); })
+            .addCase(fetch_SearchList_ByUserId.pending, (state) => setStateToLoading(state))
             .addCase(fetch_SearchList_ByUserId.fulfilled, (state, action: PayloadAction<SearchListResponse>) => {
                 state.isLoading = false;
-                state.results = action.payload.results;
+                state.results = action.payload.searchResults;
                 state.error = null;
             })
             .addCase(fetch_SearchList_ByUserId.rejected, (state, action) => {
@@ -126,8 +127,9 @@ export const searchSlice = createSlice({
             //#region Create Search
             .addCase(create_Search.pending, (state) => { setStateToLoading(state); })
             .addCase(create_Search.fulfilled, (state, action: PayloadAction<SearchResponse>) => {
-                state.isLoading = false;                
-                state.results.unshift(action.payload.results);
+                state.isLoading = false;   
+                if(!state.results) state.results = [];           
+                state.results.unshift(action.payload.searchResults); 
                 state.error = null;
             })
             .addCase(create_Search.rejected, (state, action) => {
@@ -158,10 +160,19 @@ export const searchSlice = createSlice({
 const SearchResultsReducer = searchSlice.reducer
 export default SearchResultsReducer;
 
-export const selectSearchResults = (state: any) => state.search.results;
-export const selectSearchResultsByResultsId = (state: any, resultsId: string) => state.search.results.find((results: SearchResults) => results.id === resultsId);
-export const selectSearchResultsItemsByResultsId = (state: any, resultsId: string) => state.search.results.find((results: SearchResults) => results.id === resultsId).items ?? [];
+// export const selectSearchResults = (state: RootState) => state.search?.results as SearchResults[] ?? [];
+const selectSearchState = (state: RootState) => state.searchResults;
 
+export const selectSearchResults = createSelector(
+  [selectSearchState],
+  (searchState) => {
+    return searchState.results;  // This should return the part of the state you need
+  }
+) as (state: RootState) => SearchResults[];
+export const selectSearchResultsByResultsId = (state: RootState, resultsId: string) => state.searchResults.results.find((results: SearchResults) => results.id === resultsId);
+export const selectSearchResultsItemsByResultsId = (state: RootState, resultsId: string) => state.searchResults?.results?.find((results: SearchResults) => results.id === resultsId)?.items ?? [];
+export const selectSearchResultsByQueryId = (state: RootState, queryId: string) => state.searchResults.results.find((results: SearchResults) => results.queryId === queryId);
+export const selectSearchResultsItemsByQueryId = (state: RootState, queryId: string) => state.searchResults?.results?.find((results: SearchResults) => results.queryId === queryId)?.items ?? [];
 
-export const selectSearchLoading = (state: any) => state?.search?.isLoading ?? false;
-export const selectSearchError = (state: any) => state.search.error;
+export const selectSearchLoading = (state: RootState) => state?.searchResults?.isLoading ?? false;
+export const selectSearchError = (state: RootState) => state.searchResults.error;

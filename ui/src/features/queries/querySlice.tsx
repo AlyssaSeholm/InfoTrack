@@ -3,7 +3,6 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Query } from './types.tsx';
-import exp from 'constants';
 import { RootState } from '../../app/store.tsx';
 
 
@@ -29,7 +28,7 @@ interface QueryResponse {
 }
 interface QueryListResponse {
     meta: any;
-    queries: Query[];
+    queries: Query[]; 
     type: string;
 }
 
@@ -47,10 +46,10 @@ export const fetch_Query_ById = createAsyncThunk('query/fetchById', async (id: s
 export const fetch_QueryList_ByUserId = createAsyncThunk('query/fetchAllByUserId', async (userId: string, { rejectWithValue }) => {
     try {
         console.log(`${API_PATH.Query.GetList_ByUserId}/${userId}`);
-        const response = await axios.get(`${API_PATH.Company.GetList_ByUserId}/${userId}`);
+        const response = await axios.get(`${API_PATH.Query.GetList_ByUserId}/${userId}`);
         return response.data as QueryListResponse;
     } catch (error) {
-        return rejectWithValue('Failed to fetch companies by user ID');
+        return rejectWithValue('Failed to fetch queries by user ID');
     }
 });
 
@@ -113,8 +112,8 @@ export const querySlice = createSlice({
                     console.log(`existingIndex: ${existingIndex}`);
                     state.queries[existingIndex] = action.payload.query;
                 } else {
-                    // Add the new company to the array
-                    console.log("Adding new company...");
+                    // Add the new query to the array
+                    console.log("Adding new query...");
                     state.queries.unshift(action.payload.query);
                 }
 
@@ -134,7 +133,7 @@ export const querySlice = createSlice({
             })
             .addCase(fetch_QueryList_ByUserId.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.error.message || 'Failed to fetch companies';
+                state.error = action.error.message || 'Failed to fetch queries by user ID';
             })
             //#endregion Fetch List By User Id
             //#region Create Query
@@ -154,10 +153,10 @@ export const querySlice = createSlice({
             .addCase(update_Query.fulfilled, (state, action: PayloadAction<QueryResponse>) => {
                 state.isLoading = false;             
 
-                const updatedCompany = action.payload.query;
-                const existingCompany = state.queries.find(query => query.id === updatedCompany.id);
-                if (existingCompany) {
-                    Object.assign(existingCompany, updatedCompany);
+                const updatedQuery = action.payload.query;
+                const existingQuery = state.queries.find(query => query.id === updatedQuery.id);
+                if (existingQuery) {
+                    Object.assign(existingQuery, updatedQuery);
                 }
 
                 state.error = null;
@@ -193,7 +192,7 @@ export default QueryReducer;
 export const selectQueryId = (state: RootState) => state.query.selectedQueryId;
 export const selectQueryList = (state: RootState) => state.query.queries;
 export const selectQueryListByUserId = (state: RootState, userId: string) => state.query.queries.filter((query: Query) => query.userId === userId);
-export const selectQueryListByCompanyId = (state: RootState, companyId: string) => state.query.queries?.filter((query: Query) => query.myCompanyId === companyId) ?? [];
+export const selectQueryListByQueryId = (state: RootState, companyId: string) => state.query.queries?.filter((query: Query) => query.myCompanyId === companyId) ?? [];
 export const selectQueryById = (state: RootState, id: string) => state.query.queries.find((query: Query) => query.id === id);
 export const selectQueryName = (state: RootState, name: string) => state.query.queries.find(query => query.name === name);
 export const selectQueryLoading = (state: RootState) => state?.query?.isLoading ?? false;
