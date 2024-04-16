@@ -17,11 +17,11 @@ export interface ResultItem {
     resultTypeName: string;
     tags?: string[];
     msg: string;
-    rank: number;
-    breadCrumbs: ResultBreadCrumbs;
+    resultRank: number;
+    breadCrumbs: ResultsBreadCrumbs;
 }
   
-export interface ResultBreadCrumbs {
+export interface ResultsBreadCrumbs {
     text?: string;
     link?: string;
 }

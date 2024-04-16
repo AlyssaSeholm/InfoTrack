@@ -15,42 +15,42 @@ import { RootState } from '../../../app/store';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-function BarChart(){
-      const currentTheme = useSelector((state: RootState) => state.theme.currentTheme);
+function BarChart() {
+  const currentTheme = useSelector((state: RootState) => state.theme.currentTheme);
 
-    const options = {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-            color: CompletedThemes["dark"]?.primary
-          }
-        },
-      };
-      
-      const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];      
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+        color: CompletedThemes["dark"]?.primary
+      }
+    },
+  };
 
-      const data = {
-        labels,
-        datasets: [
-          {
-            label: 'Store 1',
-            data: labels.map(() => { return Math.random() * 1000 + 500 }),
-            backgroundColor: CompletedThemes[currentTheme]?.primary 
-          },
-          {
-            label: 'Store 2',
-            data: labels.map(() => { return Math.random() * 1000 + 500 }),
-            backgroundColor: CompletedThemes[currentTheme]?.secondary 
-          },
-        ],
-      };
+  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-    return (
-      <TitleCard title={"Revenue"}>
-        <Bar options={{ ...options, plugins: { legend: { position: "top" } } }} data={data} />
-      </TitleCard>
-    )
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Store 1',
+        data: labels.map(() => { return Math.random() * 1000 + 500 }),
+        backgroundColor: CompletedThemes[currentTheme]?.primary
+      },
+      {
+        label: 'Store 2',
+        data: labels.map(() => { return Math.random() * 1000 + 500 }),
+        backgroundColor: CompletedThemes[currentTheme]?.secondary
+      },
+    ],
+  };
+
+  return (
+    <TitleCard title={"Revenue"}>
+      <Bar options={{ ...options, plugins: { legend: { position: "top" } } }} data={data} />
+    </TitleCard>
+  )
 }
 
 

@@ -1,4 +1,4 @@
-import moment from "moment";
+
 
 const UTIL  = Object.freeze({
     CALENDAR_EVENT_STYLE : {

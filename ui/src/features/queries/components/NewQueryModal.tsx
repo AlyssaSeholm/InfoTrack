@@ -26,7 +26,6 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
 
   const companies = useSelector(selectCompanies);
   const selectedCompanyId = useSelector(selectSelectedCompanyId) ?? "";
-  // const isQueryLoading = useSelector(selectQueryLoading);
   const currentTheme = useSelector(selectTheme);
   const userId = useSelector(selectUserId);
 
@@ -34,7 +33,6 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
   const [queryEngineId, setQueryEngineId] = useState<string>('1');
   const [resultCount, setResultCount] = useState<string>('100');
   const [isQueryCreating, setIsQueryCreating] = useState<boolean>(false);
-  // const [radioValue, setRadioValue] = useState('Google');
   const [chips, setChips] = useState<iChip[]>([]);
 
   const getCompanyName = (id: string): string => {
@@ -66,11 +64,6 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
       { value: '200', label: '200', disabled: true },
     ];
   }
-  // const showSuccessToastMessage = () => {
-  //   toast.success("Success Notification !", {
-  //     position: 'top-right',
-  //   });
-  // };
 
   const addChip = (chip: iChip) => {
       setChips([...chips, chip]);
@@ -82,32 +75,8 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
   const canSubmit = (): boolean => {
     return chips.length > 0;
   }
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   const newQuery: any = {
-  //     userId: userId,
-  //     companyId: queryCompanyId, 
-  //     searchEngineId: queryEngineId, 
-  //     name: '',
-  //     includeTerms: chips.map(chip => chip.label).join(', '), 
-  //     resultCount: resultCount,
-  //     competitorCompanyId: null,
-  //     excludeTerms: '',       
-  //   }
-  //   console.log({newQuery, event });
-  //   const actionResult = await dispatch((create_Query as any)(newQuery));
-  //   // Unwrap the result to handle it directly
-  //   if (actionResult.meta.requestStatus === 'fulfilled') {
-  //     console.log('Query created successfully!');
-  //     toggleIsOpen();
-  //   } else if (actionResult.meta.requestStatus === 'rejected') {
-  //     console.error('Failed to create query');
-  //   }
-
-  // }; 
 
   const handleSubmit = async (e: any) => {
-    // e.preventDefault();
     if (!canSubmit()) return;
   
 
@@ -133,13 +102,13 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
       const searchResultUnwrapped = unwrapResult(searchResult);
       console.log( `Search done!  ${searchResultUnwrapped}` );
       notify("Search completed! ", ToastType.SUCCESS);
-      // showAlert('success', "Success", 'Query created successfully!')
+      
       setChips([]);
       toggleIsOpen();
-      //TODO add notification
+      
     } catch (error) {
       console.error('Failed to create query:', error);
-      // Handle errors appropriately
+      
     } finally {
       setIsQueryCreating(false);
     }
@@ -171,7 +140,7 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
         >
           
         <DialogHeader className='header' >
-            <p>Add a new query.</p>
+            <p style={{width: '100%', textAlign: 'center', textTransform: 'capitalize'}}>Add a new query</p>
         </DialogHeader>
 
         <DialogBody className='body'>
@@ -179,7 +148,8 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
             <div className='unit'>
               <h3>The keywords will be used to search </h3>
               <TextDropdown
-                btnLabel={queryEngineId !== "" ? getSearchEngineName(queryEngineId) : 'Google'}
+                selectedValue='1'
+                btnLabel={getSearchEngineName(queryEngineId)}
                 menuItems={getSearchEngineMenuItems()}
                 onSelect={handleNewSearchEngineSelected} />
               <h3>, </h3>
@@ -204,14 +174,16 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
             <div className='unit'>
               <h3>looking for any references to your company </h3>
               <TextDropdown
-                btnLabel={queryCompanyId !== "" ? getCompanyName(queryCompanyId) : getCompanyName(selectedCompanyId)}
+                selectedValue={queryCompanyId ?? selectedCompanyId}
+                btnLabel={queryCompanyId ? getCompanyName(queryCompanyId) : getCompanyName(selectedCompanyId)}
                 menuItems={convertCompaniesToMenuItems()}
                 onSelect={handleNewCompanySelect} />
             </div>
             <div className='unit'>
               <h3>in </h3>
               <TextDropdown
-                btnLabel={resultCount !== "" ? resultCount : '100'}
+                selectedValue={'50'}
+                btnLabel={resultCount ? resultCount : '50'}
                 menuItems={getResultCountMenuItems()}
                 onSelect={handleNewResultCountSelected} />
                 <h3> results.</h3>
@@ -227,7 +199,8 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
           >
               <span>Cancel</span>
           </Button>
-          {/* <Button color={CompletedThemes[currentTheme]?.primary} ripple={true} onClick={(e: any) => handleSubmit(e)}  > The keywords need to be a balance between specifity yet encompass board enough to pull adequate results. */}
+          
+          
           <DelayedTooltip 
             content={ 
               canSubmit() ? `Add query to your profile and execute the search` 
@@ -256,21 +229,6 @@ const OpenNewQueryModal: FC<NewQueryProps> = ( props ) => {
                     color:CompletedThemes[currentTheme]?.primaryContent,
                     opacity: canSubmit() ? 1 : 0.5
                   }
-                // canSubmit() && !isQueryCreating
-                // ? {
-                //   backgroundColor: CompletedThemes[currentTheme]?.primary,
-                //   color:CompletedThemes[currentTheme]?.primaryContent }
-                // : isQueryCreating 
-                //   ? {
-                //       opacity: 0.9,
-                //       color: CompletedThemes[currentTheme]?.primary,
-                //       borderColor: CompletedThemes[currentTheme]?.primary,
-                //       borderStyle: 'solid',
-                //       borderWidth: '1px',
-                //     } 
-                //   : {
-                //     opacity: 0.5,                    
-                //   }
               }
               >
                 <span>Add Query & Search</span>

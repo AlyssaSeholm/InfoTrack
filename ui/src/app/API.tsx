@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 //interface for the Helpers
 interface Params {
@@ -63,9 +63,6 @@ export const getAPI = async (url: string, data: any): Promise<any> =>{
             status: error.response?.status || 500, // Default to 500 if status is not available
             data: error.response?.data || 'Internal server error', // Default error message
           };
-        //     status: error.status,
-        //     data: error.response
-        // }
     })
 }
 

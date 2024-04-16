@@ -8,9 +8,7 @@ import { selectQueryList } from '../../queries/querySlice';
 import { selectSearchResults } from '../../search/results/searchResultsSlice';
 
 
-interface CompaniesProps {
-    
-}
+interface CompaniesProps { }
 
 const Companies: FC<CompaniesProps> = () => {
     const companies = useSelector(selectCompanies);
@@ -45,45 +43,8 @@ const Companies: FC<CompaniesProps> = () => {
                             searchResults={searchResults}
                             />
             ))}
-            {/* {companies.map((company, index) => (
-                <CompanyCard
-                    key={company.id}  // Use company.id if possible, for a more stable key than index
-                    title={company.name}
-                    gradientFromColor={CompletedThemes[theme]?.primary}
-                    gradientToColor={CompletedThemes[theme]?.accent}
-                    svgIcon={null}  // Ensure you replace null with an actual SVG element or conditional rendering
-                    description={company.name + " - " + company.baseUrl}
-                    downloadLink={company.baseUrl}
-                    sourceCodeLink={null}
-                />
-            ))} */}
         </div>
     );
-
-    // const renderCompanyCards = (company: Company, index: number) => {
-    //         return (
-    //             <>
-    //                 <CompanyCard
-    //                     key={index}
-    //                     gradientFromColor={CompletedThemes[theme]?.primary}
-    //                     gradientToColor={CompletedThemes[theme]?.accent}
-    //                     svgIcon={null}
-    //                     description={company.name + " - " + company.baseUrl}
-    //                     downloadLink={company.baseUrl}
-    //                     sourceCodeLink={null}
-    //                 />
-    //             </>
-    //         );
-    // }
-
-
-    // return (
-    //     <>
-    //         <div className='company-list-container'>
-    //             {companies.map((company, index) => (renderCompanyCards(company, index)))}
-    //         </div>
-    //     </>
-    // );
 }
 
 export default Companies;

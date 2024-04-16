@@ -153,7 +153,7 @@ export const userSlice = createSlice({
             //#endregion Update User
             //#region Delete User
             .addCase(delete_User.pending, (state) => { setStateToLoading(state); })
-            .addCase(delete_User.fulfilled, (state, action: PayloadAction<string>) => {
+            .addCase(delete_User.fulfilled, (state) => {
                 state.isLoading = false;
                 state.profile = null;
                 //TODO: Log the user out that was deleted

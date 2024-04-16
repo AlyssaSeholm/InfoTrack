@@ -106,8 +106,6 @@
             display: flex;
             width: 100%;
             flex: 1;
-            /* border: none; */
-            /* outline: none; */
         }
 
 
@@ -122,8 +120,6 @@
                 gap: 0.5rem;
                 padding: 0.25rem 0.5rem;
                 border-radius: 0.5rem;
-                /* background-color: #f0f0f067; */
-                /* color: #333; */
                 font-size: 0.875rem;
                 font-weight: 500;
                 opacity: 0.6;
@@ -136,8 +132,6 @@
                 &:active {
                     opacity: 1;
                     border-width: 2px;
-                    /* border-spacing: 0px; */
-                    /* background-color: #f0f0f07c; */
                     margin: 0px;
                     cursor: default;
                 }
@@ -167,7 +161,6 @@
     display: flex;
     height: 100%;
     width: 100%;
-    /* width: auto; */
     justify-content: center;
     opacity: 0.6;
 
@@ -193,9 +186,6 @@
             background-size: contain;
             max-height: 22vw;
             max-width: 22vw;
-            /* animation: spin 2s linear infinite; */
-            /* background-size: contain; */
-            /* animation: spin 2s linear infinite; */
         }
         
     }
@@ -307,110 +297,24 @@ button:disabled svg {
             &:focus {
                 border-width: 2px;
             }
-
         }
-        /* button[aria-expanded="true"] {
-            /* border-top-width: 0px; */
-       /* }
-
-        > label {
-             display: flex; 
-            
-        } */
-        /* label is not floating */
         > label:not(.text-sm) {
             height: 1rem;
             display: flex;
             flex: 1 0 25%;
             width: auto;
             background-color: inherit;
-            /* background-color: pink; */
-            /* height: 1rem; */
-            /* display: flex; */
-             /* background-color: rgb(0, 0, 0); */
-            /* background-color: pink; */
-            /* clip-path: inset(50); */
 
             &::before {
                 background-color: none;
-                /* border-top-color: inherit;
-                border-top-width: 1px;
-                border-left-width: 1px;
-                border-top-left-radius: 0.375rem;
-                width: 0.625rem;
-                height: 0.375rem;
-                display: block;
-                margin-top: 6.5px;
-                margin-right: 0.25rem;
-                pointer-events: none;
-                animation-duration: 10ms; */
-                /* animation: none; */
             }
 
             &::after {
                 background-color: none;
-                /* border-color:initial;
-                border-style: solid;
-                border-top-width: 1px;
-                border-right-width: 1px;
-                border-top-right-radius: 0.375rem; */
-                /* flex-grow: 1;
-                width: 0.625rem;
-                height: 0.375rem;
-                display: block;
-                margin-top: 6.5px;
-                margin-left: 0.25rem;
-                pointer-events: none;
-                animation-duration: 90ms; */
-                /* animation: none; */
             }
         }
-        /* label is floating 
-        line-height: 3.75rem
-        top: -0.375rem*/
         > label.text-sm {
             line-height: 3.15rem;
-            /* top: -0.375rem; */
-            /* align-items: center; */
-            /* margin-top: 5px; */
-            /* border-width: 0; */
-            /* align-items: center;
-            margin-top: 5px;
-            border-width: 0; */
-            /* border-top-width: 1px;
-            margin-top: 6.5px;
-            margin-right: 0.25rem;
-            pointer-events: none;
-            border-top-left-radius: 0.375rem;
-            border-top-right-radius: 0.375rem;
-            animation: none; */
-
-            /* &::before {
-                border-top-width: 1px;
-                border-left-width: 1px;
-                border-top-left-radius: 0.375rem;
-                width: 0.625rem;
-                height: 0.375rem;
-                display: block;
-                margin-top: 6.5px;
-                margin-right: 0.25rem;
-                pointer-events: none; 
-            }
-
-            &::after {*/
-                /* border-style: solid;
-                border-top-width: 1px;
-                border-right-width: 1px;
-                border-top-right-radius: 0.375rem;
-                flex-grow: 1;
-                width: 0.625rem;
-                height: 0.375rem;
-                display: block;
-                margin-top: 6.5px;
-                margin-left: 0.25rem;
-                pointer-events: none; 
-            }*/
-
         }
     }
   }

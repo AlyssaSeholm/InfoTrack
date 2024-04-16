@@ -3,11 +3,12 @@ import ChevronLeftIcon from "@heroicons/react/24/solid/ChevronLeftIcon";
 import ChevronRightIcon from "@heroicons/react/24/solid/ChevronRightIcon";
 import moment from "moment";
 import UTIL from "./util";
-import { Dialog, DialogHeader, DialogBody, DialogFooter, Button } from '@material-tailwind/react';
-import Datepicker, { DateValueType } from "react-tailwindcss-datepicker";
+import { Dialog, DialogHeader, DialogBody, DialogFooter } from '@material-tailwind/react';
+//import Datepicker, { DateValueType } from "react-tailwindcss-datepicker";
 import '../../assets/css/modal.css';
 
-const THEME_BG: { [key: string]: string } = UTIL.CALENDAR_EVENT_STYLE //TODO remove theme
+//TODO: remove hardcoded theme and use dynamic theme
+const THEME_BG: { [key: string]: string } = UTIL.CALENDAR_EVENT_STYLE
 
 export interface FilteredEvent {
   title: string,
@@ -38,6 +39,7 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
 
   useEffect(() => {
     setEvents(calendarEvents)
+    console.log(currMonth, calendarEvents);
   }, [calendarEvents])
 
 
@@ -81,26 +83,26 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
     return moment(date).month() != moment(firstDayOfMonth).month()
   }
 
-  const getPrevMonth = (event: any) => {
+  const getPrevMonth = () => {
     const firstDayOfPrevMonth = moment(firstDayOfMonth).add(-1, 'M').startOf('month');
     setFirstDayOfMonth(firstDayOfPrevMonth)
     setCurrMonth(moment(firstDayOfPrevMonth).format("MMM-yyyy"));
   };
 
-  const getCurrentMonth = (event: any) => {
+  const getCurrentMonth = () => {
     const firstDayOfCurrMonth = moment().startOf('month');
     setFirstDayOfMonth(firstDayOfCurrMonth)
     setCurrMonth(moment(firstDayOfCurrMonth).format("MMM-yyyy"));
   };
 
-  const getNextMonth = (event: any) => {
+  const getNextMonth = () => {
     const firstDayOfNextMonth = moment(firstDayOfMonth).add(1, 'M').startOf('month');
     setFirstDayOfMonth(firstDayOfNextMonth)
     setCurrMonth(moment(firstDayOfNextMonth).format("MMM-yyyy"));
   };
 
   const getDay = (day: Date | moment.MomentInput): number => {
-    return +moment(day).day().toString();//return moment(date).format("D")
+    return +moment(day).day().toString();
   }
 
   const openEventModal = () => {
@@ -108,26 +110,22 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
     return (
       <Dialog open={newEventOpen} handler={toggleNewEventOpen} className="w-1/2">
         <DialogHeader>
-            Add New Event
-          </DialogHeader>
-          <DialogBody>
-            <p>Body</p>
-            {/* <input type="date" /> */}
-            {/* <Datepicker value={null} onChange={function (value: DateValueType, e?: HTMLInputElement | null | undefined): void {
-            throw new Error("Function not implemented.");
-          } }></Datepicker> */}
-          </DialogBody>
-          <DialogFooter>
-            <button className="btn btn-primary">Save</button>
-            <button className="btn btn-outline">Cancel</button>
-          </DialogFooter>
+          Add New Event
+        </DialogHeader>
+        <DialogBody>
+          <p>This is where fancy calendar event options will go!</p>
+        </DialogBody>
+        <DialogFooter>
+          <button className="btn btn-ghost mr-4">Cancel</button>
+          <button className="btn btn-primary">Save</button>
+        </DialogFooter>
       </Dialog>
     )
   }
 
   return (
     <>
-    {openEventModal()}
+      {openEventModal()}
       <div className="w-full bg-base-100 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div className="flex  justify-normal gap-2 sm:gap-4">
@@ -135,20 +133,22 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
               {moment(firstDayOfMonth).format("MMMM yyyy").toString()}<span className="text-xs ml-2 ">Beta</span>
             </p>
 
-            <button className="btn btn-square btn-sm btn-ghost" onClick={getPrevMonth}><ChevronLeftIcon
-              className="w-5 h-5"
-
-            /></button>
+            <button className="btn btn-square btn-sm btn-ghost" onClick={getPrevMonth}>
+              <ChevronLeftIcon className="w-5 h-5" />
+            </button>
             <button className="btn btn-sm btn-ghost normal-case" onClick={getCurrentMonth}>
-
-              Current Month</button>
-            <button className="btn btn-square btn-sm btn-ghost" onClick={getNextMonth}><ChevronRightIcon
-              className="w-5 h-5"
-
-            /></button>
+              Current Month
+            </button>
+            <button className="btn btn-square btn-sm btn-ghost" onClick={getNextMonth}>
+              <ChevronRightIcon className="w-5 h-5" />
+            </button>
           </div>
           <div>
-            <button className="btn btn-sm btn-ghost btn-outline normal-case" onClick={() => toggleNewEventOpen(!newEventOpen)}>Add New Event</button>
+            <button
+              className="btn btn-sm btn-ghost btn-outline normal-case"
+              onClick={() => toggleNewEventOpen(!newEventOpen)}>
+              Add New Event
+            </button>
           </div>
 
         </div>
@@ -168,12 +168,11 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
           {allDaysInMonth().map((day: Date, idx: number) => {
             return (
               <div key={idx} className={colStartClasses[getDay(day)] + " border border-solid w-full h-28  "}>
-                {/* <p className={`inline-block flex items-center  justify-center h-8 w-8 rounded-full mx-1 mt-1 text-sm cursor-pointer hover:bg-base-300 ${isToday(day) && " bg-blue-100 dark:bg-blue-400 dark:hover:bg-base-300 dark:text-white"} ${isDifferentMonth(day) && " text-slate-400 dark:text-slate-600"}`} onClick={() => addNewEvent(day)}> { moment(day).format("D") }</p> */}
                 <p className={`inline-block flex items-center justify-center h-8 w-8 
                       rounded-full mx-1 mt-1 text-sm cursor-pointer  
                       ${isToday(day) && ""}
                       ${isDifferentMonth(day) && ""}`
-                    } 
+                }
                   onClick={() => addNewEvent(day)}
                 >
                   {moment(day).format("D")}
@@ -188,8 +187,6 @@ function CalendarView({ calendarEvents, addNewEvent, openDayDetail }:
             );
           })}
         </div>
-
-
       </div>
     </>
   )

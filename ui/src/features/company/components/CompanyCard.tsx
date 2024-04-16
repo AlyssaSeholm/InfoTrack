@@ -1,12 +1,11 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Company } from '../types';
 import TextDropdown, { iMenuItem } from '../../../components/common/input/textdropdown/TextDropdown';
 import { Query } from '../../queries/types';
 import { SearchResults } from '../../search/results/types';
 import { Accordion, AccordionBody, AccordionHeader, Button, Chip } from '@material-tailwind/react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch } from '../../../app/store';
-import { create_Search, selectSearchLoading, selectSearchResults } from '../../search/results/searchResultsSlice';
+import { useDispatch } from 'react-redux';
+import { create_Search } from '../../search/results/searchResultsSlice';
 import { unwrapResult } from '@reduxjs/toolkit';
 import notify, { ToastType } from '../../../services/NotificationService';
 import React from 'react';
@@ -15,7 +14,7 @@ import React from 'react';
 interface CompanyCardProps {
     company: Company;
     gradientToColor: string;
-    faIcon: string;  // This holds the SVG path directly or as a component
+    faIcon: string; 
     description: string;
     downloadLink: string;
     sourceCodeLink: string | null;
@@ -26,36 +25,56 @@ interface CompanyCardProps {
 }
 
 const CompanyCard: FC<CompanyCardProps> = (props) => {
-    const { company, gradientToColor, downloadLink, sourceCodeLink, title, isOpen, queries, searchResults } = props;
+    const { company, gradientToColor, downloadLink, sourceCodeLink, title, isOpen } = props;
 
     const dispatch = useDispatch();
 
-    const [selectedQueryId, setSelectedQueryId] = useState<string>(queries ? queries[0]?.id : "");
+    const [selectedQueryId, setSelectedQueryId] = useState<string | null>(null);
+    const [filteredResults, setFilteredResults] = useState<SearchResults[]>([]);
+    const [queriesList, setQueriesList] = useState<Query[]>([]);
+
     const [queriesRunning, setQueriesRunning] = useState<boolean>(false);
-    const selectedResults = useSelector(selectSearchResults);
 
+    useEffect(() => {
+        if (props.queries && props.queries.length > 0) {
+            setSelectedQueryId(props.queries[0].id);
+            console.log(`useEffect - selected queryId (${selectedQueryId}) -- before -- ${queriesList}`);
+            setQueriesList(props.queries?.filter(q => q?.myCompanyId === company?.id));
+            console.log(`useEffect - queries updated: (${queriesList?.length}) ${queriesList}`);
+        }
+    }, [props.queries]);
 
-    const getQueryName = (id: string): string => {
+    useEffect(() => {
+        if (selectedQueryId) {
+            const newFilteredResults = props.searchResults.filter(sr => sr.queryId === selectedQueryId);
+            setFilteredResults(newFilteredResults);
+            console.log(`useEffect - Filtered results updated: ${newFilteredResults.length}`);
+        }
+    }, [props.searchResults, selectedQueryId]);
+
+    const getQueryName = (id: string | null): string => {
+        var query = filteredResults.length > 0 ? filteredResults[0] : null;
+        if (!query) { return `add a query to ${company.name}`; }
+
+        if (!id && !query) { return 'No query selected'; }
+        
+        if (!id && query !== null) { 
+            setSelectedQueryId(query.id);
+        }
+
         const items = convertQueriesToMenuItems();
-        var query = items.find(q => q.value === id);
-        return query?.label ?? 'missing query name';
+        return items.find(q => q.value === query?.id)?.label ?? ' -- select a query --';
     }
+
     const convertQueriesToMenuItems = (): iMenuItem[] => {
-        return queries?.filter(q => q.myCompanyId === company.id)?.map((query: Query, index) => {
+        return queriesList?.map((query: Query, index) => {
             return {
                 value: query.id,
                 label: query.name != "" ? `${index + 1}. ${query.name}` : `${index + 1}. Query ${query.id} terms: ${query.includeTerms} ${query.excludeTerms}`,
-                count: selectedResults?.filter(sr => sr?.queryId === query.id).length ?? 0,
+                count: filteredResults?.filter(sr => sr?.queryId === query.id).length ?? 0,
                 disabled: false
             };
         }) ?? [];
-    }
-    const companyQueries = (): Query[] => {
-        return queries?.filter(q => q.myCompanyId === company.id) ?? [];
-    }
-    const handleNewSearchEngineSelected = (e: iMenuItem) => {
-        console.log(`New query chosen! ${e.label}`);
-        setSelectedQueryId(e.value);
     }
     const handleQueryRun = async () => {
         setQueriesRunning(true);
@@ -63,22 +82,50 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
         const searchResult = await dispatch((create_Search as any)(selectedQueryId));
 
         console.log(`Query ran!: ${unwrapResult(searchResult)}`);
-        notify(`Query successfully ran for ${getQueryName(selectedQueryId)}`, ToastType.SUCCESS);
         setQueriesRunning(true);
+        notify(`Query successfully ran for ${getQueryName(selectedQueryId)}`, ToastType.SUCCESS);
     }
+    const handleQuerySelection = (newQuery: iMenuItem) => {
+        console.log(`New query chosen! ${newQuery.value} ${newQuery.label}`);
+        setSelectedQueryId(newQuery.value);
+        const newFilteredResults = props.searchResults?.filter(sr => sr.queryId === newQuery.value);
+        if (newFilteredResults) {
+            setFilteredResults(newFilteredResults);
+            console.log(`manual - Filtered results updated: ${newFilteredResults.length}`);
+        } else {
+            setFilteredResults([]);
+            console.log(`manual - Filtered results updated: 0`);
+        }
+    };
 
     const [queryAccordionOpen, setQueryAccordionOpen] = React.useState(1);
     const [companyAccordionOpen, setCompanyAccordionOpen] = React.useState(false);
     const handleQueryOpen = (value: React.SetStateAction<number>) => setQueryAccordionOpen(queryAccordionOpen === value ? 0 : value);
     const handleCompanyOpen = () => { 
         setCompanyAccordionOpen(!companyAccordionOpen);
-        
+
+    };
+
+    const formatDateIntl = (dateString: string): string => {
+        const date = new Date(dateString);
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+    
+        // Split to remove the comma added by the formatter between date and time
+        return formatter.format(date).replace(',', '');
     };
 
     //#region Render Functions
     const renderEmptyQueryList = () => {
         return (
-            <div className={'card bg-base-100 shadow-xl h-20'}>
+            <div className={'card bg-base-100 shadow-xl h-10 py-3 px-4 m-4'}>
                 <p className={'text text-base-content text-md'}>No queries found for this company.</p>
             </div>
         );
@@ -105,9 +152,10 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
                 <div className='form-row'>
                     <h3>Queries: </h3>
                     <TextDropdown
-                        btnLabel={selectedQueryId !== "" ? getQueryName(selectedQueryId) : 'No queries found'}
+                        selectedValue={selectedQueryId ?? ''}
+                        btnLabel={getQueryName(selectedQueryId)}
                         menuItems={convertQueriesToMenuItems()}
-                        onSelect={handleNewSearchEngineSelected} />
+                        onSelect={(newQuery) => handleQuerySelection(newQuery)} />
                 </div>
             </>
         )
@@ -123,11 +171,7 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
             );
         }
 
-        const results = selectedResults?.filter(sr => sr?.queryId === selectedQueryId);
-        const resultsv2 = searchResults?.filter(sr => sr?.queryId === selectedQueryId);
-        console.log(`${selectedQueryId} -- renderResultsList: ${results}`)
-        console.log(`${selectedQueryId} -- renderResultsList: ${resultsv2}`)
-        if (!results || results.length === 0) {
+        if (!filteredResults || filteredResults.length === 0) {
             return (
                 <div className={'card bg-base-100 shadow-xl h-20 w-full'}>
                     <p className={'text text-base-content text-md'}>No search results found for this query.</p>
@@ -137,35 +181,27 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
 
         return (
             <>
-                {results.map((result, index) => (
+                {filteredResults.map((result, index) => (
                     <Accordion open={queryAccordionOpen === index + 1} key={index + 1} className={'p-0 overflow-hidden'} icon={<Icon id={index + 1} />} animate={{ mount: { scale: 1, y: 0 }, unmount: { scale: 0, y: 5 }, }}>
                         <AccordionHeader onClick={() => handleQueryOpen(index + 1)} className='flex flex-row w-full gap-4'>
-                            <h2 className={'text text-base-content text-md'}>{getQueryName(result.queryId)}</h2>
-                            {/* Top 10 results: */}
-                            {result.highestRank > 10 ?
-                                <h3>Highest Rank: {result.highestRank}</h3>
-                                : <p className={'text text-base-content text-md'}>No results in top 10</p>}
+                            <h2 className={'text text-base-content text-sm'}>{formatDateIntl(result.searchedOn.toString())}</h2>
+                            {result.highestRank ? <h3 className='text text-base-content text-sm'>Highest Rank: {result.highestRank}</h3> : ''}
                             {result.top100Count > 0 ?
-                                <h3>Number of Results Found: {result.top100Count} / {result.items.length}</h3>
-                                : <p className={'text text-base-content text-md'}>No results matched the key terms.</p>}
+                                <h3 className='text text-base-content text-sm'>Number of Mentions Found: {result?.items?.filter(i => i?.tags && i.tags.length > 0 )?.length ?? 0} / {result.items.length}</h3>
+                                : <p className={'text text-base-content text-sm'}>No results matched the key terms.</p>}
                         </AccordionHeader>
                         <AccordionBody className={"overflow-x-hidden overflow-y-auto max-h-96"}>
                             <ul key={index} className={'card bg-base-300 shadow-xl flex flex-wrap flex-column gap-2'}>
                                 {result.items.map((item, index) => (
-                                    <li key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around'}>
-                                        <h3 className='flex'>{`#${item.rank}`}</h3>
+                                    <li key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-3 h-min justify-left'}>
+                                        <h3 className='flex'>{`# ${item.resultRank}`}</h3>
                                         {item.tags?.map((tag, index) => (
                                             <Chip variant='outlined' key={index} value={tag} className='flex h-8 border-accent' />
                                         ))}
-                                        <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
+                                        {item.url && <a href={item.url} className='flex text-xs'>{item.url}</a>}
+                                        {item.breadCrumbs && (item.breadCrumbs.link || item.breadCrumbs.text) 
+                                            && <p className='flex text-xs'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>}
                                     </li>
-                                    // <div key={index} className={'shadow-xl rounded-md h-10 bg-base-100 flex flex-wrap flex-row items-center py-3 px-8 gap-4 h-min justify-around animate={{ mount: { scale: 1 }, unmount: { scale: 0.9 }, }}'}>
-                                    //     <h3 className='flex'>{`#${item.rank}`}</h3> 
-                                    //     {item.tags?.map((tag, index) => (
-                                    //         <Chip variant='outlined' key={index} value={tag}  className='flex h-8 border-accent'/>
-                                    //     ))}
-                                    //     <p className='flex'>{item.breadCrumbs?.text ?? ' ... '} {' > '} {item.breadCrumbs?.link ?? ' ... '}</p>
-                                    // </div>
                                 ))}
                             </ul>
                         </AccordionBody>
@@ -180,54 +216,45 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
     return (
         <>
             <div className='company-card'>
-                {/* <div className="card-mat card w-full p-6 bg-base-100 shadow-xl mt-6 collapse collapse-arrow overflow-visible" > */}
-                {/* <input type="radio" name="my-accordion-1" defaultChecked={isOpen} /> */}
-
                 <Accordion open={companyAccordionOpen} className={'p-0  overflow-hidden my-3 bg-base-100 shadow-xl mt-6 collapse collapse-arrow overflow-hidden'} >
+
                     {/* TITLE */}
                     <AccordionHeader
                         onClick={() => handleCompanyOpen()}
                         className='flex flex-row w-full gap-4 card__header '
                         style={{ background: `linear-gradient(255deg,  rgba(255, 134, 91, 0), ${gradientToColor} )`, width: `calc(100% + 5px)`, margin: `-3px 0 0px -3px` }}
                     >
-                        {/* <div className="card__header collapse-title " style={{ background: `linear-gradient(255deg,  rgba(255, 134, 91, 0), ${gradientToColor} ) ` }}> */}
                         <label className="swap swap-rotate ">
                             <input type="checkbox" />
                             <span className={`material-symbols-outlined large-icon  ${(!isOpen ? "swap-on" : "swap-off")}`}> monitoring </span>
                             <span className={`material-symbols-outlined large-icon  ${(isOpen ? "swap-on" : "swap-off")}`}> monitoring </span>
                         </label>
                         {title && <h2 className="card__header__title text text-primary-content">{title}</h2>}
-                        {/* </div> */}
+                        
                     </AccordionHeader>
+
                     {/* COLLAPSABLE CONTENT */}
-                    {/* <div className='collapse-content'> */}
-                    <AccordionBody className={"p-4 overflow-hidden max-h-96 pb-1"}>
+                    <AccordionBody className={"p-4 overflow-hidden overflow-y-auto max-h-[40vh] pb-1"}>
                         {/* BODY */}
                         <div className="card__body w-full" >
                             <div className="w-full overflow-hidden">
 
-                                {/* <div className="relative w-full min-w-[200px] h-10">
-                                    <FloatingLabelInput labelText="Username" value={fieldvalue} setValue={setfieldValue} placeholderTxt={''} />
-                                </div> */}
-
                                 <div className="relative w-full min-w-[200px] flex justify-between overflow-x-hidden overflow-y-auto max-h-80">{/* <div className="select-with-floating-label mt-3"> */}
-
 
                                     <div className='flex flex-1 flex-row flex-wrap'>
                                         <div className='flex flex-column gap-4 w-full justify-end'>
-                                            {/* <Button variant="outlined" size="md" ripple={true} className="flex items-center gap-3 py-0.5 pl-3 pr-5 border-base-content">
-                                            <span className={`material-symbols-outlined large-icon animate-spin  ${(!isOpen ? "swap-on" : "swap-off")}`}> refresh </span>
-                                            Refresh
-                                        </Button> */}
-                                            <Button disabled={queriesRunning || !selectedQueryId} variant="gradient" size="sm" ripple={true} onClick={handleQueryRun}
-                                                className={`flex items-center gap-3 py-0.5 pl-3 pr-5 bg-primary opacity-70 hover:opacity-100 focus:opacity-100 text-primary-content border-primary-content ${queriesRunning ? 'bg-opacity-50' : ''}`}
+                                            <Button variant="gradient" size="sm" ripple={true} 
+                                                disabled={queriesRunning || !selectedQueryId}
+                                                onClick={handleQueryRun}
+                                                className={`flex items-center gap-3 py-0.5 pl-3 pr-5 bg-primary opacity-70 hover:opacity-100 focus:opacity-100 text-primary-content border-primary-content 
+                                                    ${(queriesRunning || selectedQueryId || !filteredResults || filteredResults.length === 0) ? 'bg-opacity-50 cursor-default' : ''}`}
                                             >
-                                                <span className={`material-symbols-outlined large-icon ${queriesRunning ? 'animate-pulse' : ''}  ${(!isOpen ? "swap-on" : "swap-off")}`}> query_stats </span>
+                                                <span className={`material-symbols-outlined large-icon ${queriesRunning ? 'animate-pulse' : ''} `}> query_stats </span>
                                                 Run Query
                                             </Button>
                                         </div>
                                         <div className='flex flex w-full'>
-                                            {(!companyQueries() || companyQueries().length === 0)
+                                            {(!queriesList || queriesList.length === 0)
                                                 ? renderEmptyQueryList()
                                                 : renderQueryListSelect()}
                                         </div>
@@ -235,7 +262,8 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
 
                                 </div>
                                 <div className="w-full mt-4 flex flex-row flex-wrap p-3 gap-3">
-                                    {renderResultsList()}
+                                    {(queriesList && queriesList.length > 0 && selectedQueryId && filteredResults?.length > 0)
+                                        && renderResultsList()}
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,4 @@
 
-// import axios from 'axios'
-// import capitalize from 'capitalize-the-first-letter'
 import React, { useState } from 'react'
 import InformationCircleIcon from '@heroicons/react/24/outline/InformationCircleIcon'
 
@@ -16,7 +14,6 @@ function SelectBox(props: { labelTitle: any; labelDescription: any; defaultValue
         updateFormValue({updateType, value : newValue})
         setValue(newValue)
     }
-
 
     return (
         <div id='kittens' className={`inline-block ${containerStyle}`}>

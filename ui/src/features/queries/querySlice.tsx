@@ -4,6 +4,7 @@ import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Query } from './types.tsx';
 import { RootState } from '../../app/store.tsx';
+import notify, { ToastType } from '../../services/NotificationService.tsx';
 
 
 interface QueryState {
@@ -121,7 +122,8 @@ export const querySlice = createSlice({
             })
             .addCase(fetch_Query_ById.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.error.message || 'Failed to fetch query';
+                state.error = action.error.message || 'Failed to fetch query';                
+                notify(`Ran into an issue fetching the query. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch By Id
             //#region Fetch List By User Id
@@ -134,6 +136,7 @@ export const querySlice = createSlice({
             .addCase(fetch_QueryList_ByUserId.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch queries by user ID';
+                notify(`Ran into an issue fetching the query list by user id. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch List By User Id
             //#region Create Query
@@ -146,6 +149,7 @@ export const querySlice = createSlice({
             .addCase(create_Query.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to create query';
+                notify(`Encountered an error while trying to create this query. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Create Query
             //#region Update Query
@@ -164,6 +168,8 @@ export const querySlice = createSlice({
             .addCase(update_Query.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to update query';
+                
+                notify(`Query was not updated. Ran into an issue updating this query. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Update Query
             //#region Delete Query
@@ -177,6 +183,8 @@ export const querySlice = createSlice({
             .addCase(delete_Query.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to delete query';
+                
+                notify(`Query was not deleted. Ran into an issue deleting the query. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Delete Query
             ;
@@ -185,7 +193,6 @@ export const querySlice = createSlice({
 
 });
 
-// export default querySlice.reducer;
 const QueryReducer = querySlice.reducer
 export default QueryReducer;
 

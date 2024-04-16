@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import {useState, FormEvent} from 'react'
 import {Link} from 'react-router-dom'
 import LandingIntro from './LandingIntro'
 import ErrorText from  '../../components/Typography/ErrorText'
@@ -10,13 +10,12 @@ function ForgotPassword(){
     const INITIAL_USER_OBJ = {
         emailId : ""
     }
-
     const [loading, setLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
     const [linkSent, setLinkSent] = useState(false)
     const [userObj, setUserObj] = useState(INITIAL_USER_OBJ)
 
-    const submitForm = (e) =>{
+    const submitForm = (e: FormEvent<HTMLFormElement>) =>{
         e.preventDefault()
         setErrorMessage("")
 
@@ -29,7 +28,7 @@ function ForgotPassword(){
         }
     }
 
-    const updateFormValue = ({updateType, value}) => {
+    const updateFormValue = ({updateType, value}: {updateType: string, value: string}) => {
         setErrorMessage("")
         setUserObj({...userObj, [updateType] : value})
     }
@@ -62,10 +61,7 @@ function ForgotPassword(){
                             <form onSubmit={(e) => submitForm(e)}>
 
                                 <div className="mb-4">
-
-                                    <InputText type="emailId" defaultValue={userObj.emailId} updateType="emailId" containerStyle="mt-4" labelTitle="Email Id" updateFormValue={updateFormValue}/>
-
-
+                                    <InputText type="emailId" defaultValue={userObj.emailId} updateType="emailId" containerStyle="mt-4" labelTitle="Email Id" updateFormValue={updateFormValue} labelStyle={null} inputStyle={''} placeholder={null}/>
                                 </div>
 
                                 <ErrorText styleClass="mt-12">{errorMessage}</ErrorText>

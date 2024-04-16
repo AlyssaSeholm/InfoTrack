@@ -14,20 +14,12 @@ export enum ToastPosition {
     BOTTOM_RIGHT = "bottom-right"
 }
 
-// export interface ToastNotification {
-//     // id: string;
-//     // title: string;
-//     // text: string;
-//     message: string;
-//     type: ToastType;
-// }
-
 const notify = (message: string, type: ToastType = ToastType.INFO) => {
     switch (type) {
-        case 'success':
+        case ToastType.SUCCESS:
             toast.success(message);
             break;
-        case 'error':
+        case ToastType.ERROR:
             toast.error(message);
             break;
         default:

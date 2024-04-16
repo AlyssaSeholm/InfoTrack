@@ -26,7 +26,7 @@ export const rightDrawerSlice = createSlice({
             state.extraObject = extraObject
         },
 
-        closeRightDrawer: (state, action: PayloadAction<RightDrawerState>) => {
+        closeRightDrawer: (state) => {
             state.isOpen = false
             state.bodyType = ""
             state.header = ""
@@ -41,4 +41,3 @@ export const { openRightDrawer, closeRightDrawer } = rightDrawerSlice.actions
 
 
 export const RightDrawerReducer = rightDrawerSlice.reducer
-// export default rightDrawerSlice.reducer

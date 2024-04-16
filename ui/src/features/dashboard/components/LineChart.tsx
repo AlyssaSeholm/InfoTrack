@@ -53,13 +53,13 @@ function LineChart(){
   
 
     return(
-      // <TitleCard title={"Montly Active Users (in K)"}>
-      //     <Line data={data} options={options}/>
-      // </TitleCard>
-
-      <TitleCard title={"Some Data"}>
-          <LineChartComponent />
+      <TitleCard title={"Montly Active Users (in K)"}>
+          <Line data={data} options={options}/>
       </TitleCard>
+
+      // <TitleCard title={"Some Data"}>
+      //     <LineChartComponent />
+      // </TitleCard>
     )
 }
 

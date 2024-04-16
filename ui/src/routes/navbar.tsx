@@ -1,5 +1,4 @@
 /** Icons are imported separatly to reduce build time */
-// import BellIcon from '@heroicons/react/24/outline/BellIcon'
 import DocumentTextIcon from '@heroicons/react/24/outline/DocumentTextIcon'
 import Squares2X2Icon from '@heroicons/react/24/outline/Squares2X2Icon'
 import TableCellsIcon from '@heroicons/react/24/outline/TableCellsIcon'
@@ -8,14 +7,10 @@ import CodeBracketSquareIcon from '@heroicons/react/24/outline/CodeBracketSquare
 import DocumentIcon from '@heroicons/react/24/outline/DocumentIcon'
 import ExclamationTriangleIcon from '@heroicons/react/24/outline/ExclamationTriangleIcon'
 import CalendarDaysIcon from '@heroicons/react/24/outline/CalendarDaysIcon'
-import ArrowRightOnRectangleIcon from '@heroicons/react/24/outline/ArrowRightOnRectangleIcon'
-import LoadingIcon from '@heroicons/react/24/outline/LoadingIcon'
 import UserIcon from '@heroicons/react/24/outline/UserIcon'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
-import BoltIcon from '@heroicons/react/24/outline/BoltIcon'
 import ChartBarIcon from '@heroicons/react/24/outline/ChartBarIcon'
 import CurrencyDollarIcon from '@heroicons/react/24/outline/CurrencyDollarIcon'
-import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
@@ -56,7 +51,6 @@ const routes = [
       {
         path: '/login',
         icon: <FontAwesomeIcon icon={faArrowRightToBracket} />,
-        // icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
         name: 'Login',
       },
       {
@@ -114,19 +108,19 @@ const routes = [
     name: 'Documentation', // name that appear in Sidebar
     submenu : [
       {
-        path: '/app/getting-started', // url
+        path: '/app/about-the-project', // url
         icon: <DocumentTextIcon className={submenuIconClasses}/>, // icon component
-        name: 'Getting Started', // name that appear in Sidebar
+        name: 'Start Here!', // name that appear in Sidebar
+      },
+      {
+        path: '/app/post-mortem',
+        icon: <TableCellsIcon className={submenuIconClasses}/>, 
+        name: 'Post Mortem',
       },
       {
         path: '/app/features',
-        icon: <TableCellsIcon className={submenuIconClasses}/>, 
-        name: 'Features',
-      },
-      {
-        path: '/app/components',
         icon: <CodeBracketSquareIcon className={submenuIconClasses}/>, 
-        name: 'Components',
+        name: 'Features',
       }
     ]
   },

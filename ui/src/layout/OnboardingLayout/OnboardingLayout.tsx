@@ -11,17 +11,12 @@ const OnboardingLayout: FC<OnboardingLayoutProps> = ({ children }) => {
   return (
     <>
       <div data-testid="OnboardingLayout">
-      {/* <NavigationBar /> */}
 
       { children }
 
-      {/* <Footer /> */}
       </div>
     </>
   );
-  // <div data-testid="OnboardingLayout">
-  //   OnboardingLayout Component
-  // </div>
 };
 
 export default OnboardingLayout;

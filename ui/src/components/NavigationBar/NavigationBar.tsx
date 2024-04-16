@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
-// import styles from './NavigationBar.module.css';
+import { FC } from 'react';
 
 interface NavigationBarProps {}
 
+//#DevNote: This was the first attempt at the navbar component. It was later replaced with the one from daisyUI.
+//  Left this in as I want to exand upon using storybook and testing.
 const NavigationBar: FC<NavigationBarProps> = ( {} ) => {
   
   return (
@@ -28,9 +29,6 @@ const NavigationBar: FC<NavigationBarProps> = ( {} ) => {
               <li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Aqua" value="aqua"/></li>
             </ul>
           </div>
-          {/* <div className="form-control">
-            <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-          </div> */}
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-12 rounded-xl">
@@ -52,9 +50,6 @@ const NavigationBar: FC<NavigationBarProps> = ( {} ) => {
       </div>
     </>
   )
-  // <div className={styles.NavigationBar} data-testid="NavigationBar">
-  //   NavigationBar Component
-  // </div>
 };
 
 export default NavigationBar;

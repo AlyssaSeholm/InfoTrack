@@ -1,15 +1,12 @@
-import { themeChange } from 'theme-change'
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import BellIcon from '@heroicons/react/24/outline/BellIcon'
 import Bars3Icon from '@heroicons/react/24/outline/Bars3Icon'
-import MoonIcon from '@heroicons/react/24/outline/MoonIcon'
-import SunIcon from '@heroicons/react/24/outline/SunIcon'
 import { openRightDrawer } from '../features/common/rightDrawerSlice';
 import { RIGHT_DRAWER_TYPES } from '../utilities/Constants'
 import { setTheme } from '../features/theme/themeSlice';
 
-import { NavLink, Routes, Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { RootState } from '../app/store'
 
 
@@ -25,27 +22,11 @@ function Header() {
       dispatch(setTheme(newTheme));
       console.log(newTheme);
     };
-    // useEffect(() => {
-    //     themeChange(false)
-    //     if (currentTheme === null) {
-    //         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    //             setCurrentTheme("dark")
-    //         } else {
-    //             setCurrentTheme("light") //todo: change to default theme
-    //         }
-    //     }
-    // }, [])
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', currentTheme); // Apply the theme to the document
         localStorage.setItem("theme", currentTheme); // Save the theme to localStorage
     }, [currentTheme]);
-
-    // const handleThemeChange = (event: any) => {
-    //     const newTheme = event.target.getAttribute('data-set-theme');
-    //     console.log(newTheme);
-    //     setCurrentTheme(newTheme); // Update the state and trigger the effect above
-    // };
 
     // Opening right sidebar for notification
     const openNotification = () => {
@@ -64,8 +45,6 @@ function Header() {
     }
 
     return (
-        // navbar fixed  flex-none justify-between bg-base-300  z-10 shadow-md
-
         <>
             <div className="navbar sticky top-0 bg-base-200  z-10 shadow-md ">
 
@@ -98,16 +77,6 @@ function Header() {
                             <li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Sunset" data-set-theme="sunset"  value="sunset" /></li>
                         </ul>
                     </div>
-
-
-                    {/* Light and dark theme selection toogle **/}
-                    {/* TODO: Show toggle only when theme is default */}
-                    {/* <label className="swap ">
-                        <input type="checkbox" />
-                        <SunIcon data-set-theme="light" data-act-class="ACTIVECLASS" className={"fill-current w-6 h-6 " + (currentTheme === "dark" ? "swap-on" : "swap-off")} />
-                        <MoonIcon data-set-theme="dark" data-act-class="ACTIVECLASS" className={"fill-current w-6 h-6 " + (currentTheme === "light" ? "swap-on" : "swap-off")} />
-                    </label> */}
-
 
                     {/* Notification icon */}
                     <button className="btn btn-ghost ml-4  btn-circle" onClick={() => openNotification()}>

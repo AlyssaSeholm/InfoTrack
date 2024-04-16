@@ -1,4 +1,4 @@
- function Subtitle({styleClass, children}){
+ function Subtitle({styleClass, children}: {styleClass: string, children: React.ReactNode}){
     return(
         <div className={`text-xl font-semibold ${styleClass}`}>{children}</div>
     )

@@ -1,16 +1,13 @@
-import { createAsyncThunk, unwrapResult } from '@reduxjs/toolkit';
-import { fetch_CompanyList_ByUserId } from '../features/company/companySlice';
-import { fetch_QueryList_ByUserId } from '../features/queries/querySlice';
-import { fetch_User_ByEmail, selectUserId } from '../features/user/userSlice';
-import { fetch_SearchList_ByUserId } from '../features/search/results/searchResultsSlice';
+import { createAsyncThunk, unwrapResult, AsyncThunk } from '@reduxjs/toolkit';
 
-export const fetchInitialData = createAsyncThunk(
+export const fetchInitialData: AsyncThunk<void, void, {}> = createAsyncThunk(
   'data/fetchInitial',
   async (_, { dispatch, getState }) => {
-    // Optionally check if data is already loaded or not needed to be re-fetched
-    // const state: RootState = getState();
+    
+    //#DevNote: This is not ideally how I'd handle situations where the user is not logged in, but it's a quick way to get the data I need for now.
+
     const userId = selectUserId(getState());
-    if (!userId) { //TODO: Change this to check if user is logged in
+    if (typeof userId === 'undefined') { //TODO: Change this to check if user is logged in
         const actionResult = await dispatch(fetch_User_ByEmail('Lys.Seholm@gmail.com'));
         const result = unwrapResult(actionResult);
         console.log('User:', result.user);
@@ -23,7 +20,7 @@ export const fetchInitialData = createAsyncThunk(
         const queryResultsUnwrapped = unwrapResult(queryResults);
         console.log('Queries:', queryResultsUnwrapped);
 
-        const searchResults = await dispatch(fetch_SearchList_ByUserId(result.user.id));
+        const searchResults = await dispatch(fetch_QueryList_ByUserId(result.user.id));
         const searchResultsUnwrapped = unwrapResult(searchResults);
         console.log('SearchResults:', searchResultsUnwrapped);
     } else {
@@ -35,7 +32,7 @@ export const fetchInitialData = createAsyncThunk(
         const queryResultsUnwrapped = unwrapResult(queryResults);
         console.log('Queries (had userId):', queryResultsUnwrapped);
 
-        const searchResults = await dispatch(fetch_SearchList_ByUserId(userId));
+        const searchResults = await dispatch(fetch_QueryList_ByUserId(userId));
         const searchResultsUnwrapped = unwrapResult(searchResults);
         console.log('SearchResults (had userId):', searchResultsUnwrapped);
     }
@@ -44,3 +41,19 @@ export const fetchInitialData = createAsyncThunk(
     // Add more fetches as necessary
   }
 );
+
+function selectUserId(arg0: unknown) {
+  throw new Error('Function not implemented.');
+}
+function fetch_User_ByEmail(arg0: string): any {
+  throw new Error('Function not implemented.');
+}
+
+function fetch_CompanyList_ByUserId(id: any): any {
+  throw new Error('Function not implemented.');
+}
+
+function fetch_QueryList_ByUserId(id: any): any {
+  throw new Error('Function not implemented.');
+}
+

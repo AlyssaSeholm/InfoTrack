@@ -1,6 +1,6 @@
 import { FC, SetStateAction, useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faLock, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 interface InputTextWithPreIconProps {
@@ -18,11 +18,6 @@ interface InputTextWithPreIconProps {
 
 const InputTextWithPreIcon: FC<InputTextWithPreIconProps> = ( props ) => {
     const {
-        labelTitle,
-        labelStyle,
-        type,
-        containerStyle,
-        inputStyle,
         defaultValue,
         placeholder,
         updateFormValue,
@@ -52,21 +47,6 @@ const InputTextWithPreIcon: FC<InputTextWithPreIconProps> = ( props ) => {
             />
         </div>
     );
-
-    // return (
-    //     <div className={`form-control w-full ${props.containerStyle} focus-within:px-2 px-3`}>
-    //         <label className="label">
-    //             <span className={"label-text text-base-content " + props.labelStyle}>{props.labelTitle}</span>
-    //         </label>
-    //         <input
-    //             type={props.type || "text"}
-    //             value={value || ""}
-    //             placeholder={props.placeholder || ""}
-    //             onChange={(e) => updateInputValue(e.target.value)}
-    //             className={"input w-full focus:input-accent input-primary input-bordered  "}
-    //         />
-    //     </div>
-    // )
 }
 
 InputTextWithPreIcon.defaultProps = {

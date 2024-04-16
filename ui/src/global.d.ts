@@ -10,6 +10,7 @@ declare module '*.png' {
     export default content
 }
 
+//#DevNote: This is a workaround for the onPointerEnterCapture and onPointerLeaveCapture errors in @types/react
 //#region onPointerEnterCapture and onPointerLeaveCapture work around
 /* --------------------------------------------------------------------------
    Needed to fix the onPointerEnterCapture unexpected errors in @types/react
@@ -25,7 +26,6 @@ declare module 'react' {
   interface RefAttributes<T> {
     onPointerEnterCapture?: (e: React.PointerEvent<T>) => void
     onPointerLeaveCapture?: (e: React.PointerEvent<T>) => void
-    // placeholder?: (e: any) => {undefined} 
   }
 }
 //#endregion onPointerEnterCapture and onPointerLeaveCapture work around

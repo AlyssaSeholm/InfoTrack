@@ -1,4 +1,4 @@
-import { FC, SetStateAction, useState } from "react"
+import { FC, useState } from "react"
 
 
 interface ChipProps {
@@ -15,7 +15,7 @@ interface ChipProps {
 
 const Chip: FC<ChipProps> = ( props ) => {
 
-    const [value, setValue] = useState<string | null>(props.defaultValue)
+    const [value] = useState<string | null>(props.defaultValue)
     
 
     return (

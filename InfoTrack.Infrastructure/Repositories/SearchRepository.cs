@@ -26,7 +26,7 @@ namespace InfoTrack.Infrastructure.Repositories
         {
             List<int> queryIds = await _context.Queries.Where(q => q.UserId == userId).Select(uc => uc.Id).ToListAsync(cancellationToken);
 
-            var results = await _context.SearchResults.Where(sr => queryIds.Contains(sr.Id)).Include(sr => sr.Items).ToListAsync(cancellationToken);
+            var results = await _context.SearchResults.Where(sr => queryIds.Contains(sr.QueryId)).Include(sr => sr.Items).ToListAsync(cancellationToken);
 
             return results ?? Enumerable.Empty<SearchResults?>();
         }

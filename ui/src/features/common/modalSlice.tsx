@@ -29,7 +29,7 @@ export const modalSlice = createSlice({
             state.extraObject = extraObject
         },
 
-        closeModal: (state, action: PayloadAction<ModalState>) => {
+        closeModal: (state) => {
             state.isOpen = false
             state.bodyType = ""
             state.title = ""
@@ -43,4 +43,3 @@ modalSlice.getInitialState = () => initialState
 export const { openModal, closeModal } = modalSlice.actions
 
 export const ModalReducer = modalSlice.reducer
-// export default modalSlice.reducer

@@ -1,11 +1,13 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setPageTitle } from "../common/headerSlice"
-import DocComponentsNav from "./components/DocComponentsNav"
-import DocComponentsContent from "./components/DocComponentsContent"
+import AboutTheProjectNav from "./components/AboutTheProjectNav"
+// import ReadMe from "./components/GettingStartedContent"
+import AboutTheProjectContent from "./components/AboutTheProjectContent"
 
 
-function DocComponents() {
+
+function GettingStarted() {
 
     const dispatch = useDispatch()
 
@@ -16,13 +18,13 @@ function DocComponents() {
 
     return (
         <>
-            <div className="bg-base-100 flex overflow-hidden rounded-lg document-view" >
+            <div className="bg-base-100  flex overflow-hidden  rounded-lg  document-view">
                 <div className="flex-none p-4">
-                    <DocComponentsNav activeIndex={1} />
+                    <AboutTheProjectNav activeIndex={1} />
                 </div>
 
                 <div className="grow pt-12  overflow-y-scroll">
-                    <DocComponentsContent />
+                    <AboutTheProjectContent />
                 </div>
 
             </div>
@@ -31,4 +33,4 @@ function DocComponents() {
     )
 }
 
-export default DocComponents
+export default GettingStarted
