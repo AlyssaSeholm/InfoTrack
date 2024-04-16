@@ -1,19 +1,15 @@
 # InfoTrack SEO
 
-## TODO:
-explain the solution's overall architecture, how projects relate to each other, and general setup or contribution guidelines.
-
 ## Description
 
 This project is responsible for...
 
 ## Setup and Configuration
 
-Instructions for setting up the project...
+Instructions for setting up the project - some instructions are in the Infrastructure ReadMe.
 
-## Dependencies
+Also, be sure to check out the docs on the frontend website!
 
-List of dependencies...
 
 ## Understanding the Structure:
 
@@ -22,6 +18,3 @@ List of dependencies...
  - **Domain Layer (InfoTrack.Domain):** Defines the business domain models and interfaces for repositories and services.
  - **Infrastructure Layer (InfoTrack.Infrastructure):** Manages data access, external service integrations, and other infrastructure concerns.
 
-## Credits:
-
-Contact info...
