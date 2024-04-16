@@ -5,7 +5,7 @@ function PostMortemContent() {
 
   return (
     <>
-      <article className="prose">
+      <article className="prose" style={{maxWidth: '85%'}}>
         <h1 className="">Post Mortem </h1>
 
 

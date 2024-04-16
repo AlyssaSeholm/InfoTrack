@@ -34,7 +34,7 @@ function DocComponentsContent() {
 
     return (
         <>
-            <article className="prose">
+            <article className="prose" style={{maxWidth: '85%'}}>
                 <h1  className="" >Features & Components</h1>
                 <p>
                     I have created a custom floating label input component that can be used in forms. It is a simple input component

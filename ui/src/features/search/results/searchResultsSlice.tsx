@@ -23,11 +23,10 @@ interface SearchResponse {
     meta: any;
     searchResults: SearchResults;
     type: string;
-
 }
 interface SearchListResponse {
     meta: any;
-    searchResults: SearchResults[] | SearchResults;
+    searchResults: SearchResults[];
     type: string;
 }
 
@@ -47,7 +46,7 @@ export const create_Search = createAsyncThunk('search/create', async (queryId: s
         const request = { queryId: queryId };
         console.dir(`Search_Create QueryId:${queryId}`);
         const response = await axios.post(API_PATH.Search.Post, request);
-        return response.data as SearchResponse;
+        return response.data as SearchResults;
     } catch (error) {
         return rejectWithValue('Failed to create search');
     }
@@ -99,15 +98,15 @@ export const searchSlice = createSlice({
             //#endregion Fetch List By User Id
             //#region Create Search
             .addCase(create_Search.pending, (state) => { setStateToLoading(state); })
-            .addCase(create_Search.fulfilled, (state, action: PayloadAction<SearchResponse>) => {
+            .addCase(create_Search.fulfilled, (state, action: PayloadAction<SearchResults>) => {
                 state.isLoading = false;   
 
                 if(!state.results) state.results = [];    
                 
-                if(!state.results.find((s) => s.id === action.payload.searchResults.id)) {
-                    state.results.unshift(action.payload.searchResults);
+                if(!state.results.find((s) => s.id === action.payload?.id)) {
+                    state.results.unshift(action.payload);
                 } else {
-                    console.log(`Search already exists: ${action.payload.searchResults.id}`);
+                    console.log(`Search already exists: ${action.payload?.id}`);
                 }
                 
                 // state.results.unshift(action.payload.searchResults); 

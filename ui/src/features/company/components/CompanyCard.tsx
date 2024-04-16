@@ -234,7 +234,7 @@ const CompanyCard: FC<CompanyCardProps> = (props) => {
                     </AccordionHeader>
 
                     {/* COLLAPSABLE CONTENT */}
-                    <AccordionBody className={"p-4 overflow-hidden overflow-y-auto max-h-[40vh] pb-1"}>
+                    <AccordionBody className={"p-4 overflow-hidden overflow-y-auto max-h-[40vh] pb-1"} styles={{height:'55vh'}}>
                         {/* BODY */}
                         <div className="card__body w-full" >
                             <div className="w-full overflow-hidden">

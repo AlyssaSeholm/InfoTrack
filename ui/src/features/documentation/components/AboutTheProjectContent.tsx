@@ -4,7 +4,7 @@ function AboutTheProjectContent() {
 
   return (
     <>
-      <article className="prose">
+      <article className="prose" style={{maxWidth: '85%'}}>
         <h1 className="">~ About the Project ~</h1>
         {/* Introduction */}
         <h2 className="" id="abouttheproject1">Introduction</h2>
