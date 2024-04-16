@@ -32,7 +32,7 @@ function AboutTheProjectContent() {
         <p>
           I used <b>SQLExpress</b>, so there's a few notes in the (Infrastructure project's) ReadMe files on the commands to get the migration sorted.
           <br />
-          <a href="https://github.com/srobbin01/daisyui-admin-dashboard-template" className='text-sm text-blue-500' target="_blank">Repo Link</a>
+          <a href="https://github.com/AlyssaSeholm/InfoTrack" className='text-sm text-blue-500' target="_blank">Repo Link</a>
           <br />
           <code>dotnet ef --startup-project InfoTrack.API migrations add InitialCreate --context InfoTrackDbContext --project InfoTrack.Infrastructure --output-dir Migrations </code><br />
           <code>dotnet ef --startup-project InfoTrack.API database update --context InfoTrackDbContext --project InfoTrack.Infrastructure</code>
