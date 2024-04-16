@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import FeaturesNav from '../features/documentation/components/FeaturesNav'
-import GettingStartedContent from '../features/documentation/components/GettingStartedContent'
-import GettingStartedNav from '../features/documentation/components/GettingStartedNav'
-import Title from '../components/Typography/Title'
+import PostMortemNav from '../features/documentation/components/PostMortemNav'
+import AboutTheProjectContent from '../features/documentation/components/AboutTheProjectContent'
+import AboutTheProjectNav from '../features/documentation/components/AboutTheProjectNav'
 import DocComponentsNav from '../features/documentation/components/DocComponentsNav'
-import FeaturesContent from '../features/documentation/components/FeaturesContent'
+import PostMortemContent from '../features/documentation/components/PostMortemContent'
 import DocComponentsContent from '../features/documentation/components/DocComponentsContent'
 
 function Documentation() {
@@ -14,17 +13,21 @@ function Documentation() {
                 <div className="card mx-auto w-full max-w-4xl  bg-base-100 shadow-xl">
                     <div className="py-12 p-10 h-screen flex overflow-hidden  bg-base-100 rounded-xl" >
                         <div className="flex-none p-4 overflow-y-scroll gap-6 ">
-                            <h1 className='text-3xl font-bold mb-2'>Dashwind</h1>
-                            <Link to="/login"><button type="submit" className={"btn normal-case btn-xs btn-primary"}>Live Preview</button></Link>
+                            <h1 className='text-3xl font-bold mb-2'>Cat-A-Log SEO</h1>
+                            <Link to="/login">
+                                <button type="submit" className={"btn normal-case btn-xs btn-primary"}>
+                                    Live Preview
+                                </button>
+                            </Link>
 
-                            <GettingStartedNav activeIndex={null} />
-                            <FeaturesNav activeIndex={null} />
+                            <AboutTheProjectNav activeIndex={null} />
+                            <PostMortemNav activeIndex={null} />
                             <DocComponentsNav activeIndex={null} />
                         </div>
 
                         <div className="grow pt-12  overflow-y-scroll">
-                            <GettingStartedContent />
-                            <FeaturesContent />
+                            <AboutTheProjectContent />
+                            <PostMortemContent />
                             <DocComponentsContent />
                         </div>
                     </div>

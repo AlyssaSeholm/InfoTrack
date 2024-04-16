@@ -1,4 +1,4 @@
-﻿namespace InfoTrack.Infrastructure
+﻿namespace InfoTrack.Domain.Entities
 {
     public class Startup
     {

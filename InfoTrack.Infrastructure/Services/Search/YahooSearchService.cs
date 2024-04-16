@@ -1,7 +1,7 @@
 ﻿using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Services.Interfaces;
+using InfoTrack.Domain.Entities.Services.Interfaces;
 
-namespace InfoTrack.Infrastructure.Services.Search
+namespace InfoTrack.Domain.Entities.Services.Search
 {
     public class YahooSearchService(HttpClient httpClient) //: ISearchService
     {

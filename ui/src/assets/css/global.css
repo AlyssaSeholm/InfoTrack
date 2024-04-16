@@ -1,12 +1,44 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+.body {
+    padding: 0 !important;
+}
+
+.material-symbols-outlined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.large-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variation-settings: 'FILL' 0,
+        'wght' 300,
+        'GRAD' -25,
+        'opsz' 48;
+    font-size: 34px;
+}
 
 @keyframes wiggle {
-    0% { transform: translateX(0px); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-    100% { transform: translateX(0px); }
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 .animate-wiggle {
@@ -35,26 +67,18 @@
         height: 75%;
         max-height: 30rem;
         background-color: #01001e75;
-        /* background: #01001e;
-        width: 10rem;
-        height: 10rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        box-shadow: 0 0 10px 5px #0000008c; */
 
         img {
-            margin:-3em 0 0em 0.75em;
+            margin: -3em 0 0em 0.75em;
         }
     }
+
     .logo-subtext {
         margin-top: -3rem;
         color: white;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 1.75rem;
-        /* text-shadow: -2px -2px #01001e, 2px 2px #01001e, -2px 2px #01001e, 2px -2px #01001e; */
         -webkit-text-stroke: 1.5px #0000008c;
     }
 }
@@ -64,7 +88,233 @@
     padding: 0.5em 0;
 }
 
+.input-text-with-chips {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    min-height: 2rem;
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+    >label.input {
+        width: 100%;
+
+        .input-for-chips {
+            display: flex;
+            width: 100%;
+            flex: 1;
+        }
+
+
+        .chips-container {
+            display: flex;
+            gap: 0.5em;
+            padding: 0.25em 0;
+
+            .chip-removeable {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                opacity: 0.6;
+                border-spacing: 2px;
+                margin: 1px;
+                background-o
+
+                &:hover,
+                &:focus,
+                &:active {
+                    opacity: 1;
+                    border-width: 2px;
+                    margin: 0px;
+                    cursor: default;
+                }
+                > button {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 2px 4px;
+                    opacity: 0.4;
+                    outline: none;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        >label.hint {
+            text-align: center;
+        }
+    }
+}
+.loading-mouse-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    opacity: 0.6;
+
+    .loading-mouse-background {
+        display: flex;
+        height: 45vw;
+        min-width: 50vw;
+        width: 100%;
+        background: radial-gradient(
+                        circle, 
+                        rgba(255,255,255,1) 37%, 
+                        rgba(255,255,255,0.219782913165266) 100% 
+                    );
+        flex-direction: column;
+        border-radius: 10%;
+        justify-content: center;
+        align-content: center;
+
+        .loading-mouse-gif {
+            display: flex;
+            height: 100%;
+            width: auto;
+            background-size: contain;
+            max-height: 22vw;
+            max-width: 22vw;
+        }
+        
+    }
+    .loading-text {
+        font-size: large;
+    }
+}
+
+.company-card {
+    display: flex;
+    width: 100%;
+
+    /* unused group? */
+    .card-mat {
+        padding: 0;
+        width: 100%;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        .card__header {
+            padding: 1rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 0.25rem;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+            gap: 1rem;
+            max-height: 4rem;
+
+            .card__header__title {
+                font-size: 1.5rem;
+                text-align: left;
+                /* padding-left: 2rem; */
+            }
+            .card__header__icon {
+                font-size: 1.5rem;
+                text-align: left;
+                padding-left: 2rem;
+            }
+        }
+        .card__body {
+            display: flex;
+            padding: 1rem;
+        
+        }
+        .card__footer {    
+            display: flex;
+            padding: 1rem 1rem 0.5rem 1rem;
+            justify-content: flex-end;
+        }
+    }
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: baseline;
+    }
+    
+    .card__footer {    
+        display: flex;
+        padding: 0.25rem 1rem 0.25rem 1rem;
+        justify-content: flex-end;
+    }
+}
+
+div[data-floating-ui-portal] {
+    > div {
+      background-color: rgba(0, 0, 0, 0.25);
+      transition: 0.5s ease-in;
+      transition-property: background-color; 
+    }
+  }
+
+#delayedtooltip {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Make button loading spinner is more visible */
+button:disabled svg {
+    display: flex;
+    flex: 1;
+    width: 1.25rem;
+    height: 1.25rem;
+  
+    > path {    
+      stroke-width:7px;
+    }
+  
+    > path:not(.text-gray-900) {
+      color: black;
+      opacity: 0.2;
+    }
+  }
+
+  .select-with-floating-label {
+    display: flex;
+    
+    > div {
+        display: flex;
+
+        > button {
+            display: flex;
+
+            border-width: 1px;
+            
+            &:focus {
+                border-width: 2px;
+            }
+        }
+        > label:not(.text-sm) {
+            height: 1rem;
+            display: flex;
+            flex: 1 0 25%;
+            width: auto;
+            background-color: inherit;
+
+            &::before {
+                background-color: none;
+            }
+
+            &::after {
+                background-color: none;
+            }
+        }
+        > label.text-sm {
+            line-height: 3.15rem;
+        }
+    }
+  }

@@ -1,6 +1,6 @@
 ﻿using InfoTrack.Domain.Entities;
+using InfoTrack.Domain.Entities.Services.Interfaces;
 using InfoTrack.Domain.Repositories.Interfaces;
-using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Domain.Services
 {
@@ -13,6 +13,7 @@ namespace InfoTrack.Domain.Services
         {
             return await _CompanyRepository.GetByIdAsync(companyId, cancellationToken);
         }
+
         public async Task<Company?> GetCompanyById(string companyId, CancellationToken cancellationToken)
         {
             bool isValidInt = int.TryParse(companyId, out int result);
@@ -21,19 +22,25 @@ namespace InfoTrack.Domain.Services
 
             return await GetCompanyById(result, cancellationToken);
         }
+
+
         public async Task<Company?> GetCompanyByName(string name, CancellationToken cancellationToken)
         {
             return await _CompanyRepository.GetByNameAsync(name, cancellationToken);
         }
 
+
         public async Task<IEnumerable<Company?>> GetCompanyList(CancellationToken cancellationToken)
         {
             return await _CompanyRepository.GetAllAsync(cancellationToken);
         }
+
+
         public async Task<IEnumerable<Company?>> GetCompanyListByUserId(int userId, CancellationToken cancellationToken)
         {
             return await _CompanyRepository.GetListByUserIdAsync(userId, cancellationToken);
         }
+
         public async Task<IEnumerable<Company?>> GetCompanyListByUserId(string userId, CancellationToken cancellationToken)
         {
             bool isValidInt = int.TryParse(userId, out int result);
@@ -48,25 +55,21 @@ namespace InfoTrack.Domain.Services
         {
             return await _CompanyRepository.AddAsync(company, cancellationToken);
         }
+
+
         public async Task<Company> UpdateCompany(Company company, CancellationToken cancellationToken)
         {
             await _CompanyRepository.UpdateAsync(company, cancellationToken);
             return company;
         }
-        //public async Task<Company> PatchCompany(string fieldName, string newValue, CancellationToken cancellationToken)
-        //{
-        //    var fieldNames = await _CompanyRepository.GetFieldList();
 
-        //    //TODO
-        //    throw new NotImplementedException();
-        //}
+                
         public async Task<Company> PatchCompany(Company company, CancellationToken cancellationToken)
         {
-            // Patch logic might involve specific property updates
-            // Implement based on your patching strategy
-            // Example: Update only non-null fields of 'company'
+            // TODO: implement company patch
             return await _CompanyRepository.PatchAsync(company, cancellationToken);
         }
+
 
         /// <summary>
         /// Returned value will be empty if no company was deleted

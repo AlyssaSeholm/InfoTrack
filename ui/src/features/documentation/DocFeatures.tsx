@@ -1,39 +1,34 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import TitleCard from "../../components/Cards/TitleCard"
-import { setPageTitle, showNotification } from "../common/headerSlice"
-import GettingStartedNav from "./components/GettingStartedNav"
-import ReadMe from "./components/GettingStartedContent"
-import GettingStartedContent from "./components/GettingStartedContent"
-import FeaturesNav from "./components/FeaturesNav"
-import FeaturesContent from "./components/FeaturesContent"
+import { setPageTitle } from "../common/headerSlice"
+import PostMortemNav from "./components/PostMortemNav"
+import PostMortemContent from "./components/PostMortemContent"
 
 
-
-function Features(){
+function PostMortem() {
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(setPageTitle({ title : "Documentation"}))
-      }, [])
+        dispatch(setPageTitle({ title: "Documentation" }))
+    }, [])
 
 
-    return(
+    return (
         <>
             <div className="bg-base-100 flex overflow-hidden rounded-lg document-view">
-                    <div className="flex-none p-4">
-                        <FeaturesNav activeIndex={1}/>
-                    </div>
-
-                    <div className="grow pt-12  overflow-y-scroll">
-                        <FeaturesContent />
-                    </div>
-
+                <div className="flex-none p-4">
+                    <PostMortemNav activeIndex={1} />
                 </div>
-           
+
+                <div className="grow pt-12  overflow-y-scroll">
+                    <PostMortemContent />
+                </div>
+
+            </div>
+
         </>
     )
 }
 
-export default Features
+export default PostMortem

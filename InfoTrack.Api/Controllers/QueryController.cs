@@ -29,7 +29,7 @@ namespace InfoTrack.API.Controllers
 
             //Todo: Add validation
 
-            return new CreatedAtActionResult("Create", "QueryController", new { id = response.Query.Id }, response);
+            return new CreatedAtActionResult("Create", "Query", new { id = response.Query.Id }, response);
         }
 
 
@@ -50,6 +50,21 @@ namespace InfoTrack.API.Controllers
 
             if (response.Query == null) { return new NotFoundObjectResult(request.Id); }
 
+            return new OkObjectResult(response);
+        }
+        /// <summary> GetQueryListByUserId </summary>
+        /// <remarks> 
+        /// </remarks>
+        [HttpGet("AllByUserId/{UserId}", Name = "GetAllQueriesByUserIdRoute")] //TODO: Fix this to return UserQueryDto vs QueryDto
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(List<GetAllQueriesByUserIdResponse>), (int)HttpStatusCode.OK)]
+        [SwaggerOperation(OperationId = "GetAllQueriesByUserId")]
+        public async Task<ActionResult<List<GetAllQueriesByUserIdResponse>>> GetAllByUserId([FromRoute] GetAllQueriesByUserIdRequest request)
+        {
+            if (request == null) { return new BadRequestObjectResult("Id missing from route"); }
+
+            var response = await _mediator.Send(request);
             return new OkObjectResult(response);
         }
 

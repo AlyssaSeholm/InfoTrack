@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 //interface for the Helpers
 interface Params {
@@ -63,9 +63,6 @@ export const getAPI = async (url: string, data: any): Promise<any> =>{
             status: error.response?.status || 500, // Default to 500 if status is not available
             data: error.response?.data || 'Internal server error', // Default error message
           };
-        //     status: error.status,
-        //     data: error.response
-        // }
     })
 }
 
@@ -97,7 +94,7 @@ const API_PATH  = Object.freeze({
         GetList_ByQueryId: `${getConfig.baseUrl}/api/Search/ByQueryId`,
         GetList_ByUserId: `${getConfig.baseUrl}/api/Search/ByUserId`, 
         Post: `${getConfig.baseUrl}/api/Search/ByQueryId`, //create/execute a new search
-        Delete: `${getConfig.baseUrl}/api/Query`//TODO: Allow user to delete a search?
+        Delete: `${getConfig.baseUrl}/api/Search`//TODO: Allow user to delete a search?
     },
 });
 export default API_PATH;

@@ -2,13 +2,13 @@
 using InfoTrack.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-//TODO
 namespace InfoTrack.Infrastructure.Repositories
 {
     public class Repository<T>(IInfoTrackDbContext context) 
         : IRepository<T> where T : class
     {
         protected readonly IInfoTrackDbContext _context = context;
+
 
         async Task<T> IRepository<T>.AddAsync(T entity, CancellationToken cancellationToken)
         {

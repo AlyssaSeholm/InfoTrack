@@ -1,6 +1,6 @@
-﻿using InfoTrack.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using InfoTrack.Domain.Entities;
 
 namespace InfoTrack.Infrastructure.Data.Configurations
 {

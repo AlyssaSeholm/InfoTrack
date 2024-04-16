@@ -153,7 +153,7 @@ export const userSlice = createSlice({
             //#endregion Update User
             //#region Delete User
             .addCase(delete_User.pending, (state) => { setStateToLoading(state); })
-            .addCase(delete_User.fulfilled, (state, action: PayloadAction<string>) => {
+            .addCase(delete_User.fulfilled, (state) => {
                 state.isLoading = false;
                 state.profile = null;
                 //TODO: Log the user out that was deleted
@@ -175,8 +175,9 @@ const UserReducer = userSlice.reducer
 export default UserReducer;
 
 export const selectUserEmail = (state: any) => state.user.email;
-export const selectUserProfile = (state: any) => state.user.profile;
-export const selectUserLoading = (state: any) => state.user.isLoading;
+export const selectUserId = (state: any) => state.user.profile?.id;
+export const selectUserProfile = (state: any) => state.user.profile as User | null;
+export const selectUserLoading = (state: any) => state?.user?.isLoading ?? false;
 export const selectUserError = (state: any) => state.user.error;
 export const selectUser = (state: any) => state.user;
 export const hasUserProfile = (state: any) => state.user.profile !== null;

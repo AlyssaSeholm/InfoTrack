@@ -4,6 +4,7 @@ import axios from 'axios';
 import API_PATH from '../../app/API.tsx';
 import { Company } from './types.tsx';
 import { RootState } from '../../app/store.tsx';
+import notify, { ToastType } from '../../services/NotificationService.tsx';
 
 
 interface CompanyState {
@@ -145,6 +146,7 @@ export const companySlice = createSlice({
             .addCase(fetch_Company_ById.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch company';
+                notify(`Company was not retrieved. Ran into an issue getting the company by id. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch By Id
             //#region Fetch By Name
@@ -168,6 +170,7 @@ export const companySlice = createSlice({
             .addCase(fetch_Company_ByName.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch companies';
+                notify(`Company was not retrieved. Ran into an issue getting the company by name. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch By Name
             //#region Fetch List By User Id
@@ -175,11 +178,14 @@ export const companySlice = createSlice({
             .addCase(fetch_CompanyList_ByUserId.fulfilled, (state, action: PayloadAction<CompanyListResponse>) => {
                 state.isLoading = false;
                 state.companies = action.payload.companies;
+                state.selectedCompany = state.companies.find(company => company.primaryCompanyId === null && company.relationshipType === 'Primary') || null;
+                state.selectedCompanyId = state.selectedCompany?.id || null;
                 state.error = null;
             })
             .addCase(fetch_CompanyList_ByUserId.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch companies';
+                notify(`Company list was not retrieved. Ran into an issue getting the company list by user id. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch List By User Id
             //#region Fetch All
@@ -192,6 +198,7 @@ export const companySlice = createSlice({
             .addCase(fetch_CompanyList_All.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to fetch companies';
+                notify(`Company list was not retrieved. Ran into an issue getting the company list. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Fetch All
             //#region Create Company
@@ -204,6 +211,7 @@ export const companySlice = createSlice({
             .addCase(create_Company.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to create company';
+                notify(`Company was not created. Ran into an issue creating the company. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Create Company
             //#region Update Company
@@ -220,6 +228,7 @@ export const companySlice = createSlice({
             .addCase(update_Company.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to update company';
+                notify(`Company was not updated. Ran into an issue updating the company. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Update Company
             //#region Delete Company
@@ -232,6 +241,7 @@ export const companySlice = createSlice({
             .addCase(delete_Company.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.error.message || 'Failed to delete company';
+                notify(`Company was not deleted. Ran into an issue deleting the company. [ ${action.payload} ]`, ToastType.ERROR);
             })
             //#endregion Delete Company
             ;
@@ -243,10 +253,11 @@ export const companySlice = createSlice({
 export const selectCompanies = (state: RootState) => state.company.companies;
 export const selectCompanyById = (state: RootState, id: string) => state.company.companies.find(company => company.id === id);
 export const selectCompanyByName = (state: RootState, name: string) => state.company.companies.find(company => company.name === name);
-export const selectCompanyLoading = (state: RootState) => state.company.isLoading;
+export const selectCompanyLoading = (state: RootState) => state?.company?.isLoading ?? false;
 export const selectCompanyError = (state: RootState) => state.company.error;
+export const selectSelectedCompany = (state: RootState) => state.company.selectedCompany;
+export const selectSelectedCompanyId = (state: RootState) => state.company.selectedCompanyId;
 
-// export default companySlice.reducer;
 const CompanyReducer = companySlice.reducer
 export default CompanyReducer;
 

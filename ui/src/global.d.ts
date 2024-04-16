@@ -1,9 +1,5 @@
 import '@testing-library/jest-dom';
-// declare module '*.jpg';
-// declare module '*.png' {
-//     const value: any;
-//     export = value;
-//   }
+import "@material-tailwind/react/tailwind.css";
 
 declare module '*.svg' {
     const content: React.FC<React.SVGProps<SVGElement>>
@@ -13,3 +9,23 @@ declare module '*.png' {
     const content: any;
     export default content
 }
+
+//#DevNote: This is a workaround for the onPointerEnterCapture and onPointerLeaveCapture errors in @types/react
+//#region onPointerEnterCapture and onPointerLeaveCapture work around
+/* --------------------------------------------------------------------------
+   Needed to fix the onPointerEnterCapture unexpected errors in @types/react
+   ref: https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/69006
+  --------------------------------------------------------------------------*/
+import 'react'
+declare module 'react' {
+  interface HTMLAttributes<T> {
+    onPointerEnterCapture?: (e: React.PointerEvent<T>) => void
+    onPointerLeaveCapture?: (e: React.PointerEvent<T>) => void
+    placeholder?: (e: any) => {undefined} 
+  }
+  interface RefAttributes<T> {
+    onPointerEnterCapture?: (e: React.PointerEvent<T>) => void
+    onPointerLeaveCapture?: (e: React.PointerEvent<T>) => void
+  }
+}
+//#endregion onPointerEnterCapture and onPointerLeaveCapture work around

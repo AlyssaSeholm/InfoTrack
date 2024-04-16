@@ -9,5 +9,6 @@ export interface Company {
     includeTerms: string[];
     createdOn: Date;
     dateRemoved?: Date;
+
+    icon?: string;
   }
-  

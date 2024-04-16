@@ -26,6 +26,24 @@ namespace InfoTrack.Infrastructure.Data.Configurations
             builder.Property(u => u.SelectedTheme)
                    .HasMaxLength(100);
 
+            builder.Property(u => u.Title)
+                   .HasMaxLength(100);
+
+            builder.Property(u => u.City)
+                   .HasMaxLength(100);
+
+            builder.Property(u => u.State)
+                   .HasMaxLength(50);
+
+            builder.Property(u => u.About)
+                   .HasMaxLength(500);
+
+            builder.Property(u => u.Language)
+                   .HasMaxLength(100);
+
+            builder.Property(u => u.Timezone)
+                   .HasMaxLength(25);
+
             builder.Property(u => u.CreatedOn)
                    .IsRequired()
                    .HasDefaultValue(DateTime.UtcNow);

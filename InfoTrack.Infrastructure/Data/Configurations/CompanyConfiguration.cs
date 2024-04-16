@@ -11,13 +11,13 @@ namespace InfoTrack.Infrastructure.Data.Configurations
             builder.HasKey(c => c.Id);
 
             builder.HasOne(uc => uc.User)
-                   .WithMany()//u => u.UserCompanies)
+                   .WithMany()
                    .HasForeignKey(uc => uc.UserId)
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(uc => uc.PrimaryParentCompany)
-                   .WithMany()//c => c.UserCompanies)
+                   .WithMany()
                    .HasForeignKey(uc => uc.PrimaryCompanyId)
                    .IsRequired(false)
                    .OnDelete(DeleteBehavior.Restrict);

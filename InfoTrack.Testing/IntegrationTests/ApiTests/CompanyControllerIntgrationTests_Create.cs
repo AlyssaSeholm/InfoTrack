@@ -1,13 +1,9 @@
 ﻿
 using InfoTrack.Application;
-using InfoTrack.Application.Mediatr.Commands;
 using InfoTrack.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using System.Net;
-using System.Text;
 
 namespace InfoTrack.Testing.IntegrationTests.ApiTests
 {

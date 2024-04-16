@@ -3,6 +3,7 @@ import { lazy } from 'react'
 const Dashboard = lazy(() => import('../pages/protected/Dashboard'))
 const Welcome = lazy(() => import('../pages/protected/Welcome'))
 const Page404 = lazy(() => import('../pages/protected/404'))
+const Loading = lazy(() => import('../pages/protected/Loading'))
 const Blank = lazy(() => import('../pages/protected/Blank'))
 const Charts = lazy(() => import('../pages/protected/Charts'))
 const Calendar = lazy(() => import('../pages/protected/Calendar'))
@@ -10,8 +11,8 @@ const Team = lazy(() => import('../pages/protected/Team'))
 const Transactions = lazy(() => import('../pages/protected/Transactions'))
 const Bills = lazy(() => import('../pages/protected/Bills'))
 const ProfileSettings = lazy(() => import('../pages/protected/ProfileSettings'))
-const GettingStarted = lazy(() => import('../pages/GettingStarted'))
-const DocFeatures = lazy(() => import('../pages/DocFeatures'))
+const DocAboutTheProject = lazy(() => import('../pages/GettingStarted'))
+const DocPostMortem = lazy(() => import('../pages/DocFeatures'))
 const DocComponents = lazy(() => import('../pages/DocComponents'))
 
 
@@ -45,15 +46,15 @@ const routes = [
         component: Bills,
     },
     {
-        path: '/getting-started',
-        component: GettingStarted,
+        path: '/about-the-project',
+        component: DocAboutTheProject,
+    },
+    {
+        path: '/post-mortem',
+        component: DocPostMortem,
     },
     {
         path: '/features',
-        component: DocFeatures,
-    },
-    {
-        path: '/components',
         component: DocComponents,
     },
     {
@@ -63,6 +64,10 @@ const routes = [
     {
         path: '/404',
         component: Page404,
+    },
+    {
+        path: '/loading',
+        component: Loading,
     },
     {
         path: '/blank',

@@ -1,5 +1,4 @@
 /** Icons are imported separatly to reduce build time */
-// import BellIcon from '@heroicons/react/24/outline/BellIcon'
 import DocumentTextIcon from '@heroicons/react/24/outline/DocumentTextIcon'
 import Squares2X2Icon from '@heroicons/react/24/outline/Squares2X2Icon'
 import TableCellsIcon from '@heroicons/react/24/outline/TableCellsIcon'
@@ -8,16 +7,15 @@ import CodeBracketSquareIcon from '@heroicons/react/24/outline/CodeBracketSquare
 import DocumentIcon from '@heroicons/react/24/outline/DocumentIcon'
 import ExclamationTriangleIcon from '@heroicons/react/24/outline/ExclamationTriangleIcon'
 import CalendarDaysIcon from '@heroicons/react/24/outline/CalendarDaysIcon'
-import ArrowRightOnRectangleIcon from '@heroicons/react/24/outline/ArrowRightOnRectangleIcon'
 import UserIcon from '@heroicons/react/24/outline/UserIcon'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
-import BoltIcon from '@heroicons/react/24/outline/BoltIcon'
 import ChartBarIcon from '@heroicons/react/24/outline/ChartBarIcon'
 import CurrencyDollarIcon from '@heroicons/react/24/outline/CurrencyDollarIcon'
-import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightToBracket, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 const iconClasses = `h-6 w-6`
 const submenuIconClasses = `h-5 w-5`
@@ -52,13 +50,18 @@ const routes = [
     submenu : [
       {
         path: '/login',
-        icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
+        icon: <FontAwesomeIcon icon={faArrowRightToBracket} />,
         name: 'Login',
       },
       {
         path: '/register', //url
         icon: <UserIcon className={submenuIconClasses}/>, // icon component
         name: 'Register', // name that appear in Sidebar
+      },
+      {
+        path: '/app/loading', //url
+        icon: <FontAwesomeIcon icon={faSpinner} />,
+        name: 'Loading', // name that appear in Sidebar
       },
       {
         path: '/forgot-password',
@@ -105,19 +108,19 @@ const routes = [
     name: 'Documentation', // name that appear in Sidebar
     submenu : [
       {
-        path: '/app/getting-started', // url
+        path: '/app/about-the-project', // url
         icon: <DocumentTextIcon className={submenuIconClasses}/>, // icon component
-        name: 'Getting Started', // name that appear in Sidebar
+        name: 'Start Here!', // name that appear in Sidebar
+      },
+      {
+        path: '/app/post-mortem',
+        icon: <TableCellsIcon className={submenuIconClasses}/>, 
+        name: 'Post Mortem',
       },
       {
         path: '/app/features',
-        icon: <TableCellsIcon className={submenuIconClasses}/>, 
-        name: 'Features',
-      },
-      {
-        path: '/app/components',
         icon: <CodeBracketSquareIcon className={submenuIconClasses}/>, 
-        name: 'Components',
+        name: 'Features',
       }
     ]
   },

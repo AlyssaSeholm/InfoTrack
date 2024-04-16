@@ -23,6 +23,7 @@
         public int MyCompanyId { get; set; }
         public int? CompetitorCompanyId { get; set; }
         public int SearchEngineId { get; set; }
+        public int? NumberOfResultsPulled { get; set; }
         public required string Name { get; set; }
 
         public required string IncludeTerms { get; set; }

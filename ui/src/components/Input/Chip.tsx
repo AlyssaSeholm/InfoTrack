@@ -1,4 +1,4 @@
-import { FC, SetStateAction, useState } from "react"
+import { FC, useState } from "react"
 
 
 interface ChipProps {
@@ -8,15 +8,14 @@ interface ChipProps {
     containerStyle: string | null, 
     inputStyle: string, 
     defaultValue: string | null, 
-    placeholder: string | null, 
+    placeholder: string | null,
     updateFormValue: Function | null, 
     updateType: string | null ,
 }
 
 const Chip: FC<ChipProps> = ( props ) => {
 
-    const [value, setValue] = useState<string | null>(props.defaultValue)
-
+    const [value] = useState<string | null>(props.defaultValue)
     
 
     return (
@@ -27,7 +26,7 @@ const Chip: FC<ChipProps> = ( props ) => {
             <input
                 type={props.type || "text"}
                 value={value || ""}
-                placeholder={props.placeholder || ""}
+                placeholder={""}
                 onChange={(e) => (e.target.value)}
                 className={"input w-full focus:input-accent input-primary input-bordered  "}
             />

@@ -1,0 +1,84 @@
+#new_query_modal,
+#new_event_modal {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    max-width: 1200px;
+    min-width: 600px;
+
+  .header {
+    display: flex;
+
+    .icon {
+      font-size: 3.2em;
+    }
+
+    .title {
+      font-size: 1.6em;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  .body {
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem !important;
+    margin: 0;
+    place-items: center;
+    min-width: 40rem;
+    max-height: 35rem;
+    min-height: unset;
+    width: 100%;
+    padding: 0 !important;
+
+    .row ,
+    .col,
+    .form-control {
+        display: flex;
+        flex: 1;
+        align-items: baseline;
+
+        h3 {
+            display: flex;
+        }
+    }
+    .row {
+      flex-direction: row;
+      /* row-gap: 0.75rem; */
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .col {
+        flex-direction: column;
+        column-gap: 0.75rem;
+    }
+    .unit {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        padding: 0 0.25rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+div[data-floating-ui-portal] {
+  > div {
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in;
+    transition-property: background-color; 
+  }
+}
+/* button[data-loading="true"] svg {
+  fill: red; 
+}
+button:has(> .disabled) svg {
+  fill: red;
+} */

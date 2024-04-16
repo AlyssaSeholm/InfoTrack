@@ -1,4 +1,5 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
+using InfoTrack.Domain.Entities;
 
 namespace InfoTrack.Domain.Repositories.Interfaces
 {
@@ -8,5 +9,6 @@ namespace InfoTrack.Domain.Repositories.Interfaces
         Task<IEnumerable<SearchResults?>> GetListByQueryIdAsync(int queryId, CancellationToken cancellationToken);
         Task<Query?> GetQueryByQueryId(int queryId, CancellationToken cancellationToken);
         Task<SearchEngines?> GetSearchEngineByEngineId(int engineId, CancellationToken cancellationToken);
+        Task AddRangeAsync(List<SearchResultItem> srItems, CancellationToken cancellationToken);
     }
 }

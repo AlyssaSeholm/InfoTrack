@@ -536,8 +536,8 @@ function completeThemes(themes: { [themeName: string]: Partial<ThemeColors> }): 
         success: "",
         warning: "",
         error: "",
-        // Set all other properties to empty strings by default
-        // Then override with existing properties from the theme
+        
+        // Set all other properties to empty strings by default. Then override with existing properties from the theme
         ...theme,
         colorScheme: theme.colorScheme || "",
         base200: theme.base200 || "",

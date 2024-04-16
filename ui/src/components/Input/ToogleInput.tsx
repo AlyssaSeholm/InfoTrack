@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-function ToggleInput({ labelTitle, labelStyle, type, containerStyle, inputStyle = "primary", defaultValue, placeholder, updateFormValue, updateType }
+function ToggleInput({ labelTitle, labelStyle, containerStyle, inputStyle = "primary", defaultValue, updateFormValue, updateType }
     : { labelTitle: string | null, labelStyle: string | null, type: string | null, containerStyle: string | null, inputStyle: string, defaultValue: boolean | undefined, placeholder: string | null, updateFormValue: Function | null, updateType: string | null }) {
 
     const [value, setValue] = useState(defaultValue)

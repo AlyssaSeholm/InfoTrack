@@ -9,5 +9,6 @@ export interface Query {
     includeTerms: string;
     excludeTerms: string;
     createdOn: Date;
+    name?: string;
   }
   

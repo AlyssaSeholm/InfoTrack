@@ -11,7 +11,7 @@ namespace InfoTrack.Infrastructure.Data.Configurations
             builder.HasKey(sr => sr.Id);
 
             builder.HasOne(sr => sr.Query)
-                   .WithMany() //q => q.SearchResults)
+                   .WithMany()
                    .HasForeignKey(sr => sr.QueryId)
                    .OnDelete(DeleteBehavior.Restrict);
 

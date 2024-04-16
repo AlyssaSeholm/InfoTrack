@@ -1,21 +1,17 @@
-import { useState, useRef, FormEvent } from 'react'
+import { useState, FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import LandingIntro from './LandingIntro'
 import ErrorText from '../../components/Typography/ErrorText'
 import InputText from '../../components/Input/InputText'
-import { RootState } from '../../app/store'
 import { AppDispatch } from '../../app/store';
 import { useDispatch, useSelector } from 'react-redux'
-import { fetch_User_ByEmail, hasUserProfile, selectUserEmail, selectUserError, selectUserLoading } from './userSlice'
-import { setPageTitle } from '../common/headerSlice'
+import { fetch_User_ByEmail, selectUserEmail, selectUserLoading } from './userSlice'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-    const user_error = useSelector(selectUserError);
     const user_loading = useSelector(selectUserLoading);
     const user_email = useSelector(selectUserEmail);
-    const has_profile = useSelector(hasUserProfile);
 
     const INITIAL_LOGIN_OBJ = {
         password: "",
@@ -28,8 +24,6 @@ function Login() {
     // const [loading, setLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
     const [loginObj, setLoginObj] = useState(INITIAL_LOGIN_OBJ)
-
-    // const user_loading = useSelector((state: RootState) => state.user.loading);
 
     const submitForm = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -57,15 +51,6 @@ function Login() {
                 // err could be typed based on what your async thunk rejects
                 setErrorMessage("Login failed. Please check your credentials.");
             }
-            // dispatch(fetch_User_ByEmail(loginObj.emailId.trim()) as any);
-            // dispatch(setPageTitle(loginObj.emailId.trim()) as any);
-
-            // setLoading(true)
-            // // Call API to check user credentials and save token in localstorage
-            // localStorage.setItem("token", "DumyTokenHere")
-
-            // setLoading(false)
-            // window.location.href = '/app/dashboard '
         }
     }
 
@@ -75,7 +60,7 @@ function Login() {
     }
 
     return (
-        <div className="min-h-screen bg-base-200 flex items-center">
+        <div className="min-h-screen bg-base-100 flex items-center">
             <div className="card mx-auto w-full max-w-5xl  bg-base-100 shadow-xl">
                 <div className="grid md:grid-cols-2 grid-cols-1 bg-base-100 rounded-xl">
                     <div className=''>
@@ -115,7 +100,3 @@ function Login() {
 }
 
 export default Login
-
-function setEmail(arg0: any): any {
-    throw new Error('Function not implemented.')
-}

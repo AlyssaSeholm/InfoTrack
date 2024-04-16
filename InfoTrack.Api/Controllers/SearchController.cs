@@ -28,9 +28,30 @@ namespace InfoTrack.API.Controllers
             var response = await _mediator.Send(request);
 
             //Todo: Add validation to see if email is available
+            if (!response.Success)
+            {
+                return new NotFoundObjectResult(response.Msg);
+            }
 
-            //TODO: add encryption to user id for response
-            return new CreatedAtActionResult("CreateByQueryId", "Search", new { id = response.Search.Id }, response);
+            return new CreatedAtActionResult("CreateByQueryId", "Search", new { id = response.SearchResults.Id }, response.SearchResults);
+        }
+
+        [HttpGet("NewSearch/{QueryId}", Name = "GetNewSearchByQueryIdRoute")]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(GetNewSearchResultsByQueryIdResponse), (int)HttpStatusCode.Created)]
+        [SwaggerOperation(OperationId = "GetNewSearchByQueryId")]
+        public async Task<ActionResult<GetNewSearchResultsByQueryIdResponse>> GetNewByQueryId([FromRoute] GetNewSearchResultsByQueryIdRequest request) //=> await _mediator.Send(request);
+        {
+            var response = await _mediator.Send(request);
+
+            //Todo: Add validation to see if email is available
+            if (!response.Success)
+            {
+                return new NotFoundObjectResult(response.Msg);
+            }
+
+            return new CreatedAtActionResult("GetNewByQueryId", "Search", new { id = response.SearchResults.Id }, response.SearchResults);
         }
 
 
@@ -63,7 +84,7 @@ namespace InfoTrack.API.Controllers
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(GetAllSearchResultsByUserIdResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
-        [SwaggerOperation(OperationId = "GetSearchResultsByQueryId")]
+        [SwaggerOperation(OperationId = "GetSearchResultsByUserId")]
         public async Task<ActionResult<GetAllSearchResultsByUserIdResponse>> GetByUserId([FromRoute] GetAllSearchResultsByUserIdRequest request)
         {
             if (request == null || string.IsNullOrEmpty(request.UserId)) { return new BadRequestObjectResult("Missing Id from route."); }

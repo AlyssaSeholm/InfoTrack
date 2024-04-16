@@ -6,14 +6,12 @@ export interface HeaderState {
     newNotificationMessage: string;
     newNotificationStatus: number;
 }
-  
-// Define a type for the item object
-interface Notification {
+
+export interface Notification {
     status: number;
     message: string;
 }
   
-// Initial state with types
 const initialState: HeaderState = {
     pageTitle: "Home",  // current page title state management
     noOfNotifications : 15,  // no of unread notifications
@@ -44,4 +42,3 @@ headerSlice.getInitialState = () => initialState
 export const { setPageTitle, removeNotificationMessage, showNotification } = headerSlice.actions
 
 export const HeaderReducer = headerSlice.reducer
-// export default headerSlice.reducer

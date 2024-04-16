@@ -13,7 +13,7 @@ namespace InfoTrack.Infrastructure.Services.Parse
     {
         public override async Task<IEnumerable<ResultParse>> ParseResults(string htmlContent, CancellationToken cancellation)
         {
-            if (htmlContent == null) { return Enumerable.Empty<ResultParse>(); }
+            if (string.IsNullOrEmpty(htmlContent)) { return []; }
 
             var doc = new HtmlDocument();
             doc.LoadHtml(htmlContent);
@@ -43,7 +43,7 @@ namespace InfoTrack.Infrastructure.Services.Parse
                     var h3Text = node?.SelectSingleNode(".//h3")?.InnerText?.Trim();
                     var href = node?.GetAttributeValue("href", string.Empty);
 
-                    string? bc1_link = "", bc1_text = "", bc2_link = "", bc2_text = "", bc2_type = "";
+                    string? bc1_link = "", bc1_text = "", bc2_text = "";
                     bool checkForBreadcrumbText = false;
                     if (node?.ChildNodes?.Count > 0 && node?.ChildNodes[0].ChildNodes?.Count > 1) { checkForBreadcrumbText = true; }
                     bc1_text = checkForBreadcrumbText ? node?.ChildNodes?[0]?.ChildNodes?[1]?.InnerText : ""; //&#8250;
@@ -58,19 +58,13 @@ namespace InfoTrack.Infrastructure.Services.Parse
 
                     var parsedItem = new GoogleSearchResultParse()
                     {
-                        Description = "",
-                        Link = "",
+                        ResultRank = iter,
                         Snippet = node?.OuterHtml ?? "",
                         DataVed = dataVed ?? "",
                         Href = href ?? "",
                         Title = h3Text ?? "",
-                        Breadcrumbs_Text = bc1_text ?? "",
+                        Breadcrumbs_Text = !string.IsNullOrEmpty(bc1_text) ? bc1_link.Replace("&#8250;", ">").Trim() : bc1_link ?? "",
                         Breadcrumbs_Link = bc1_link ?? "",
-                        DataId = "",
-                        DataViewerGroup = "",
-                        PostedDate = "", //date ?? "",
-                        Snippet_Match = "", //matched ?? "",
-                        Snippet_Remainder = "", //remainder ?? ""
                     };
                     parseResults.Add(parsedItem);
                 }

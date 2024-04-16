@@ -1,4 +1,5 @@
-﻿using InfoTrack.Domain.Entities;
+﻿
+using InfoTrack.Domain.Entities;
 using InfoTrack.Domain.Repositories.Interfaces;
 using InfoTrack.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,12 @@ namespace InfoTrack.Infrastructure.Repositories
     public class SearchRepository(IInfoTrackDbContext context)
         : Repository<SearchResults>(context), ISearchRepository
     {
+        public async Task AddRangeAsync(List<SearchResultItem> srItems, CancellationToken cancellationToken)
+        {
+            await _context.SearchResultItems.AddRangeAsync(srItems, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
         public async Task<IEnumerable<SearchResults?>> GetListByQueryIdAsync(int queryId, CancellationToken cancellationToken)
         {
             var results = await _context.SearchResults.Where(sr => sr.QueryId == queryId).Include(sr => sr.Items).ToListAsync(cancellationToken);
@@ -19,7 +26,7 @@ namespace InfoTrack.Infrastructure.Repositories
         {
             List<int> queryIds = await _context.Queries.Where(q => q.UserId == userId).Select(uc => uc.Id).ToListAsync(cancellationToken);
 
-            var results = await _context.SearchResults.Where(sr => queryIds.Contains(sr.Id)).Include(sr => sr.Items).ToListAsync(cancellationToken);
+            var results = await _context.SearchResults.Where(sr => queryIds.Contains(sr.QueryId)).Include(sr => sr.Items).ToListAsync(cancellationToken);
 
             return results ?? Enumerable.Empty<SearchResults?>();
         }

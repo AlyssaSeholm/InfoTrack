@@ -4,9 +4,17 @@ export interface User {
     email: string;
     firstName: string;
     lastName: string;
-    selectedTheme?: string;
     createdOn: Date;
     lastModifiedOn: Date;
     msg?: string;
+
+    avatarImg?: string;
+    role?: string;
+    selectedTheme?: string;
+    city?: string;
+    state?: string;
+    about?: string;
+    language?: string;
+    timezone?: string;
   }
   

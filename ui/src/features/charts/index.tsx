@@ -5,7 +5,7 @@ import PieChart from './components/PieChart'
 import ScatterChart from './components/ScatterChart'
 import StackBarChart from './components/StackBarChart'
 import Datepicker from "react-tailwindcss-datepicker"; 
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 
 
 
@@ -17,7 +17,7 @@ function Charts(){
         endDate: new Date() 
     }); 
     
-    const handleDatePickerValueChange = (newValue) => {
+    const handleDatePickerValueChange = (newValue: SetStateAction<{ startDate: Date; endDate: Date }>) => {
         console.log("newValue:", newValue); 
         setDateValue(newValue); 
     } 
@@ -25,22 +25,20 @@ function Charts(){
     return(
         <>
         <Datepicker 
-                containerClassName="w-72" 
-                value={dateValue} 
-                theme={"light"}
-                inputClassName="input input-bordered w-72" 
-                popoverDirection={"down"}
-                toggleClassName="invisible"
-                onChange={handleDatePickerValueChange} 
-                showShortcuts={true} 
-                primaryColor={"white"} 
-            /> 
-        {/** ---------------------- Different charts ------------------------- */}
+            containerClassName="w-72" 
+            value={dateValue} 
+            inputClassName="input input-bordered w-72" 
+            popoverDirection={"down"}
+            toggleClassName="invisible"
+            onChange={(value) => handleDatePickerValueChange(value as SetStateAction<{ startDate: Date; endDate: Date }>)} 
+            showShortcuts={true} 
+        /> 
+
+        {/** ---------- Demo of Different charts with dummy data ----------- */}
             <div className="grid lg:grid-cols-2 mt-0 grid-cols-1 gap-6">
                 <StackBarChart />
                 <BarChart />
             </div>
-
         
             <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
                 <DoughnutChart />

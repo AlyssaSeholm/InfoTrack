@@ -2,7 +2,7 @@ import { SetStateAction, useState } from "react"
 
 
 function TextAreaInput(
-    { labelTitle, labelStyle, type, containerStyle, inputStyle = "primary", defaultValue, placeholder, updateFormValue, updateType} :
+    { labelTitle, labelStyle, containerStyle, inputStyle = "primary", defaultValue, placeholder, updateFormValue, updateType} :
     { labelTitle: string | null, labelStyle: string | null, type: string | null, containerStyle: string | null, inputStyle: string, defaultValue: string | null, placeholder: string | null, updateFormValue: Function | null, updateType: string | null}){
 
     const [value, setValue] = useState<string | null | undefined>(defaultValue)

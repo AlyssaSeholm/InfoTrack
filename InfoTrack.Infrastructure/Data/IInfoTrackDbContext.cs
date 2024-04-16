@@ -9,7 +9,8 @@ namespace InfoTrack.Infrastructure.Data
         DbSet<User> Users { get; }
         DbSet<Company> Companies { get; }
         /// <summary>
-        /// Not Used, but it was a time issue as I didn't have the time/capacity to rely on having company profiles and user profiles.
+        /// #DevNote: Not Used, but it was a time issue as I was intending on trying to allow 2 different profile types.
+        /// A standard user and then more of an admin user (that logged in more as a company and could set preferences).
         /// </summary>
         DbSet<UserCompany> UserCompanies { get; }
         DbSet<UserCompanyRelationship> UserCompanyRelationships { get; }
@@ -19,11 +20,6 @@ namespace InfoTrack.Infrastructure.Data
         DbSet<SearchResultType> SearchResultTypes { get; }
         public DbSet<SearchEngines> SearchEngines { get; set; }
 
-        //EntityEntry Add(object entity);
-        //EntityEntry Remove(object entity);
-        //EntityEntry Add<T>(object entity);
-        //EntityEntry Remove<T>(object entity);
-        //ValueTask<TEntity> FindAsync<TEntity>(params object[] keyValues) where TEntity : class;
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         ChangeTracker ChangeTracker { get; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

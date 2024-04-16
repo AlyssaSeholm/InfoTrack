@@ -1,8 +1,8 @@
-﻿using InfoTrack.Domain.Entities;
-using InfoTrack.Domain.Repositories.Interfaces;
+﻿using InfoTrack.Domain.Repositories.Interfaces;
+using InfoTrack.Infrastructure.Services.Parse;
 using Microsoft.Extensions.Hosting;
 
-namespace InfoTrack.Infrastructure.Services.Parse
+namespace InfoTrack.Domain.Entities.Services.Parse
 {
     public class YahooResultParserService(ISearchRepository searchRepository, HttpClient httpClient, IHostEnvironment webHostEnvironment) 
         : ResultParserService(searchRepository, httpClient, webHostEnvironment)

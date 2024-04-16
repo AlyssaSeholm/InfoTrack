@@ -1,6 +1,6 @@
 ﻿using InfoTrack.Domain.Entities;
+using InfoTrack.Domain.Entities.Services.Interfaces;
 using InfoTrack.Domain.Repositories.Interfaces;
-using InfoTrack.Domain.Services.Interfaces;
 
 namespace InfoTrack.Domain.Services
 {
@@ -28,6 +28,11 @@ namespace InfoTrack.Domain.Services
         public async Task<Query?> GetQueryById(int queryId, CancellationToken cancellationToken)
         {
             return await _QueryRepository.GetByIdAsync(queryId, cancellationToken);
+        }
+
+        public async Task<IEnumerable<Query?>> GetQueryListByUserId(string userId, CancellationToken cancellationToken)
+        {
+            return await _QueryRepository.GetListByUserIdAsync(userId, cancellationToken);
         }
 
         public async Task<Query> PatchQuery(Query query, CancellationToken cancellationToken)
